@@ -1,0 +1,54 @@
+.gd_user_input {
+	display: inline;
+	width: 445px;
+	margin: 0;
+	height: 13px; 
+}
+
+.gd_user_div {
+	border:3px solid blue;
+	border-radius: 12px;
+}
+
+.gd_user_submit {
+	display: inline; 
+	text-align: center; 
+	width: 84px; 
+	height: 48px; 
+	border: 3px solid blue; 
+	margin: 0;
+	background: blue; 
+	color: #ffffff;
+}
+
+.gd_user_hosting_div {
+	border:3px solid blue;
+	border-radius: 12px;
+}
+
+.gd_user_hosting_submit {
+	display: inline; 
+	text-align: center; 
+	width: 106px; 
+	height: 48px; 
+	border: 3px solid blue; 
+	margin: 0;
+	background: blue; 
+	color: #ffffff;
+	font-size: 128%;
+}
+
+.gd_user_select {
+	display: inline;
+	width: 445px;
+	margin: 0;
+	height: 48px; 
+	font-size: 128%;
+}
+
+.gd_widget_input {
+	display: inline;
+	width: 148px;
+	margin: 0;
+	height: 13px; 
+}

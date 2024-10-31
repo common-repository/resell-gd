@@ -1,0 +1,4529 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+Hosted Exchange - Reseller Control Center
+</title><meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Script-Type" content="text/javascript" />
+<!--CSS-->
+<link href="https://img2.wsimg.com/rcc/css/header-layout-styles-20130731.css" rel="stylesheet" type="text/css" />
+<link href="https://img2.wsimg.com/rcc/css/rcc-layout-styles-20131014.min.css" rel="stylesheet"  type="text/css"/>
+<link href="https://img2.wsimg.com/rcc/css/footer-20140221a.css" rel="stylesheet"  type="text/css"/>
+<link href="/css/uxcore-only-footer.css" rel="stylesheet" type="text/css"/>
+<link href="https://img2.wsimg.com/rcc/reseller-uxcore-only-20140224/css/uxcore.118.min.css" rel="stylesheet"  type="text/css"/>
+<!-- IE6 Specific Stuff -->
+<!--[if lte IE 6]>
+<style type="text/css" media="screen">
+div.header-container {
+width:expression(((document.compatMode && document.compatMode=='CSS1Compat') ? document.documentElement.clientWidth : document.body.clientWidth) < 990 ? "990px" : "auto");
+}
+</style>
+<![endif]-->
+<!-- IE6 Specific Stuff -->
+<!--[if lte IE 7]>
+<link href="https://img2.wsimg.com/rcc/css/ie6-7-20110822.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 8]>
+<link href="https://img2.wsimg.com/rcc/css/ie8-20100702.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link href="https://img2.wsimg.com/rcc/css/offerings20131014.min.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.sf-tabs-content {padding: 15px 5px 15px 5px;display: none;}
+#ddmatch-btn{padding-right:30px;}
+.match-btn span.dropdown-arrow-container {border-left: 1px solid #cfcfcf;display: block;right: 10px;position: absolute;top: 0;width: 14px;height: 100%;}
+.match-btn span.dropdown-arrow-container span.drop-arrow {margin: 9px 0 0 7px;}
+</style>
+</head>
+<body>
+<form name="aspnetForm" method="post" action="ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=3&amp;type=405&amp;section=223&amp;groupId=64&amp;groupname=Hosted+Exchange&amp;tab=1" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="Fulb/0MdgtxOpmaSzjIz5WMYMtvp5o7+AET8i67ybtMUWxKJwzo8nH33fxcBgssdvPuFZrEfmT15u5p1+p87TbWoTBe+4pMe6jih6mdwZjhlVfO7Q6Jf90UifeGXX2uy33Ib/MYb7ncMPSDX1+mbp4fStpquM2UCvyGxZRdKQ/UX4VwCZMqv8H0Sa9Jtghix6B2LZoYn1s3qeH4Dohb8MTEQpwEJ9lhx/fl5TFB0m8cJaweGTGBz6egyRnPKFTcfWK8Cac9Sgkf9qkkiRGFnH8AJDquIlqLJcZhn7vFqeZizSst91PmLoyPkupq8GUf1ytcmlMcn1lvjkCSEPgggr0x6IC7apu9BxPgvLXSA4Vwh8KUdNSHtYXiniZeC3d/P9xkbwyG732HdXS1+XFzWXZUtSj3nUrLL8hIxwPVBXAH8sob4sY8vAz8gXSsAfa8afQVFRIwFSCtjR11IG0iIRMib41Kuy9nXcZ2CoX3VARf5ZBxZGaCydJqFGFqfxBZsA/rgsIgUJx4f5nrqfmue8N81onp9yn81AD+LaVhHN49u1coKbg5CQ3+3v64K2QUQvNj7ej2E+wFGYrRZ2KknYn/rjbth73Nb8WcIirocurazsAAA1XcCzr6zyQ9QOuYMcwhKwPkkmsFItpbQHsJKJseSKHtqoV7lmqrgoni7xX3y95OYiw/ik+y+XfpZTA6Ke+8lrGIkEt5WtwgmaF2WL25kYc3/mpPuewn1qEE/Jn6cy5mmc4ajItAiryub3Wk5lGOdQG71nh6U5g9kIFDjweM2bE1HiZbJVzcfHCKqPhIv9SxcDxebkyRsVW3Z2InzNyX6COjP94PfbjkqiBc0HKxrkc+Mumro+w274PekDTjrSz7HS+TLqjfZo1KMfUQs2LXZyfrDB7izYcdXwrwkclrJXBodh8EcAI2m4UcPt4EghphWkI4H7rMxPTCrWaZGLSDalxQakTWu4bmr9QWjPaCXANo6ho4oUdUAvBOR4aj0nanB2xIKpFIihz6EnXaott7OXGj/KA+Zha6FQFmc8jbEnLuJzXYT9rEOvnJWFVqDbrmnPY21HqT1Ox/W4jajCTxpLgRfk0/awlHDAJpszwqEsY1dIynJe3Thk1rARQ/bpo9DJm9nF4gj8vOTjgHOAYJNkucDmiolvJLwr+4IBkMeqYsON/rIYsgsOaXDnOgOL8HJwSbncRG5K0tSsMpgkSaRvLQ2lYE/25bjftblEoCPwxUJVP8OmJLwQGEMQnX9AFPdx9qASgYvtwtNHiDPyLKI6ME29WBOZ6nswPyqNmxKARk+t/+DvdNc8HE1GNBLqYEfeCh77+KEUvlL6q010YrpbqJVpAco0wzrts593AIoNzH7E7pJigqnVhc3U0k2IWPM5IB+uLECTOrWDFXcZF0P79WZ2Zgab4H1JI+VJgLgBNJfsLHyjZXkUZpPACQvqRnObAAu/3fYXtKyyf2CBig8OMcoe1XENbahBydX/AswIfzsHW7VqZItUXLOaNsm8dioWOcYfiYePek4bmJyl7TdH2zlE3eufKeAbkHxzRIGVamoftpbt8TybkCbWkWZxUnq7aO4p5P6vVuoGnVye6SzIwyVKWCwkIC4hjXgTSiRMeZOF4npVjFiVPUr0IpU3xW2enGQxsxq9PouEH5F1qp+FeRTx5d8uuSRSJNiv+R/Hx2IKxthDm189cvq9mWfLmtjIHFOxwdVbFVqLcOKcOgVwxq4sQFSYN6jGYQsTnKrSWcuEJXqKAexbBACNNSkKCzJN0oIbdVW1VYV8oziFUMaOSBjkycM9FPWSggQpuIVV16+rDnV4x+Mj2wmITXSsm/SnKclDtvQDR/dHyptI73pzr3LG3ItuNqJWOrfdDEVdl8e6HjhDe1DIseK3HNRRPdPDWA3daxNXo3uy1HWHDnV4xQKPMB1NaYaC4bSL8yeI1s4ofM+OIx4jt9a50DN2tP1yaeRoBen8hvcdm36b9lo6zamsfpl7pRZ/NXLazU2O0ZG5ynsYyBQfNTFATNFcBALFvaFxh1d5vG9Eme+W1c9Uku+cpkEHAK6Rk90ml01ACv65kHUTxTqcivPLYSkdryWFb6+7tslG4ziRudjCRaOHgYus1HMPVdx3vekSrNnPx/iCZBh11fEHgBNp3sB0iHvokqcaTTzT3SWrCh6YXwBHgy7NzxgYf1VEA/2F569ZzrWw/KNG2jhOU4/oOS0jKt+skSttLaqzQf/DUVL508euk3OcEd+r20I8FsQV8IDFQjLN2JQ8spSde2WfyWJCTWh36933Z9H41XunEl4a/cwIxhD3HJXgQKMjQVTycnNdkt7C9xrrVyN115N3JC4dLstu0pG9D12jKoMF5cogSU0rFNRqE4yNKErFNtWm9use0EC1ToBYnjKvMdf6LHHLqlqc7tSDIdCxkPuywcE+J9L6WxK8ngFVN9HJolxHF5+VBuZPm2za0TqUF2ifaJK1zBg1q92xBKnFiXy62eXayg5C/4W/OG5oHyfVZq+NBKpkXS1H/3zsUcZrgARrIoldHu3Myr4dAFxyZRTunXlR6vzuQLE9TW/ZZmmSPD8tpC6Zg6QHVBmcl455hZzVltfRxrRKThqyDVh0yl3wX/+r57TN026nas8aJ7Xbwabh7+s2NKnigtXC2ahZR7V2ZkkoTazFckjSd5zZGoD0ALc91234HzHVPxRKy/o1g7LA4wEL2H6uVb20pBhcxuqLz/ZMgkSUff9tMFjhtjaUrb5LP0FLkk/vRgRZKYNpPxT+xp9vC4esDGkPv9hsCLGB0btXNAUMc2YP+wLP0VupQeZMrQ4VRgijkH3yCSN6WQYPs/I+d0TSM9GMUaEMzGKLMQl0ORNqmUUcaoNpUT/C24jGSxAls4cxhrWqb/xzAdEx5xR6Th9g/ZMMGHhrDBIzusry9i1kqoLeaOuQ11vAPEmVFbDKrOTxNR6bi+XeMBGYW8NIuxjCabxbBYODX1iwmgTfUh+V3mP9fzQ6b6VSFymjE70Ow==" />
+</div>
+<div id="totalContainer" class="total-container">
+<div style="display:none;"><img src="https://img.securepaynet.net/image.aspx?sitename=www.resellercontrolcenter.com&amp;server=P3PWRCCWEB003&amp;page=/b-2015-06-23_15-11-00/Products/ProductPricing.aspx&amp;isc=&amp;ci=41542&amp;privatelabelid=510674&amp;shopper=103245034&amp;querystring=ci%3d41542%26group%3dproduct%26suiteId%3d3%26type%3d405%26section%3d223%26groupId%3d64%26groupname%3dHosted%2bExchange%26tab%3d1" alt="" border="0"/>	</div>
+<div class="uxcore-only">
+<header id="uxh">
+<div id="uxh-acct-delegate" style="display:none;" class="delegate-shim">
+<div style="display:none;" class="delegate delegate-rep">
+<div class="container">
+<div class="acct-delegate-text delegate-left">{0} logged in as: <span>{1} {2}</span></div>
+<div class="delegate-right"><a id="exit-impersonation-link" href="https://sso.godaddy.com/logout?app=www&realm=idp" class="delegate-link"><span class="uxicon uxicon-x"></span><span class="text">Stop impersonation</span></a></div>
+</div>
+</div>
+<div style="display:none;" class="delegate delegate-cust">
+<div class="container">
+<div class="acct-delegate-text delegate-left">{0} logged in as: <span>{1} {2}</span></div>
+<div class="delegate-right"><a id="exit-delegation-link" href="javascript: void(0);" data-action="https://sso.godaddy.com/cookie/switchback/" data-sk="WSv4LgM7Bb9a692PjgPEBHG5MeDTHr" class="delegate-link"><span class="uxicon uxicon-x"></span><span class="text">Exit access</span></a></div>
+</div>
+</div>
+</div>
+<nav id="uxh-nav" class="navbar navbar-default uxc-header">
+<div class="container">
+<div id="uxh-nav-header" class="navbar-header">
+<button id="uxh-mobile-nav" type="button" data-toggle="collapse" data-target=".uxc-header-nav" class="navbar-toggle"><span class="sr-only">Toggle Navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a id="uxh-nav-brand" href="//www.godaddy.com/?ci=" class="navbar-brand"><span id="uxhNavBrandLink" class="uxc-gd-logo">Go Daddy</span></a>
+<div id="uxh-nav-product"></div>
+</div>
+<div id="uxh-nav-collapse" class="navbar-collapse collapse uxc-header-nav">
+<ul id="uxh-nav-breadcrumbs" role="menubar" class="nav navbar-nav navbar-left">
+<li id="uxh-nav-mya-link"><a role="menuitem" href="https://mya.godaddy.com/default.aspx?ci=">My Account</a></li>
+<li id="uxh-s-productsmenu" class="dropdown"><a role="button" href="javascript:void(0);" data-toggle="dropdown" class="dropdown-toggle"><span id="uxh-product">Reseller Control Center</span>&nbsp;<b id="uxh-products-arrow" style="display:none;" class="caret uxh-ctrl-s-products"></b></a>
+<ul id="uxh-s-products" role="menu" data-showops="false" class="sf-menu-icns dropdown-menu uxh-ctrl-s-products">
+<li><a href="https://dcc.godaddy.com/default.aspx?ci=&regionsite=www&marketid=en-US" class="menuitem">Domains</a></li>
+<li><a href="https://gateway.godaddy.com?ci=&regionsite=www&prog_id=GoDaddy&marketid=en-US" class="menuitem">Hosting</a></li>
+<li><a href="https://productivity.godaddy.com/emailchooser?ci=&regionsite=www&utm_medium=uxh&utm_source=rcc&prog_id=GoDaddy&marketid=en-US" class="menuitem">Email</a></li>
+</ul>
+</li>
+<li id="uxh-i-server" style="display:none;"></li>
+</ul>
+<ul id="uxh-nav-right" role="menubar" class="nav navbar-nav navbar-right">
+<li id="uxh-nav-support"><a id="uxhNavSupportLink" role="menuitem" href="https://www.godaddy.com/help" target="_blank">Help</a></li>
+<li id="uxh-nav-user" class="dropdown"><a id="uxh-nav-user-link" role="button" href="javascript:void(0);" data-toggle="dropdown" class="dropdown-toggle"><span id="uxh-s-name-prefix" style="display:none;">Customer #</span><span id="uxh-s-name">Hello</span>&nbsp;<b class="caret"></b></a>
+<ul id="uxh-nav-user-menu" role="menu" class="dropdown-menu shopper-menu">
+<li id="uxh-s-header" class="uxh-logged-in shopper-header dropdown-header">
+<div class="shopper-header-content">
+<div id="uxh-s-fullname" style="display:none;" class="uxc-nowrap"></div>
+<div id="uxh-s-status" style="display:none;" class="uxc-nowrap"></div>
+<div class="uxc-details">
+<div id="uxh-mi-custid" style="display:none;" class="uxc-nowrap"><span class="uxc-shopper-menu-label">Customer #:</span><span id="uxh-s-id"></span></div>
+<div id="uxh-mi-mgrid" style="display:none;" class="uxc-nowrap"><span class="uxc-shopper-menu-label">Manager ID:</span><span id="uxh-mgr-id"></span></div>
+<div id="uxh-mi-mgrname" style="display:none;" class="uxc-nowrap"><span class="uxc-shopper-menu-label">Manager Name:</span><span id="uxh-mgr-name"></span></div>
+<div id="uxh-vip-info" style="display:none;" class="uxc-nowrap"><span id="uxh-vip-label" class="uxc-shopper-menu-label">VIP Acct Exec:</span>
+<div id="uhx-vip-details">
+<div id="uxh-vip-repname"></div>
+<div id="uxh-vip-phone"></div>
+<div><a id="uxh-vip-email" href="javascript:void(0);"></a></div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li role="presentation" class="divider uxh-no-delegate"></li>
+<li id="uxh-nav-logged-in" class="uxh-logged-in uxh-no-delegate"><a role="menuitem" href="https://idp.godaddy.com/logout.aspx?spkey=GDRCC">Log Out</a></li>
+<li id="uxh-nav-logged-out" class="uxh-logged-out"><a role="menuitem" href="https://sso.godaddy.com?realm=idp&app={{pc:loginapp}}&path={{pc:currentpage}}">Log In</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<nav id="uxh-nav-app" role="navigation" class="navbar uxc-nav">
+<div class="container">
+<div id="uxh-nav-app-active" data-toggle="collapse" data-target="#uxh-nav-app-collapse" data-default-caption="Menu" class="collapsed"><span id="uxh-nav-app-caption">Menu</span><b class="caret"></b></div>
+<div id="uxh-nav-app-collapse" class="navbar-collapse collapse">
+<ul id="uxh-nav-app-menu" class="nav navbar-nav">
+<li><a href="https://reseller.godaddy.com/default.aspx">Dashboard</a></li>
+<li class="dropdown">
+<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Reports <b class="caret"></b></a>
+<ul class="dropdown-menu" role="menu">
+<li>
+<ul class="dropdown-columns">
+<li>
+<ul>
+<li>
+<a>Sales and Commissions</a>
+<ul>
+<li><a href="https://reseller.godaddy.com/Reports/CommissionReport.aspx">Commissions</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/ProductCommissionReport.aspx">Product Commissions</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/PaymentHistoryReport.aspx">Payment History</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/RenewalsReport.aspx">Renewals</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/MarketingSourceCodeReport.aspx">Marketing Source Codes</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/ProductSalesReport.aspx">Product Sales</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>
+<a>Customers</a>
+<ul>
+<li><a href="https://reseller.godaddy.com/Reports/CustomerLookUpReport.aspx">Customer Lookup</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/CustomerSalesReport.aspx">Customer Sales</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/DiscountCustomerSalesReport.aspx">Discount Customer Sales</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>
+<a>Domains</a>
+<ul>
+<li><a href="https://reseller.godaddy.com/Reports/DomainLookupReport.aspx">Domain Lookup</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/domainsregisteredreport.aspx">Domain Registrations</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/PendingTransfersReport.aspx">Pending Transfers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Storefront <b class="caret"></b></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="https://reseller.godaddy.com/StorefrontDesign/ColorPalette.aspx">Storefront Designer</a></li>
+<li><a href="https://reseller.godaddy.com/MobileDesign/Default.aspx">Mobile Designer</a></li>
+<li><a href="https://reseller.godaddy.com/StorefrontDesign/SocialMedia.aspx">Social Media</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="https://reseller.godaddy.com/Products/Currency.aspx">Settings</a></li>
+<li><a href="https://reseller.godaddy.com/Products/ProductOfferings.aspx?suiteId=1">Hosting</a></li>
+<li><a href="https://reseller.godaddy.com/Products/DomainOfferings.aspx">Domains</a></li>
+<li><a href="https://reseller.godaddy.com/Products/ProductOfferings.aspx?suiteId=7">Domain Services</a></li>
+<li><a href="https://reseller.godaddy.com/Products/ProductOfferings.aspx?suiteId=5">Site Builders</a></li>
+<li><a href="https://reseller.godaddy.com/Products/ProductOfferings.aspx?suiteId=2">SSL &amp; Security</a></li>
+<li><a href="https://reseller.godaddy.com/Products/ProductOfferings.aspx?suiteId=3">Email &amp; Productivity</a></li>
+<li><a href="https://reseller.godaddy.com/Products/ProductOfferings.aspx?suiteId=4">Marketing Tools</a></li>
+<li><a href="https://reseller.godaddy.com/Products/ProductOfferings.aspx?suiteId=6">Product Add ons</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Promotions <b class="caret"></b></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="https://reseller.godaddy.com/Promotions/DomainPromos.aspx">Domains Promotions</a></li>
+<li><a href="https://reseller.godaddy.com/Promotions/SpecialPromos.aspx">Special Promotions</a></li>
+<li><a href="https://reseller.godaddy.com/Promotions/CustomPromos.aspx">Custom Promotions</a></li>
+<li><a href="https://reseller.godaddy.com/Promotions/OrderLevelPromos.aspx">Order Level Promotions</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="https://reseller.godaddy.com/MarketingTools/default.aspx">Free Products</a></li>
+<li><a href="https://reseller.godaddy.com/MarketingTools/BannerArtwork.aspx">Banner Artwork</a></li>
+<li><a href="https://reseller.godaddy.com/MarketingTools/MarketingSourceCodes.aspx">Marketing Source Codes</a></li>
+<li><a href="https://reseller.godaddy.com/MarketingTools/AdvancedMarketing.aspx">Advanced Marketing</a></li>
+<li><a href="https://reseller.godaddy.com/MarketingTools/GoogleAdWords.aspx">Google Adwords &reg;</a></li>
+<li><a href="https://reseller.godaddy.com/MarketingTools/Analytics.aspx">Google Analytics</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Settings <b class="caret"></b></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="https://reseller.godaddy.com/Settings/default.aspx">Contact Information</a></li>
+<li><a href="https://reseller.godaddy.com/Settings/CustomDomainSettings.aspx">Storefront Domains</a></li>
+<li><a href="https://reseller.godaddy.com/Settings/Payee.aspx">Payee Setup</a></li>
+<li><a href="https://reseller.godaddy.com/Settings/Support.aspx">Support Options</a></li>
+<li><a href="https://reseller.godaddy.com/Settings/EventNotification.aspx">Notification Preferences</a></li>
+<li><a href="https://reseller.godaddy.com/SelectReseller.aspx">Reseller Accounts</a></li>
+<li><a href="https://reseller.godaddy.com/QuickSetUp/Default.aspx">Quick Setup
+</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+</div>
+<div id="dialogExpired" style="display:none;" title="Session Timeout" >
+<br/>
+<div class="yellow-notification-box clear-fix ie-clear-fix">
+<p class="notification-text">
+Your session has expired.
+</p>
+</div>
+</div>
+<div id="dialogWarning" style="display:none;" title="Session Timeout" >
+<div style="padding: 15px 20px 0 20px;">
+<div class="yellow-notification-box clear-fix ie-clear-fix">
+<p class="notification-text">Your session will expire in&nbsp;<span id="dialogText-warning"></span>&nbsp;seconds</p>
+</div>
+</div>
+</div>
+<div class="main-container clear-fix ie-clear-fix">
+<div class="uxcore-only">
+<ol class="breadcrumb">
+<li>Products</li>
+<li>Email &amp; Productivity</li>
+<li class="active">Hosted Exchange</li>
+</ol>
+</div>
+<div id="divpricingJobError" class="error-notification notification-box" style="display: none;">
+<p class="notification-text">
+<span class="success-span">We couldn't process your global pricing change at this time. <a id="lnkResubmitPricing" href="#" >Please try again.</a></span>
+</p>
+</div>
+<div id="productRestore" class="pricingRestoreWarning msgDiv" data-style="warn" style="display: none;">
+Product Pricing is restored to Suggested Retail. Please click Save to make the changes permanant.
+</div>
+<div id="productError" class="pricingSaveError msgDiv" data-style="error" style="display: none">
+Error saving your changes.
+</div>
+<div id="productSuccess" class="pricingSaveSuccess msgDiv" data-style="success" style="display: none">
+Your changes have been saved!
+</div>
+<div id="productImportSuccess" class="pricingSaveSuccess msgDiv" data-style="success" style="display: none">
+Your changes have been saved!
+</div>
+<div id="productWarn" class="pricingSaveWarning msgDiv" data-style="warn" style="display: none;">
+Your changes have been cancelled.
+</div>
+<div id="pendingChangesWarn" class="pendingSaveWarning msgDiv" data-style="warn" style="display: none;">
+You have pending changes.  Please click Save or Cancel to continue.
+</div>
+<div id="priceMatchWarn" class="pricingSaveWarning msgDiv" data-style="warn" style="display: none;">
+Your renewal retail product pricing has been synched with the new retail product pricing. Please review the changes below, and click <strong>Save</strong> to update.
+</div>
+<div id="mainContainer">
+<div class="rounded-wrapper">
+<div class="rounded-wrapper-top rounded-fade-background">
+<h3 class="collapse-header">Quick Pricing Options</h3>
+</div>
+<div id="quickPricing" class="rounded-wrapper-content free-product-background">
+<div id="topWrapper" class="accordian-padding-bottom">
+<div>
+<div class="float-left offerings-sprite graphic-money" style="margin: 10px 15px 10px 0;">
+</div>
+<div class="float-left account-access" style="width: 800px; margin-top: 25px;">
+Setting your pricing is easy. Change prices for the selected product or across your entire product group. You can also set limited-time sale prices and change your default storefront display currency.
+</div>
+</div>
+<a id="acc"></a>
+<div class="collapse-bar collapse-bar-background"  style="clear: both;">
+<a href="javascript:void(0);" class="plus a1"></a>
+<span class="collapse-title">Set sale prices and dates.</span>
+<span class="collapse-text">Use to offer limited-time discount pricing.</span>
+</div>
+<div style="position: relative; display: none;" class="setSaleDateAccordian accordian-container">
+<div class="accordian-padding-top">
+<div class="accordian-label">
+Sale start/end dates:</div><div style="margin-bottom: 10px;">
+<input id="saleStart" type="text" name="date-from" />
+<span style="padding:0 5px 0 5px;">to</span>
+<input id="saleEnd" type="text" name="date-to" />
+</div>
+</div>
+<div>
+<input type="checkbox" id="datesOnly" value="1" /> Only update sale dates.
+</div>
+<div style="margin-top:20px;">
+<div>
+<div class="accordian-label">
+Sale price:</div>
+<div class="accordian-padding-bottom">
+<select id="salePriceOption">
+<option value="0">Suggested Retail Price</option>
+<option value="2">Your Retail Price</option>
+</select>&nbsp;-&nbsp;<input type="text" id="salePercent" style="width:100px;" maxlength="3"  />&nbsp;%</div>
+</div>
+</div>
+<div>
+<div class="accordian-label">
+Apply Pricing to:</div>
+<div class="accordian-padding-bottom">
+<select id="saleSelect">
+<option value="0">All New &amp; Renewals</option>
+<option value="1">New Only</option>
+<option value="2">Renewals Only</option>
+</select>
+</div>
+</div>
+<div class="accordian-padding-bottom" >
+<a href="#acc" id="salePreview" class="sf-btn-pil"><span class="sf-icn-pil sf-icn-pil-edit"></span>Preview Sale Dates/Pricing</a>
+<span class="preview-text">
+See sales prices in the pricing table below.</span></div>
+<span class="ajax-spinner" id="salePreviewSpinner" style="display: none;margin-top:35px;margin-left:200px;">&nbsp;</span>
+<div id="salePreviewSaveCancel" class="accordian-padding-bottom"  style="display: none;">
+<a id="salePreviewSave" class="black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">
+Save</a> &nbsp;&nbsp;<a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=3&amp;type=405&amp;section=223&amp;groupId=64&amp;groupname=Hosted+Exchange&amp;tab=1&amp;c=true">Cancel</a></div>
+</div>
+<div class="collapse-bar collapse-bar-background">
+<a href="javascript:void(0);" class="plus a2"></a>
+<span class="collapse-title">Set prices for entire product group.</span>
+<span class="collapse-text">Use for bulk pricing updates.</span>
+</div>
+<div style="display: none;" class="accordian-container">
+<div class="accordian-padding-bottom accordian-padding-top">
+Select the price you want to change. Then, add a dollar amount or percentage increase to your starting price.
+</div>
+<div class="accordian-padding-bottom float-left" style="margin-right:10px;">
+<div class="accordian-label">
+Price to change:</div>
+<div>
+<select id="bulkPricingPriceToModify">
+<option value="1">Your Retail Price</option>
+<option value="2">Your Sale Price</option>
+<option value="3">Your Sale & Retail Price</option>
+</select></div>
+</div>
+<div class="accordian-padding-bottom float-left" style="margin-right:10px;">
+<div class="accordian-label">
+Starting price:</div>
+<div>
+<select id="bulkPricingPointSelect" style="width: 250px;">
+<option value="1">Suggested Retail Price</option>
+<option value="2">Suggested Retail Price +
+$</option>
+<option value="3">Suggested Retail Price + %</option>
+<option value="4">Minimum Retail Price</option>
+<option value="5">Minimum Retail Price +
+$</option>
+<option value="6">Minimum Retail Price + %</option>
+<option value="7">My Retail Price -
+$</option>
+<option value="8">My Retail Price - % </option>
+<option value="9">My Retail Price +
+$</option>
+<option value="10">My Retail Price + % </option>
+</select></div>
+</div>
+<div class="accordian-padding-bottom float-left" style="margin-right: 10px;">
+<div class="accordian-label" id="bulkAmountLabel" style="display: none;">
+Amount (% or $)</div>
+<div style="clear: both;">
+<span id="bulkAmountDiv" class="float-left;" style="display: none;">
+<input id="bulkPricingAmount" name="bulkPricingAmount" type="text" maxlength="25"
+style="width: 50px;" />
+</span>
+</div>
+</div>
+<div class="accordian-padding-bottom float-left" style="margin-right: 10px;">
+<div style="clear: both;">
+<a href="#acc" id="bulkPricingPreview" class="sf-btn-pil" style="display:inline-block;vertical-align:text-bottom;margin:15px 0 0 0;"><span class="sf-icn-pil sf-icn-pil-edit"></span>Calculate</a>
+</div>
+</div>
+<div class="accordian-padding-bottom" style="clear:both;">
+Don't like the last pricing change you made?&nbsp;&nbsp;
+<a href="javascript:void(0);" id="lnkRestore" class="sf-btn-pil"><span class="sf-icn-pil sf-icn-pil-edit"></span>Restore Pricing to Suggested Retail</a>
+</div>
+<div id="bulkPricingSaveCancel" class="accordian-padding-bottom" style="display: none;">
+<a id="bulkPricingSave" class="black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">
+Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=3&amp;type=405&amp;section=223&amp;groupId=64&amp;groupname=Hosted+Exchange&amp;tab=1&amp;c=true">Cancel</a>
+</div><div id="restorePopIn" style="display: none;">
+Are you sure  you want to restore suggested retail pricing? This change affects every product in your catalog.
+</div>
+</div>
+<div class="collapse-bar collapse-bar-background">
+<a href="javascript:void(0);" class="plus"></a>
+<span class="collapse-title">Change display currency.</span>
+<span class="collapse-text">Use to change the currency for pricing shown in the Reseller Control Center.</span>
+</div>
+<div style="display: none;" class="currencyOptinSection accordian-container">
+<div id="saveCurrencyError" data-style="error" style="display: none;line-height:2;height: 210px; overflow-y: auto; overflow-x: auto;">
+Error saving your changes.
+</div>
+<div class="accordian-padding-top">
+<div class="accordian-label">
+Select Reseller Control Center Display Currency:
+</div>
+<div class="accordian-label">
+<select id="currencyList" style="width: 250px;">
+<option value="AED">United Arab Emirates Dirham (&#1583;&#46;&#1573;)</option><option value="ARS">Argentine Peso (AR$)</option><option value="AUD">Australian Dollar (A$)</option><option value="BRL">Brazilian Real (R$)</option><option value="CAD">Canadian Dollar (C$)</option><option value="CHF">Swiss Franc (CHF)</option><option value="CLP">Chilean Peso (CL$)</option><option value="CNY">Chinese Yuan (&#165;)</option><option value="COP">Colombian Peso (CO$)</option><option value="CZK">Czech Republic Koruna (&#75;&#269;)</option><option value="DKK">Danish Krone (kr)</option><option value="EGP">Egyptian Pound (&#163;)</option><option value="EUR">Euro (&euro;)</option><option value="GBP">British Pound (&#163;)</option><option value="HKD">Hong Kong Dollar (HK$)</option><option value="HUF">Hungary Forint (&#70;&#116;)</option><option value="IDR">Indonesian Rupiah (Rp)</option><option value="ILS">Israeli New Shekel (&#8362;)</option><option value="INR">Indian Rupee (&#8360;)</option><option value="JPY">Japanese Yen (&#165;)</option><option value="KRW">South Korean Won (&#65510;)</option><option value="MAD">Moroccan Dirham (&#46;&#1583;&#46;&#1605;)</option><option value="MXN">Mexican Peso (MXN)</option><option value="MYR">Malaysian Ringgit (RM)</option><option value="NOK">Norway Krone (&#107;&#114;)</option><option value="NZD">New Zealand Dollar (NZ$)</option><option value="PEN">Peruvian Nuevo sol (S/.)</option><option value="PHP">Philippine Peso (&#8369;)</option><option value="PKR">Pakistan Rupee (&#8360;)</option><option value="PLN">Polish Zloty (z&#322;)</option><option value="RON">Romania Leu (&#108;&#101;&#105;)</option><option value="RUB">Russia Ruble (&#1088;&#1091;&#1073;)</option><option value="SAR">Saudi Arabia Riyal (&#65020;)</option><option value="SEK">Swedish Krona (kr)</option><option value="SGD">Singapore Dollar (SG$)</option><option value="THB">Thai Baht (&#x0E3F;)</option><option value="TRY">Turkey Lira (TL)</option><option value="TWD">New Taiwan Dollar (NT$)</option><option value="UAH">Ukrainian Hryvnia (&#8372;)</option><option value="USD">United States Dollar ($)</option><option value="UYU">Peso Uruguayo (&#36;&#85;)</option><option value="VEF">Venezuelan bolivar (Bs.)</option><option value="VND">Vietnamese Dong (&#8363;)</option><option value="ZAR">South Africa Rand (&#82;)</option>
+</select>
+</div>
+<div style="margin-bottom:20px;padding-top:10px;">
+The RCC display currency is how prices appear when managing them in the RCC.<br/><br/>Display and transactional currencies for your storefront are managed under <a href="https://reseller.godaddy.com/Products/Currency.aspx?ci=59405">Settings.</a>
+</div>
+</div>
+<div id="saveCancelCurrencyOptions" class="accordian-padding-bottom">
+<a id="saveCurrencyOptions" class="black-css3-button" style="margin-right: 10px;"
+href="javascript:void(0);">Save</a><a id="cancelCurrencyOptions" href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=3&amp;type=405&amp;section=223&amp;groupId=64&amp;groupname=Hosted+Exchange&amp;tab=1&amp;c=true">Cancel</a>
+</div>
+</div>
+</div>
+</div>
+</div>  <div id="processingPopIn" style="display:none;">
+We are processing your request for pricing updates. Please wait a few minutes before making additional updates.
+</div>
+<div style="margin-top: 20px;">
+</div>
+<div class="dialogdiv" id="importExcelPopin" style="display: none;">
+</div>
+<div id="tabs" class="sf-tabs-content-wrap">
+<div class="sf-tabs-content" data-title="New">
+<input type="hidden" class="tabIdx" />
+<div style="padding-bottom: 20px;">
+<div class="productTitle" style="margin-left: 10px;">
+Hosted Exchange
+</div>
+</div>
+<div class="table-top">
+<div class="table-top-right-curve">
+</div>
+<div class="table-top-middle">
+<div class="float-left import-export">
+<a href="Export.aspx?suiteid=3&group=product&type=405&name=Hosted+Exchange&ci=41543" class="offerings-sprite act-icon-export"><span>Export Prices</span></a>
+</div>
+<div class="float-left import-export">
+<a href="javascript:void(0);" id="lnkImportOffering" class="offerings-sprite act-icon-import"><span>Import Prices</span></a>
+</div>
+<div class="float-right last-updated" id="RegisterLastUpdateDate">
+</div>
+</div>
+</div>
+<div class="groupWrapper" style="clear: both;" id="regGroupWrapper">
+<div class="collapse-bar collapse-bar-background" style="clear: both; margin-top: 0;">
+<input type="hidden" class="ProductGroupId" value="64" />
+<input type="hidden" class="PricingSectionId" value="223" />
+<input type="hidden" class="ProductGroupIdAndPricingSectionId" value="64-223" />
+<a href="javascript:void(0);" class="plus"></a><span class="collapse-title">
+Microsoft Outlook</span>
+</div>
+<div class="mainpricingSection" style="display: none;">
+<!--- Main Table Starts Here -->
+<div class="main-table-style" style="clear: both;">
+<table class="regTable" cellspacing="0" cellpadding="0">
+<tr class="header">
+<th>Product</th>
+<th class="rightHeader">Min. Retail</th>
+<th class="rightHeader">Suggested<br />Retail</th>
+<th class="rightHeader">Your Retail</th>
+<th class="rightHeader">Your Sale</th>
+<th>Start Sale</th>
+<th>End Sale</th>
+<th class="rightHeader">Base Buy<br />Rate</th>
+<th class="rightHeader">Retail Profit</th>
+<th class="rightHeader">Sale Profit</th>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Individual (monthly)</span>
+<input type="hidden" id="60720" class="pf-id" value="60720" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60720" value="c80f6f38b26ba7c2fcaeeaece3f46262" />
+<input type="hidden" class="max-retail" id="maxretail_60720" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="223" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$6.99</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$6.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60720" class="price retail-price" data-pfid="60720"
+value="$6.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60720" class="price sale-price" data-pfid="60720"
+value="$6.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60720" class="date sale-start" data-pfid="60720"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60720" class="date sale-end" data-pfid="60720"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60720">
+$5.59</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60720">
+$1.40</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60720">
+$1.40</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Individual (quarterly)</span>
+<input type="hidden" id="60721" class="pf-id" value="60721" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60721" value="25554b424a90bfc33b9d8845bb691363" />
+<input type="hidden" class="max-retail" id="maxretail_60721" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="223" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$20.97</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$20.97</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60721" class="price retail-price" data-pfid="60721"
+value="$20.97" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60721" class="price sale-price" data-pfid="60721"
+value="$20.97" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60721" class="date sale-start" data-pfid="60721"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60721" class="date sale-end" data-pfid="60721"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60721">
+$16.78</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60721">
+$4.19</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60721">
+$4.19</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Individual - 1 Year (annual)</span>
+<input type="hidden" id="60722" class="pf-id" value="60722" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60722" value="63071895a5836900463ec2de0550b9d7" />
+<input type="hidden" class="max-retail" id="maxretail_60722" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="223" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$75.49</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$83.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60722" class="price retail-price" data-pfid="60722"
+value="$83.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60722" class="price sale-price" data-pfid="60722"
+value="$83.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60722" class="date sale-start" data-pfid="60722"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60722" class="date sale-end" data-pfid="60722"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60722">
+$60.39</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60722">
+$23.49</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60722">
+$23.49</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Individual - 2 Years (annual)</span>
+<input type="hidden" id="60723" class="pf-id" value="60723" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60723" value="f95c17cb2761a856c7a65ff77439f5dc" />
+<input type="hidden" class="max-retail" id="maxretail_60723" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="223" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$142.59</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$167.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60723" class="price retail-price" data-pfid="60723"
+value="$167.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60723" class="price sale-price" data-pfid="60723"
+value="$167.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60723" class="date sale-start" data-pfid="60723"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60723" class="date sale-end" data-pfid="60723"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60723">
+$114.08</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60723">
+$53.68</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60723">
+$53.68</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Individual - 3 Years (annual)</span>
+<input type="hidden" id="60724" class="pf-id" value="60724" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60724" value="43bd2fd45a782d9963733a2bb590e476" />
+<input type="hidden" class="max-retail" id="maxretail_60724" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="223" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$213.89</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$251.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60724" class="price retail-price" data-pfid="60724"
+value="$251.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60724" class="price sale-price" data-pfid="60724"
+value="$251.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60724" class="date sale-start" data-pfid="60724"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60724" class="date sale-end" data-pfid="60724"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60724">
+$171.12</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60724">
+$80.52</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60724">
+$80.52</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Individual - 4 Years (annual)</span>
+<input type="hidden" id="60725" class="pf-id" value="60725" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60725" value="58d66f75991c23fb051c4562d91ff8bd" />
+<input type="hidden" class="max-retail" id="maxretail_60725" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="223" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$285.19</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$335.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60725" class="price retail-price" data-pfid="60725"
+value="$335.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60725" class="price sale-price" data-pfid="60725"
+value="$335.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60725" class="date sale-start" data-pfid="60725"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60725" class="date sale-end" data-pfid="60725"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60725">
+$228.15</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60725">
+$107.37</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60725">
+$107.37</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Individual - 5 Years (annual)</span>
+<input type="hidden" id="60726" class="pf-id" value="60726" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60726" value="4d944881fb4f6a6ef633d2e4a2b6bdb0" />
+<input type="hidden" class="max-retail" id="maxretail_60726" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="223" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$356.49</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$419.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60726" class="price retail-price" data-pfid="60726"
+value="$419.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60726" class="price sale-price" data-pfid="60726"
+value="$419.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60726" class="date sale-start" data-pfid="60726"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60726" class="date sale-end" data-pfid="60726"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60726">
+$285.19</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60726">
+$134.21</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60726">
+$134.21</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Individual - 10 Years (annual)</span>
+<input type="hidden" id="60727" class="pf-id" value="60727" />
+<input type="hidden" class="periods" value="10" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60727" value="32c6d6fe6700e16d4ec2f200d82dc338" />
+<input type="hidden" class="max-retail" id="maxretail_60727" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="223" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$712.98</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$838.80</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60727" class="price retail-price" data-pfid="60727"
+value="$838.80" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60727" class="price sale-price" data-pfid="60727"
+value="$838.80" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60727" class="date sale-start" data-pfid="60727"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60727" class="date sale-end" data-pfid="60727"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60727">
+$570.38</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60727">
+$268.42</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60727">
+$268.42</span>
+</td>
+</tr>
+<tr class="save-row">
+<td colspan="10">
+<div>
+<a class="save sectionSave black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=3&amp;type=405&amp;section=223&amp;groupId=64&amp;groupname=Hosted+Exchange&amp;tab=1&amp;c=true" class="cancel">Cancel</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="collapse-bar collapse-bar-background" style="clear: both; margin-top: 0;">
+<input type="hidden" class="ProductGroupId" value="64" />
+<input type="hidden" class="PricingSectionId" value="361" />
+<input type="hidden" class="ProductGroupIdAndPricingSectionId" value="64-361" />
+<a href="javascript:void(0);" class="plus"></a><span class="collapse-title">
+Microsoft Outlook Group</span>
+</div>
+<div class="mainpricingSection" style="display: none;">
+<!--- Main Table Starts Here -->
+<div class="main-table-style" style="clear: both;">
+<table class="regTable" cellspacing="0" cellpadding="0">
+<tr class="header">
+<th>Product</th>
+<th class="rightHeader">Min. Retail</th>
+<th class="rightHeader">Suggested<br />Retail</th>
+<th class="rightHeader">Your Retail</th>
+<th class="rightHeader">Your Sale</th>
+<th>Start Sale</th>
+<th>End Sale</th>
+<th class="rightHeader">Base Buy<br />Rate</th>
+<th class="rightHeader">Retail Profit</th>
+<th class="rightHeader">Sale Profit</th>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Group (includes 3 mailboxes) - 1 Month</span>
+<input type="hidden" id="60746" class="pf-id" value="60746" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60746" value="995d3d133dcd1f7acd135cb6c1577797" />
+<input type="hidden" class="max-retail" id="maxretail_60746" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="361" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$29.99</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$29.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60746" class="price retail-price" data-pfid="60746"
+value="$29.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60746" class="price sale-price" data-pfid="60746"
+value="$29.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60746" class="date sale-start" data-pfid="60746"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60746" class="date sale-end" data-pfid="60746"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60746">
+$26.99</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60746">
+$3.00</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60746">
+$3.00</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Group (includes 3 mailboxes) - Quarterly</span>
+<input type="hidden" id="60747" class="pf-id" value="60747" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60747" value="70fb98991e82055d6254b2ee3dd46ddd" />
+<input type="hidden" class="max-retail" id="maxretail_60747" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="361" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$89.97</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$89.97</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60747" class="price retail-price" data-pfid="60747"
+value="$89.97" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60747" class="price sale-price" data-pfid="60747"
+value="$89.97" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60747" class="date sale-start" data-pfid="60747"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60747" class="date sale-end" data-pfid="60747"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60747">
+$80.73</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60747">
+$9.24</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60747">
+$9.24</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Group (includes 3 mailboxes) - 1 Year</span>
+<input type="hidden" id="60748" class="pf-id" value="60748" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60748" value="6473e1806a094b291ac467f2907994a2" />
+<input type="hidden" class="max-retail" id="maxretail_60748" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="361" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$359.88</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$359.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60748" class="price retail-price" data-pfid="60748"
+value="$359.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60748" class="price sale-price" data-pfid="60748"
+value="$359.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60748" class="date sale-start" data-pfid="60748"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60748" class="date sale-end" data-pfid="60748"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60748">
+$323.89</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60748">
+$35.99</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60748">
+$35.99</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Group (includes 3 mailboxes) - 2 Years</span>
+<input type="hidden" id="60749" class="pf-id" value="60749" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60749" value="8eee99a613933692c13d5ef756aeb502" />
+<input type="hidden" class="max-retail" id="maxretail_60749" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="361" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$719.76</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$719.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60749" class="price retail-price" data-pfid="60749"
+value="$719.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60749" class="price sale-price" data-pfid="60749"
+value="$719.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60749" class="date sale-start" data-pfid="60749"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60749" class="date sale-end" data-pfid="60749"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60749">
+$647.78</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60749">
+$71.98</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60749">
+$71.98</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Group (includes 3 mailboxes) - 3 Years</span>
+<input type="hidden" id="60750" class="pf-id" value="60750" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60750" value="27751d8bffb22cc4c039ae88c9297a6f" />
+<input type="hidden" class="max-retail" id="maxretail_60750" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="361" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1,079.64</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1,079.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60750" class="price retail-price" data-pfid="60750"
+value="$1,079.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60750" class="price sale-price" data-pfid="60750"
+value="$1,079.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60750" class="date sale-start" data-pfid="60750"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60750" class="date sale-end" data-pfid="60750"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60750">
+$971.67</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60750">
+$107.97</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60750">
+$107.97</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Group (includes 3 mailboxes) - 4 Years</span>
+<input type="hidden" id="60751" class="pf-id" value="60751" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60751" value="79a4e1abe85534a1bc8ff1fce44d3794" />
+<input type="hidden" class="max-retail" id="maxretail_60751" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="361" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1,439.52</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1,439.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60751" class="price retail-price" data-pfid="60751"
+value="$1,439.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60751" class="price sale-price" data-pfid="60751"
+value="$1,439.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60751" class="date sale-start" data-pfid="60751"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60751" class="date sale-end" data-pfid="60751"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60751">
+$1,295.56</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60751">
+$143.96</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60751">
+$143.96</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Group (includes 3 mailboxes) - 5 Years</span>
+<input type="hidden" id="60752" class="pf-id" value="60752" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60752" value="0ee48afab47e704e631d7ddb7910ab2a" />
+<input type="hidden" class="max-retail" id="maxretail_60752" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="361" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1,799.40</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1,799.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60752" class="price retail-price" data-pfid="60752"
+value="$1,799.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60752" class="price sale-price" data-pfid="60752"
+value="$1,799.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60752" class="date sale-start" data-pfid="60752"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60752" class="date sale-end" data-pfid="60752"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60752">
+$1,619.46</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60752">
+$179.94</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60752">
+$179.94</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Group (includes 3 mailboxes) - 10 Years</span>
+<input type="hidden" id="60753" class="pf-id" value="60753" />
+<input type="hidden" class="periods" value="10" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60753" value="5e0d743b81a7a63d9591c16244d7e3a8" />
+<input type="hidden" class="max-retail" id="maxretail_60753" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="361" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$3,598.80</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$3,598.80</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60753" class="price retail-price" data-pfid="60753"
+value="$3,598.80" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60753" class="price sale-price" data-pfid="60753"
+value="$3,598.80" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60753" class="date sale-start" data-pfid="60753"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60753" class="date sale-end" data-pfid="60753"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60753">
+$3,238.92</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60753">
+$359.88</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60753">
+$359.88</span>
+</td>
+</tr>
+<tr class="save-row">
+<td colspan="10">
+<div>
+<a class="save sectionSave black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=3&amp;type=405&amp;section=223&amp;groupId=64&amp;groupname=Hosted+Exchange&amp;tab=1&amp;c=true" class="cancel">Cancel</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="collapse-bar collapse-bar-background" style="clear: both; margin-top: 0;">
+<input type="hidden" class="ProductGroupId" value="64" />
+<input type="hidden" class="PricingSectionId" value="230" />
+<input type="hidden" class="ProductGroupIdAndPricingSectionId" value="64-230" />
+<a href="javascript:void(0);" class="plus"></a><span class="collapse-title">
+Microsoft Outlook with Mobile</span>
+</div>
+<div class="mainpricingSection" style="display: none;">
+<!--- Main Table Starts Here -->
+<div class="main-table-style" style="clear: both;">
+<table class="regTable" cellspacing="0" cellpadding="0">
+<tr class="header">
+<th>Product</th>
+<th class="rightHeader">Min. Retail</th>
+<th class="rightHeader">Suggested<br />Retail</th>
+<th class="rightHeader">Your Retail</th>
+<th class="rightHeader">Your Sale</th>
+<th>Start Sale</th>
+<th>End Sale</th>
+<th class="rightHeader">Base Buy<br />Rate</th>
+<th class="rightHeader">Retail Profit</th>
+<th class="rightHeader">Sale Profit</th>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook with Mobile (2 GB Total/1 Box) (monthly)</span>
+<input type="hidden" id="60728" class="pf-id" value="60728" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60728" value="2bfb1605e961704fccd223896dd1c9f4" />
+<input type="hidden" class="max-retail" id="maxretail_60728" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="230" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$9.99</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$9.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60728" class="price retail-price" data-pfid="60728"
+value="$9.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60728" class="price sale-price" data-pfid="60728"
+value="$9.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60728" class="date sale-start" data-pfid="60728"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60728" class="date sale-end" data-pfid="60728"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60728">
+$7.99</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60728">
+$2.00</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60728">
+$2.00</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook with Mobile (2 GB Total/1 Box) (quarterly)</span>
+<input type="hidden" id="60729" class="pf-id" value="60729" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60729" value="35bd12027939e67fede84e5a3b90c053" />
+<input type="hidden" class="max-retail" id="maxretail_60729" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="230" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$29.97</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$29.97</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60729" class="price retail-price" data-pfid="60729"
+value="$29.97" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60729" class="price sale-price" data-pfid="60729"
+value="$29.97" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60729" class="date sale-start" data-pfid="60729"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60729" class="date sale-end" data-pfid="60729"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60729">
+$23.98</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60729">
+$5.99</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60729">
+$5.99</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook with Mobile (2 GB Total/1 Box) - 1 Year (annual)</span>
+<input type="hidden" id="60730" class="pf-id" value="60730" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60730" value="63e613ddafbdef670ea0c0664f50989e" />
+<input type="hidden" class="max-retail" id="maxretail_60730" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="230" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$107.89</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$119.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60730" class="price retail-price" data-pfid="60730"
+value="$119.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60730" class="price sale-price" data-pfid="60730"
+value="$119.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60730" class="date sale-start" data-pfid="60730"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60730" class="date sale-end" data-pfid="60730"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60730">
+$86.31</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60730">
+$33.57</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60730">
+$33.57</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook with Mobile (2 GB Total/1 Box) - 2 Years (annual)</span>
+<input type="hidden" id="60731" class="pf-id" value="60731" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60731" value="1c7ac7c89edcd53ef6593bec60753ed9" />
+<input type="hidden" class="max-retail" id="maxretail_60731" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="230" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$203.79</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$239.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60731" class="price retail-price" data-pfid="60731"
+value="$239.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60731" class="price sale-price" data-pfid="60731"
+value="$239.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60731" class="date sale-start" data-pfid="60731"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60731" class="date sale-end" data-pfid="60731"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60731">
+$163.04</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60731">
+$76.72</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60731">
+$76.72</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook with Mobile (2 GB Total/1 Box) - 3 Years (annual)</span>
+<input type="hidden" id="60732" class="pf-id" value="60732" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60732" value="a826917b22b0a4a2a98b98a53e5b8359" />
+<input type="hidden" class="max-retail" id="maxretail_60732" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="230" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$305.69</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$359.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60732" class="price retail-price" data-pfid="60732"
+value="$359.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60732" class="price sale-price" data-pfid="60732"
+value="$359.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60732" class="date sale-start" data-pfid="60732"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60732" class="date sale-end" data-pfid="60732"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60732">
+$244.56</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60732">
+$115.08</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60732">
+$115.08</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook with Mobile (2 GB Total/1 Box) - 4 Years (annual)</span>
+<input type="hidden" id="60733" class="pf-id" value="60733" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60733" value="3adc37c1672016a87aaaadc61c840efc" />
+<input type="hidden" class="max-retail" id="maxretail_60733" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="230" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$407.59</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$479.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60733" class="price retail-price" data-pfid="60733"
+value="$479.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60733" class="price sale-price" data-pfid="60733"
+value="$479.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60733" class="date sale-start" data-pfid="60733"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60733" class="date sale-end" data-pfid="60733"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60733">
+$326.07</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60733">
+$153.45</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60733">
+$153.45</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook with Mobile (2 GB Total/1 Box) - 5 Years (annual)</span>
+<input type="hidden" id="60734" class="pf-id" value="60734" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60734" value="951212b549953316cb63484e13a6991c" />
+<input type="hidden" class="max-retail" id="maxretail_60734" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="230" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$509.49</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$599.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60734" class="price retail-price" data-pfid="60734"
+value="$599.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60734" class="price sale-price" data-pfid="60734"
+value="$599.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60734" class="date sale-start" data-pfid="60734"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60734" class="date sale-end" data-pfid="60734"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60734">
+$407.59</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60734">
+$191.81</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60734">
+$191.81</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook with Mobile (2 GB Total/1 Box) - 10 Years (annual)</span>
+<input type="hidden" id="60735" class="pf-id" value="60735" />
+<input type="hidden" class="periods" value="10" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60735" value="d568f95d01db615ccb08e0570ce50227" />
+<input type="hidden" class="max-retail" id="maxretail_60735" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="230" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1,018.98</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1,198.80</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60735" class="price retail-price" data-pfid="60735"
+value="$1,198.80" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60735" class="price sale-price" data-pfid="60735"
+value="$1,198.80" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60735" class="date sale-start" data-pfid="60735"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60735" class="date sale-end" data-pfid="60735"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60735">
+$815.18</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60735">
+$383.62</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60735">
+$383.62</span>
+</td>
+</tr>
+<tr class="save-row">
+<td colspan="10">
+<div>
+<a class="save sectionSave black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=3&amp;type=405&amp;section=223&amp;groupId=64&amp;groupname=Hosted+Exchange&amp;tab=1&amp;c=true" class="cancel">Cancel</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="collapse-bar collapse-bar-background" style="clear: both; margin-top: 0;">
+<input type="hidden" class="ProductGroupId" value="64" />
+<input type="hidden" class="PricingSectionId" value="232" />
+<input type="hidden" class="ProductGroupIdAndPricingSectionId" value="64-232" />
+<a href="javascript:void(0);" class="plus"></a><span class="collapse-title">
+Microsoft Outlook Group with Mobile</span>
+</div>
+<div class="mainpricingSection" style="display: none;">
+<!--- Main Table Starts Here -->
+<div class="main-table-style" style="clear: both;">
+<table class="regTable" cellspacing="0" cellpadding="0">
+<tr class="header">
+<th>Product</th>
+<th class="rightHeader">Min. Retail</th>
+<th class="rightHeader">Suggested<br />Retail</th>
+<th class="rightHeader">Your Retail</th>
+<th class="rightHeader">Your Sale</th>
+<th>Start Sale</th>
+<th>End Sale</th>
+<th class="rightHeader">Base Buy<br />Rate</th>
+<th class="rightHeader">Retail Profit</th>
+<th class="rightHeader">Sale Profit</th>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Group with Mobile (20 GB Total/5 Boxes) (monthly)</span>
+<input type="hidden" id="60736" class="pf-id" value="60736" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60736" value="19a5280dfd9901d913d04ddd10102ceb" />
+<input type="hidden" class="max-retail" id="maxretail_60736" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="232" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$59.99</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$59.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60736" class="price retail-price" data-pfid="60736"
+value="$59.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60736" class="price sale-price" data-pfid="60736"
+value="$59.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60736" class="date sale-start" data-pfid="60736"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60736" class="date sale-end" data-pfid="60736"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60736">
+$47.99</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60736">
+$12.00</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60736">
+$12.00</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Group with Mobile (20 GB Total/5 Boxes) (quarterly)</span>
+<input type="hidden" id="60737" class="pf-id" value="60737" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60737" value="ca7b8461fe4b1f17e66795a10db10114" />
+<input type="hidden" class="max-retail" id="maxretail_60737" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="232" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$170.97</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$179.97</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60737" class="price retail-price" data-pfid="60737"
+value="$179.97" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60737" class="price sale-price" data-pfid="60737"
+value="$179.97" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60737" class="date sale-start" data-pfid="60737"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60737" class="date sale-end" data-pfid="60737"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60737">
+$136.78</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60737">
+$43.19</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60737">
+$43.19</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Group with Mobile (20 GB Total/5 Boxes) - 1 Year (annual)</span>
+<input type="hidden" id="60738" class="pf-id" value="60738" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60738" value="e875d99062eeca7e6c312a35aed1402a" />
+<input type="hidden" class="max-retail" id="maxretail_60738" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="232" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$647.89</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$719.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60738" class="price retail-price" data-pfid="60738"
+value="$719.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60738" class="price sale-price" data-pfid="60738"
+value="$719.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60738" class="date sale-start" data-pfid="60738"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60738" class="date sale-end" data-pfid="60738"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60738">
+$518.31</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60738">
+$201.57</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60738">
+$201.57</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Group with Mobile (20 GB Total/5 Boxes) - 2 Years (annual)</span>
+<input type="hidden" id="60739" class="pf-id" value="60739" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60739" value="45a658fa0d6a77e253e0f07ad23e2530" />
+<input type="hidden" class="max-retail" id="maxretail_60739" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="232" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1,223.79</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1,439.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60739" class="price retail-price" data-pfid="60739"
+value="$1,439.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60739" class="price sale-price" data-pfid="60739"
+value="$1,439.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60739" class="date sale-start" data-pfid="60739"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60739" class="date sale-end" data-pfid="60739"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60739">
+$979.04</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60739">
+$460.72</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60739">
+$460.72</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Group with Mobile (20 GB Total/5 Boxes) - 3 Years (annual)</span>
+<input type="hidden" id="60740" class="pf-id" value="60740" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60740" value="9c21690568476873cdde40cc0fb0529e" />
+<input type="hidden" class="max-retail" id="maxretail_60740" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="232" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1,835.69</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$2,159.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60740" class="price retail-price" data-pfid="60740"
+value="$2,159.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60740" class="price sale-price" data-pfid="60740"
+value="$2,159.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60740" class="date sale-start" data-pfid="60740"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60740" class="date sale-end" data-pfid="60740"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60740">
+$1,468.56</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60740">
+$691.08</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60740">
+$691.08</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Group with Mobile (20 GB Total/5 Boxes) - 4 Years (annual)</span>
+<input type="hidden" id="60741" class="pf-id" value="60741" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60741" value="0091c46d847accff9e01b67b1f8976af" />
+<input type="hidden" class="max-retail" id="maxretail_60741" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="232" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$2,447.59</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$2,879.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60741" class="price retail-price" data-pfid="60741"
+value="$2,879.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60741" class="price sale-price" data-pfid="60741"
+value="$2,879.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60741" class="date sale-start" data-pfid="60741"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60741" class="date sale-end" data-pfid="60741"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60741">
+$1,958.07</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60741">
+$921.45</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60741">
+$921.45</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Group with Mobile (20 GB Total/5 Boxes) - 5 Years (annual)</span>
+<input type="hidden" id="60742" class="pf-id" value="60742" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60742" value="50b5ca359b4552527f8087db12d3cfc4" />
+<input type="hidden" class="max-retail" id="maxretail_60742" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="232" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$3,059.49</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$3,599.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60742" class="price retail-price" data-pfid="60742"
+value="$3,599.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60742" class="price sale-price" data-pfid="60742"
+value="$3,599.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60742" class="date sale-start" data-pfid="60742"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60742" class="date sale-end" data-pfid="60742"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60742">
+$2,447.59</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60742">
+$1,151.81</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60742">
+$1,151.81</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Group with Mobile (20 GB Total/5 Boxes) - 10 Years (annual)</span>
+<input type="hidden" id="60743" class="pf-id" value="60743" />
+<input type="hidden" class="periods" value="10" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60743" value="3fccc1c96a9033fc581ec0c353469df7" />
+<input type="hidden" class="max-retail" id="maxretail_60743" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="232" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$6,118.98</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$7,198.80</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60743" class="price retail-price" data-pfid="60743"
+value="$7,198.80" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60743" class="price sale-price" data-pfid="60743"
+value="$7,198.80" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60743" class="date sale-start" data-pfid="60743"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60743" class="date sale-end" data-pfid="60743"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60743">
+$4,895.18</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60743">
+$2,303.62</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60743">
+$2,303.62</span>
+</td>
+</tr>
+<tr class="save-row">
+<td colspan="10">
+<div>
+<a class="save sectionSave black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=3&amp;type=405&amp;section=223&amp;groupId=64&amp;groupname=Hosted+Exchange&amp;tab=1&amp;c=true" class="cancel">Cancel</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="collapse-bar collapse-bar-background" style="clear: both; margin-top: 0;">
+<input type="hidden" class="ProductGroupId" value="64" />
+<input type="hidden" class="PricingSectionId" value="225" />
+<input type="hidden" class="ProductGroupIdAndPricingSectionId" value="64-225" />
+<a href="javascript:void(0);" class="plus"></a><span class="collapse-title">
+Microsoft Outlook - Addon</span>
+</div>
+<div class="mainpricingSection" style="display: none;">
+<!--- Main Table Starts Here -->
+<div class="main-table-style" style="clear: both;">
+<table class="regTable" cellspacing="0" cellpadding="0">
+<tr class="header">
+<th>Product</th>
+<th class="rightHeader">Min. Retail</th>
+<th class="rightHeader">Suggested<br />Retail</th>
+<th class="rightHeader">Your Retail</th>
+<th class="rightHeader">Your Sale</th>
+<th>Start Sale</th>
+<th>End Sale</th>
+<th class="rightHeader">Base Buy<br />Rate</th>
+<th class="rightHeader">Retail Profit</th>
+<th class="rightHeader">Sale Profit</th>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Storage Upgrade (1000 MB Total)</span>
+<input type="hidden" id="60744" class="pf-id" value="60744" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60744" value="1dde5d41f6fc77ef7b315e302c893d76" />
+<input type="hidden" class="max-retail" id="maxretail_60744" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="225" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1.00</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1.00</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60744" class="price retail-price" data-pfid="60744"
+value="$1.00" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60744" class="price sale-price" data-pfid="60744"
+value="$1.00" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60744" class="date sale-start" data-pfid="60744"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60744" class="date sale-end" data-pfid="60744"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60744">
+$0.80</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60744">
+$0.20</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60744">
+$0.20</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Outlook Sharepoint Storage Upgrade (1000 MB Total) (annual)</span>
+<input type="hidden" id="200" class="pf-id" value="200" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_200" value="bc06258590128d44504aa63bf902fa29" />
+<input type="hidden" class="max-retail" id="maxretail_200" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="225" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1.00</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1.00</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_200" class="price retail-price" data-pfid="200"
+value="$1.00" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_200" class="price sale-price" data-pfid="200"
+value="$1.00" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_200" class="date sale-start" data-pfid="200"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_200" class="date sale-end" data-pfid="200"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_200">
+$0.80</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_200">
+$0.20</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_200">
+$0.20</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Enable Blackberry on Mailbox</span>
+<input type="hidden" id="60755" class="pf-id" value="60755" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60755" value="725e696f46fcba6e423eece3eff6b415" />
+<input type="hidden" class="max-retail" id="maxretail_60755" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="225" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$3.00</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$3.00</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60755" class="price retail-price" data-pfid="60755"
+value="$3.00" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60755" class="price sale-price" data-pfid="60755"
+value="$3.00" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60755" class="date sale-start" data-pfid="60755"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60755" class="date sale-end" data-pfid="60755"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60755">
+$2.50</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60755">
+$0.50</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60755">
+$0.50</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Additional Mailbox</span>
+<input type="hidden" id="60754" class="pf-id" value="60754" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_60754" value="1fb465fe60fbd842b574640cb2e37828" />
+<input type="hidden" class="max-retail" id="maxretail_60754" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="225" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$6.00</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$6.00</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_60754" class="price retail-price" data-pfid="60754"
+value="$6.00" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_60754" class="price sale-price" data-pfid="60754"
+value="$6.00" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_60754" class="date sale-start" data-pfid="60754"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_60754" class="date sale-end" data-pfid="60754"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_60754">
+$5.00</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_60754">
+$1.00</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_60754">
+$1.00</span>
+</td>
+</tr>
+<tr class="save-row">
+<td colspan="10">
+<div>
+<a class="save sectionSave black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=3&amp;type=405&amp;section=223&amp;groupId=64&amp;groupname=Hosted+Exchange&amp;tab=1&amp;c=true" class="cancel">Cancel</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sf-tabs-content" data-title="Renewals">
+<input type="hidden" class="tabIdx" />
+<div style="padding-bottom: 20px;">
+<div class="productTitle" style="margin-left: 10px;">
+Hosted Exchange
+Renewals
+</div>
+</div>
+<div class="table-top">
+<div class="table-top-right-curve">
+</div>
+<div class="table-top-middle">
+<div class="float-left import-export">
+<a href="Export.aspx?suiteid=3&group=product&type=405&name=Hosted+Exchange&ci=41543" class="offerings-sprite act-icon-export"><span>Export Prices</span></a>
+</div>
+<div class="float-left import-export">
+<a href="javascript:void(0);" id="lnkImportRenewal" class="offerings-sprite act-icon-import"><span>Import Prices</span></a>
+</div>
+<div class="float-left" style="margin: 12px 0 0 15px; border-left: 1px dashed #c9c9c9; padding-left: 15px;">
+<ul class="banner-size-dropdown">
+<li>
+<a href="javascript:void(0);" id="ddmatch-btn" class="match-btn sf-btn-pil"><span class="sf-icn-pil sf-icn-pil-edit"></span>Match New Product Pricing <span class="dropdown-arrow-container"><span class="sf-icn-descend sf-icn drop-arrow"></span></span></a>
+<ul id="priceMatch" style="margin: -5px 0 0 13px;">
+<li><a href="javascript:void(0);" class="lnk_selectbanner" data-value="0">All Prices</a></li>
+<li><a href="javascript:void(0);" class="lnk_selectbanner" data-value="1">Retail Prices</a></li>
+<li><a href="javascript:void(0);" class="lnk_selectbanner" data-value="2">Sale Prices</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="float-left ajax-spinner" id="matchSpinner" style="margin-left: 375px; display: none;"></div>
+<div class="float-right last-updated" id="RenewLastUpdateDate">
+</div>
+</div>
+</div>
+<div class="groupWrapper" style="clear: both;" id="renewWrapper">
+<div class="collapse-bar collapse-bar-background" style="clear: both; margin-top: 0;">
+<input type="hidden" class="ProductGroupId" value="64" />
+<input type="hidden" class="PricingSectionId" value="224" />
+<input type="hidden" class="ProductGroupIdAndPricingSectionId" value="64-224" />
+<a href="javascript:void(0);" class="plus"></a><span class="collapse-title">
+Microsoft Outlook - Renewal</span>
+</div>
+<div class="mainpricingSection" style="display: none;">
+<!--- Main Table Starts Here -->
+<div class="main-table-style">
+<table class="renewTable" cellspacing="0" cellpadding="0">
+<tr class="header">
+<th>Product</th>
+<th class="rightHeader">Min. Retail</th>
+<th class="rightHeader">Suggested<br />Retail</th>
+<th class="rightHeader">Your Retail</th>
+<th class="rightHeader">Your Sale</th>
+<th>Start Sale</th>
+<th>End Sale</th>
+<th class="rightHeader">Base Buy<br />Rate</th>
+<th class="rightHeader">Retail Profit</th>
+<th class="rightHeader">Sale Profit</th>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Individual - Renewal (monthly)</span>
+<input type="hidden" id="70720" class="pf-id" value="70720" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70720" value="4cb2e4edbe5ecfa3fd1f63ee80a0d945" />
+<input type="hidden" class="max-retail" id="maxretail_70720" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="224" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$6.99</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$6.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70720" class="price retail-price" data-pfid="70720"
+value="$6.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70720" class="price sale-price" data-pfid="70720"
+value="$6.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70720" class="date sale-start" data-pfid="70720"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70720" class="date sale-end" data-pfid="70720"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70720">
+$5.59</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70720">
+$1.40</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70720">
+$1.40</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Individual - Renewal (quarterly)</span>
+<input type="hidden" id="70721" class="pf-id" value="70721" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70721" value="bbaaf8c56facef7de640ddff4bb3645a" />
+<input type="hidden" class="max-retail" id="maxretail_70721" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="224" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$20.97</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$20.97</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70721" class="price retail-price" data-pfid="70721"
+value="$20.97" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70721" class="price sale-price" data-pfid="70721"
+value="$20.97" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70721" class="date sale-start" data-pfid="70721"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70721" class="date sale-end" data-pfid="70721"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70721">
+$16.78</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70721">
+$4.19</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70721">
+$4.19</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Individual - Renewal - 1 Year (annual)</span>
+<input type="hidden" id="70722" class="pf-id" value="70722" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70722" value="75de1cf6031578f89cbd3cfbe774e495" />
+<input type="hidden" class="max-retail" id="maxretail_70722" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="224" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$75.49</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$83.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70722" class="price retail-price" data-pfid="70722"
+value="$83.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70722" class="price sale-price" data-pfid="70722"
+value="$83.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70722" class="date sale-start" data-pfid="70722"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70722" class="date sale-end" data-pfid="70722"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70722">
+$60.39</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70722">
+$23.49</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70722">
+$23.49</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Individual - Renewal - 2 Years (annual)</span>
+<input type="hidden" id="70723" class="pf-id" value="70723" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70723" value="cb69d261aedb274e5f8863dd3b778c72" />
+<input type="hidden" class="max-retail" id="maxretail_70723" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="224" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$142.59</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$167.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70723" class="price retail-price" data-pfid="70723"
+value="$167.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70723" class="price sale-price" data-pfid="70723"
+value="$167.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70723" class="date sale-start" data-pfid="70723"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70723" class="date sale-end" data-pfid="70723"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70723">
+$114.08</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70723">
+$53.68</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70723">
+$53.68</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Individual - Renewal - 3 Years (annual)</span>
+<input type="hidden" id="70724" class="pf-id" value="70724" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70724" value="79ef91c919347b9df3c9155c57df2d73" />
+<input type="hidden" class="max-retail" id="maxretail_70724" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="224" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$213.89</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$251.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70724" class="price retail-price" data-pfid="70724"
+value="$251.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70724" class="price sale-price" data-pfid="70724"
+value="$251.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70724" class="date sale-start" data-pfid="70724"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70724" class="date sale-end" data-pfid="70724"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70724">
+$171.12</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70724">
+$80.52</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70724">
+$80.52</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Individual - Renewal - 4 Years (annual)</span>
+<input type="hidden" id="70725" class="pf-id" value="70725" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70725" value="5dba1b9db85793b3d871b89194a13703" />
+<input type="hidden" class="max-retail" id="maxretail_70725" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="224" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$285.19</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$335.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70725" class="price retail-price" data-pfid="70725"
+value="$335.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70725" class="price sale-price" data-pfid="70725"
+value="$335.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70725" class="date sale-start" data-pfid="70725"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70725" class="date sale-end" data-pfid="70725"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70725">
+$228.15</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70725">
+$107.37</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70725">
+$107.37</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Individual - Renewal - 5 Years (annual)</span>
+<input type="hidden" id="70726" class="pf-id" value="70726" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70726" value="94720f4f5c065197a380a16416272865" />
+<input type="hidden" class="max-retail" id="maxretail_70726" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="224" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$356.49</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$419.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70726" class="price retail-price" data-pfid="70726"
+value="$419.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70726" class="price sale-price" data-pfid="70726"
+value="$419.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70726" class="date sale-start" data-pfid="70726"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70726" class="date sale-end" data-pfid="70726"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70726">
+$285.19</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70726">
+$134.21</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70726">
+$134.21</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Individual - Renewal - 10 Years (annual)</span>
+<input type="hidden" id="70727" class="pf-id" value="70727" />
+<input type="hidden" class="periods" value="10" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70727" value="9ff70676dad37e437cb541cb4c682ef3" />
+<input type="hidden" class="max-retail" id="maxretail_70727" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="224" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$712.98</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$838.80</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70727" class="price retail-price" data-pfid="70727"
+value="$838.80" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70727" class="price sale-price" data-pfid="70727"
+value="$838.80" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70727" class="date sale-start" data-pfid="70727"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70727" class="date sale-end" data-pfid="70727"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70727">
+$570.38</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70727">
+$268.42</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70727">
+$268.42</span>
+</td>
+</tr>
+<tr class="save-row">
+<td colspan="10">
+<div>
+<a class="save sectionSave black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=3&amp;type=405&amp;section=223&amp;groupId=64&amp;groupname=Hosted+Exchange&amp;tab=1&amp;c=true" class="cancel">Cancel</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="collapse-bar collapse-bar-background" style="clear: both; margin-top: 0;">
+<input type="hidden" class="ProductGroupId" value="64" />
+<input type="hidden" class="PricingSectionId" value="362" />
+<input type="hidden" class="ProductGroupIdAndPricingSectionId" value="64-362" />
+<a href="javascript:void(0);" class="plus"></a><span class="collapse-title">
+Microsoft Outlook Group - Renewal</span>
+</div>
+<div class="mainpricingSection" style="display: none;">
+<!--- Main Table Starts Here -->
+<div class="main-table-style">
+<table class="renewTable" cellspacing="0" cellpadding="0">
+<tr class="header">
+<th>Product</th>
+<th class="rightHeader">Min. Retail</th>
+<th class="rightHeader">Suggested<br />Retail</th>
+<th class="rightHeader">Your Retail</th>
+<th class="rightHeader">Your Sale</th>
+<th>Start Sale</th>
+<th>End Sale</th>
+<th class="rightHeader">Base Buy<br />Rate</th>
+<th class="rightHeader">Retail Profit</th>
+<th class="rightHeader">Sale Profit</th>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Group (includes 3 mailboxes) - Renewal - 1 Month</span>
+<input type="hidden" id="70746" class="pf-id" value="70746" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70746" value="20725c280404b948947d2b75da6f0689" />
+<input type="hidden" class="max-retail" id="maxretail_70746" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="362" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$26.99</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$29.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70746" class="price retail-price" data-pfid="70746"
+value="$29.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70746" class="price sale-price" data-pfid="70746"
+value="$29.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70746" class="date sale-start" data-pfid="70746"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70746" class="date sale-end" data-pfid="70746"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70746">
+$25.49</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70746">
+$4.50</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70746">
+$4.50</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Group (includes 3 mailboxes) - Renewal - Quarterly</span>
+<input type="hidden" id="70747" class="pf-id" value="70747" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70747" value="e6994c49ad0c9628e035c57f55eaeac2" />
+<input type="hidden" class="max-retail" id="maxretail_70747" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="362" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$80.73</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$89.97</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70747" class="price retail-price" data-pfid="70747"
+value="$89.97" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70747" class="price sale-price" data-pfid="70747"
+value="$89.97" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70747" class="date sale-start" data-pfid="70747"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70747" class="date sale-end" data-pfid="70747"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70747">
+$76.47</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70747">
+$13.50</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70747">
+$13.50</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Group (includes 3 mailboxes) - Renewal - 1 Year</span>
+<input type="hidden" id="70748" class="pf-id" value="70748" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70748" value="4af314a610cf716dac27f526d092136e" />
+<input type="hidden" class="max-retail" id="maxretail_70748" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="362" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$323.89</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$359.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70748" class="price retail-price" data-pfid="70748"
+value="$359.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70748" class="price sale-price" data-pfid="70748"
+value="$359.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70748" class="date sale-start" data-pfid="70748"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70748" class="date sale-end" data-pfid="70748"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70748">
+$305.89</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70748">
+$53.99</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70748">
+$53.99</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Group (includes 3 mailboxes) - Renewal - 2 Years</span>
+<input type="hidden" id="70749" class="pf-id" value="70749" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70749" value="62e4c0b730538f3af6ff43a1bfd37560" />
+<input type="hidden" class="max-retail" id="maxretail_70749" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="362" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$647.78</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$719.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70749" class="price retail-price" data-pfid="70749"
+value="$719.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70749" class="price sale-price" data-pfid="70749"
+value="$719.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70749" class="date sale-start" data-pfid="70749"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70749" class="date sale-end" data-pfid="70749"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70749">
+$611.79</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70749">
+$107.97</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70749">
+$107.97</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Group (includes 3 mailboxes) - Renewal - 3 Years</span>
+<input type="hidden" id="70750" class="pf-id" value="70750" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70750" value="91fb71b5760b1c53e418678b6fd75804" />
+<input type="hidden" class="max-retail" id="maxretail_70750" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="362" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$971.67</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1,079.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70750" class="price retail-price" data-pfid="70750"
+value="$1,079.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70750" class="price sale-price" data-pfid="70750"
+value="$1,079.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70750" class="date sale-start" data-pfid="70750"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70750" class="date sale-end" data-pfid="70750"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70750">
+$917.69</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70750">
+$161.95</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70750">
+$161.95</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Group (includes 3 mailboxes) - Renewal - 4 Years</span>
+<input type="hidden" id="70751" class="pf-id" value="70751" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70751" value="089b0f98af08de111966de20f83102e7" />
+<input type="hidden" class="max-retail" id="maxretail_70751" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="362" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1,295.56</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1,439.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70751" class="price retail-price" data-pfid="70751"
+value="$1,439.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70751" class="price sale-price" data-pfid="70751"
+value="$1,439.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70751" class="date sale-start" data-pfid="70751"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70751" class="date sale-end" data-pfid="70751"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70751">
+$1,223.59</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70751">
+$215.93</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70751">
+$215.93</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Group (includes 3 mailboxes) - Renewal - 5 Years</span>
+<input type="hidden" id="70752" class="pf-id" value="70752" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70752" value="03bc1599fd47507200e7fde9c28cd893" />
+<input type="hidden" class="max-retail" id="maxretail_70752" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="362" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1,619.46</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1,799.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70752" class="price retail-price" data-pfid="70752"
+value="$1,799.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70752" class="price sale-price" data-pfid="70752"
+value="$1,799.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70752" class="date sale-start" data-pfid="70752"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70752" class="date sale-end" data-pfid="70752"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70752">
+$1,529.49</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70752">
+$269.91</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70752">
+$269.91</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Group (includes 3 mailboxes) - Renewal - 10 Years</span>
+<input type="hidden" id="70753" class="pf-id" value="70753" />
+<input type="hidden" class="periods" value="10" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70753" value="955d926acdd3d7987c7ae0a82c79150c" />
+<input type="hidden" class="max-retail" id="maxretail_70753" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="362" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$3,238.92</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$3,598.80</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70753" class="price retail-price" data-pfid="70753"
+value="$3,598.80" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70753" class="price sale-price" data-pfid="70753"
+value="$3,598.80" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70753" class="date sale-start" data-pfid="70753"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70753" class="date sale-end" data-pfid="70753"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70753">
+$3,058.98</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70753">
+$539.82</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70753">
+$539.82</span>
+</td>
+</tr>
+<tr class="save-row">
+<td colspan="10">
+<div>
+<a class="save sectionSave black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=3&amp;type=405&amp;section=223&amp;groupId=64&amp;groupname=Hosted+Exchange&amp;tab=1&amp;c=true" class="cancel">Cancel</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="collapse-bar collapse-bar-background" style="clear: both; margin-top: 0;">
+<input type="hidden" class="ProductGroupId" value="64" />
+<input type="hidden" class="PricingSectionId" value="231" />
+<input type="hidden" class="ProductGroupIdAndPricingSectionId" value="64-231" />
+<a href="javascript:void(0);" class="plus"></a><span class="collapse-title">
+Microsoft Outlook with Mobile - Renewal</span>
+</div>
+<div class="mainpricingSection" style="display: none;">
+<!--- Main Table Starts Here -->
+<div class="main-table-style">
+<table class="renewTable" cellspacing="0" cellpadding="0">
+<tr class="header">
+<th>Product</th>
+<th class="rightHeader">Min. Retail</th>
+<th class="rightHeader">Suggested<br />Retail</th>
+<th class="rightHeader">Your Retail</th>
+<th class="rightHeader">Your Sale</th>
+<th>Start Sale</th>
+<th>End Sale</th>
+<th class="rightHeader">Base Buy<br />Rate</th>
+<th class="rightHeader">Retail Profit</th>
+<th class="rightHeader">Sale Profit</th>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook with Mobile (2 GB Total/1 Box) - Renewal (monthly)</span>
+<input type="hidden" id="70728" class="pf-id" value="70728" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70728" value="9b5bc3b8e4d1bf342831446abb0b3ee2" />
+<input type="hidden" class="max-retail" id="maxretail_70728" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="231" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$9.99</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$9.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70728" class="price retail-price" data-pfid="70728"
+value="$9.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70728" class="price sale-price" data-pfid="70728"
+value="$9.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70728" class="date sale-start" data-pfid="70728"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70728" class="date sale-end" data-pfid="70728"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70728">
+$7.99</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70728">
+$2.00</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70728">
+$2.00</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook with Mobile (2 GB Total/1 Box) - Renewal (quarterly)</span>
+<input type="hidden" id="70729" class="pf-id" value="70729" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70729" value="2174c1e2c1200362099f50be7e092ac0" />
+<input type="hidden" class="max-retail" id="maxretail_70729" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="231" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$29.97</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$29.97</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70729" class="price retail-price" data-pfid="70729"
+value="$29.97" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70729" class="price sale-price" data-pfid="70729"
+value="$29.97" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70729" class="date sale-start" data-pfid="70729"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70729" class="date sale-end" data-pfid="70729"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70729">
+$23.98</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70729">
+$5.99</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70729">
+$5.99</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook with Mobile (2 GB Total/1 Box) - Renewal - 1 Year (annual)</span>
+<input type="hidden" id="70730" class="pf-id" value="70730" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70730" value="9e0f4f5975de2bda75bf4e0f5fc2e890" />
+<input type="hidden" class="max-retail" id="maxretail_70730" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="231" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$107.89</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$119.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70730" class="price retail-price" data-pfid="70730"
+value="$119.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70730" class="price sale-price" data-pfid="70730"
+value="$119.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70730" class="date sale-start" data-pfid="70730"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70730" class="date sale-end" data-pfid="70730"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70730">
+$86.31</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70730">
+$33.57</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70730">
+$33.57</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook with Mobile (2 GB Total/1 Box) - Renewal - 2 Years (annual)</span>
+<input type="hidden" id="70731" class="pf-id" value="70731" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70731" value="b5a51ba931599d6538a4609cafa1098e" />
+<input type="hidden" class="max-retail" id="maxretail_70731" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="231" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$203.79</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$239.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70731" class="price retail-price" data-pfid="70731"
+value="$239.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70731" class="price sale-price" data-pfid="70731"
+value="$239.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70731" class="date sale-start" data-pfid="70731"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70731" class="date sale-end" data-pfid="70731"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70731">
+$163.04</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70731">
+$76.72</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70731">
+$76.72</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook with Mobile (2 GB Total/1 Box) - Renewal - 3 Years (annual)</span>
+<input type="hidden" id="70732" class="pf-id" value="70732" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70732" value="776bfa74342bded89039f58cee32fafb" />
+<input type="hidden" class="max-retail" id="maxretail_70732" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="231" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$305.69</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$359.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70732" class="price retail-price" data-pfid="70732"
+value="$359.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70732" class="price sale-price" data-pfid="70732"
+value="$359.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70732" class="date sale-start" data-pfid="70732"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70732" class="date sale-end" data-pfid="70732"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70732">
+$244.56</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70732">
+$115.08</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70732">
+$115.08</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook with Mobile (2 GB Total/1 Box) - Renewal - 4 Years (annual)</span>
+<input type="hidden" id="70733" class="pf-id" value="70733" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70733" value="f9f24be82083286c8d5aa9b94238221a" />
+<input type="hidden" class="max-retail" id="maxretail_70733" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="231" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$407.59</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$479.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70733" class="price retail-price" data-pfid="70733"
+value="$479.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70733" class="price sale-price" data-pfid="70733"
+value="$479.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70733" class="date sale-start" data-pfid="70733"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70733" class="date sale-end" data-pfid="70733"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70733">
+$326.07</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70733">
+$153.45</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70733">
+$153.45</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook with Mobile (2 GB Total/1 Box) - Renewal - 5 Years (annual)</span>
+<input type="hidden" id="70734" class="pf-id" value="70734" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70734" value="a68181b5ada94cd28c08bd2bd0c97d4c" />
+<input type="hidden" class="max-retail" id="maxretail_70734" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="231" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$509.49</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$599.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70734" class="price retail-price" data-pfid="70734"
+value="$599.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70734" class="price sale-price" data-pfid="70734"
+value="$599.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70734" class="date sale-start" data-pfid="70734"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70734" class="date sale-end" data-pfid="70734"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70734">
+$407.59</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70734">
+$191.81</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70734">
+$191.81</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook with Mobile (2 GB Total/1 Box) - Renewal - 10 Years (annual)</span>
+<input type="hidden" id="70735" class="pf-id" value="70735" />
+<input type="hidden" class="periods" value="10" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70735" value="96147f59e6a065c3628dbf72782fe5cf" />
+<input type="hidden" class="max-retail" id="maxretail_70735" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="231" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1,018.98</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1,198.80</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70735" class="price retail-price" data-pfid="70735"
+value="$1,198.80" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70735" class="price sale-price" data-pfid="70735"
+value="$1,198.80" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70735" class="date sale-start" data-pfid="70735"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70735" class="date sale-end" data-pfid="70735"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70735">
+$815.18</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70735">
+$383.62</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70735">
+$383.62</span>
+</td>
+</tr>
+<tr class="save-row">
+<td colspan="10">
+<div>
+<a class="save sectionSave black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=3&amp;type=405&amp;section=223&amp;groupId=64&amp;groupname=Hosted+Exchange&amp;tab=1&amp;c=true" class="cancel">Cancel</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="collapse-bar collapse-bar-background" style="clear: both; margin-top: 0;">
+<input type="hidden" class="ProductGroupId" value="64" />
+<input type="hidden" class="PricingSectionId" value="233" />
+<input type="hidden" class="ProductGroupIdAndPricingSectionId" value="64-233" />
+<a href="javascript:void(0);" class="plus"></a><span class="collapse-title">
+Microsoft Outlook Group with Mobile - Renewal</span>
+</div>
+<div class="mainpricingSection" style="display: none;">
+<!--- Main Table Starts Here -->
+<div class="main-table-style">
+<table class="renewTable" cellspacing="0" cellpadding="0">
+<tr class="header">
+<th>Product</th>
+<th class="rightHeader">Min. Retail</th>
+<th class="rightHeader">Suggested<br />Retail</th>
+<th class="rightHeader">Your Retail</th>
+<th class="rightHeader">Your Sale</th>
+<th>Start Sale</th>
+<th>End Sale</th>
+<th class="rightHeader">Base Buy<br />Rate</th>
+<th class="rightHeader">Retail Profit</th>
+<th class="rightHeader">Sale Profit</th>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Group with Mobile (20 GB Total/5 Boxes) - Renewal (monthly)</span>
+<input type="hidden" id="70736" class="pf-id" value="70736" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70736" value="5689d5391b30867b8faf687489fb9b18" />
+<input type="hidden" class="max-retail" id="maxretail_70736" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="233" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$59.99</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$59.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70736" class="price retail-price" data-pfid="70736"
+value="$59.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70736" class="price sale-price" data-pfid="70736"
+value="$59.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70736" class="date sale-start" data-pfid="70736"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70736" class="date sale-end" data-pfid="70736"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70736">
+$47.99</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70736">
+$12.00</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70736">
+$12.00</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Group with Mobile (20 GB Total/5 Boxes) - Renewal (quarterly)</span>
+<input type="hidden" id="70737" class="pf-id" value="70737" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70737" value="6656fdf2465b08512b75db935ae0a9f1" />
+<input type="hidden" class="max-retail" id="maxretail_70737" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="233" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$170.97</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$179.97</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70737" class="price retail-price" data-pfid="70737"
+value="$179.97" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70737" class="price sale-price" data-pfid="70737"
+value="$179.97" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70737" class="date sale-start" data-pfid="70737"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70737" class="date sale-end" data-pfid="70737"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70737">
+$136.78</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70737">
+$43.19</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70737">
+$43.19</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Group with Mobile (20 GB Total/5 Boxes) - Renewal - 1 Year (annual)</span>
+<input type="hidden" id="70738" class="pf-id" value="70738" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70738" value="2e39e4e174046ac9e960e4b42751886c" />
+<input type="hidden" class="max-retail" id="maxretail_70738" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="233" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$647.89</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$719.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70738" class="price retail-price" data-pfid="70738"
+value="$719.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70738" class="price sale-price" data-pfid="70738"
+value="$719.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70738" class="date sale-start" data-pfid="70738"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70738" class="date sale-end" data-pfid="70738"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70738">
+$518.31</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70738">
+$201.57</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70738">
+$201.57</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Group with Mobile (20 GB Total/5 Boxes) - Renewal - 2 Years (annual)</span>
+<input type="hidden" id="70739" class="pf-id" value="70739" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70739" value="bca55d5a066a6ef2df82eaf2ceef89a5" />
+<input type="hidden" class="max-retail" id="maxretail_70739" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="233" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1,223.79</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1,439.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70739" class="price retail-price" data-pfid="70739"
+value="$1,439.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70739" class="price sale-price" data-pfid="70739"
+value="$1,439.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70739" class="date sale-start" data-pfid="70739"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70739" class="date sale-end" data-pfid="70739"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70739">
+$979.04</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70739">
+$460.72</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70739">
+$460.72</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Group with Mobile (20 GB Total/5 Boxes) - Renewal - 3 Years (annual)</span>
+<input type="hidden" id="70740" class="pf-id" value="70740" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70740" value="109159c916a2b40efc4d52e0cb0a68a0" />
+<input type="hidden" class="max-retail" id="maxretail_70740" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="233" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1,835.69</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$2,159.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70740" class="price retail-price" data-pfid="70740"
+value="$2,159.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70740" class="price sale-price" data-pfid="70740"
+value="$2,159.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70740" class="date sale-start" data-pfid="70740"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70740" class="date sale-end" data-pfid="70740"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70740">
+$1,468.56</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70740">
+$691.08</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70740">
+$691.08</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Group with Mobile (20 GB Total/5 Boxes) - Renewal - 4 Years (annual)</span>
+<input type="hidden" id="70741" class="pf-id" value="70741" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70741" value="2be14e41604a114b3bccc4bddbd1f0e5" />
+<input type="hidden" class="max-retail" id="maxretail_70741" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="233" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$2,447.59</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$2,879.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70741" class="price retail-price" data-pfid="70741"
+value="$2,879.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70741" class="price sale-price" data-pfid="70741"
+value="$2,879.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70741" class="date sale-start" data-pfid="70741"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70741" class="date sale-end" data-pfid="70741"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70741">
+$1,958.07</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70741">
+$921.45</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70741">
+$921.45</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Group with Mobile (20 GB Total/5 Boxes) - Renewal - 5 Years (annual)</span>
+<input type="hidden" id="70742" class="pf-id" value="70742" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70742" value="3194e16b3bae0a1438d2a05455ff36fc" />
+<input type="hidden" class="max-retail" id="maxretail_70742" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="233" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$3,059.49</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$3,599.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70742" class="price retail-price" data-pfid="70742"
+value="$3,599.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70742" class="price sale-price" data-pfid="70742"
+value="$3,599.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70742" class="date sale-start" data-pfid="70742"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70742" class="date sale-end" data-pfid="70742"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70742">
+$2,447.59</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70742">
+$1,151.81</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70742">
+$1,151.81</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Group with Mobile (20 GB Total/5 Boxes) - Renewal - 10 Years (annual)</span>
+<input type="hidden" id="70743" class="pf-id" value="70743" />
+<input type="hidden" class="periods" value="10" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70743" value="9caaa4befa3bfe1f89eda750c7ce852d" />
+<input type="hidden" class="max-retail" id="maxretail_70743" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="233" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$6,118.98</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$7,198.80</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70743" class="price retail-price" data-pfid="70743"
+value="$7,198.80" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70743" class="price sale-price" data-pfid="70743"
+value="$7,198.80" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70743" class="date sale-start" data-pfid="70743"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70743" class="date sale-end" data-pfid="70743"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70743">
+$4,895.18</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70743">
+$2,303.62</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70743">
+$2,303.62</span>
+</td>
+</tr>
+<tr class="save-row">
+<td colspan="10">
+<div>
+<a class="save sectionSave black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=3&amp;type=405&amp;section=223&amp;groupId=64&amp;groupname=Hosted+Exchange&amp;tab=1&amp;c=true" class="cancel">Cancel</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="collapse-bar collapse-bar-background" style="clear: both; margin-top: 0;">
+<input type="hidden" class="ProductGroupId" value="64" />
+<input type="hidden" class="PricingSectionId" value="226" />
+<input type="hidden" class="ProductGroupIdAndPricingSectionId" value="64-226" />
+<a href="javascript:void(0);" class="plus"></a><span class="collapse-title">
+Microsoft Outlook - Addon Renewal</span>
+</div>
+<div class="mainpricingSection" style="display: none;">
+<!--- Main Table Starts Here -->
+<div class="main-table-style">
+<table class="renewTable" cellspacing="0" cellpadding="0">
+<tr class="header">
+<th>Product</th>
+<th class="rightHeader">Min. Retail</th>
+<th class="rightHeader">Suggested<br />Retail</th>
+<th class="rightHeader">Your Retail</th>
+<th class="rightHeader">Your Sale</th>
+<th>Start Sale</th>
+<th>End Sale</th>
+<th class="rightHeader">Base Buy<br />Rate</th>
+<th class="rightHeader">Retail Profit</th>
+<th class="rightHeader">Sale Profit</th>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Storage Upgrade (1000 MB Total) - Renewal</span>
+<input type="hidden" id="70744" class="pf-id" value="70744" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70744" value="baff448a7339879383fa4417fe6af17d" />
+<input type="hidden" class="max-retail" id="maxretail_70744" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="226" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1.00</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1.00</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70744" class="price retail-price" data-pfid="70744"
+value="$1.00" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70744" class="price sale-price" data-pfid="70744"
+value="$1.00" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70744" class="date sale-start" data-pfid="70744"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70744" class="date sale-end" data-pfid="70744"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70744">
+$0.80</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70744">
+$0.20</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70744">
+$0.20</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Sharepoint Storage Upgrade (1000 MB Total) - Renewal</span>
+<input type="hidden" id="10200" class="pf-id" value="10200" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_10200" value="09024aac5bac7763f792bc528dbd0755" />
+<input type="hidden" class="max-retail" id="maxretail_10200" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="226" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1.00</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1.00</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_10200" class="price retail-price" data-pfid="10200"
+value="$1.00" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_10200" class="price sale-price" data-pfid="10200"
+value="$1.00" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_10200" class="date sale-start" data-pfid="10200"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_10200" class="date sale-end" data-pfid="10200"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_10200">
+$0.80</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_10200">
+$0.20</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_10200">
+$0.20</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Enable Blackberry on Mailbox - Renewal</span>
+<input type="hidden" id="70755" class="pf-id" value="70755" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70755" value="4be08724cc4a029af9d98f8eb65e2a44" />
+<input type="hidden" class="max-retail" id="maxretail_70755" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="226" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$3.00</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$3.00</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70755" class="price retail-price" data-pfid="70755"
+value="$3.00" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70755" class="price sale-price" data-pfid="70755"
+value="$3.00" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70755" class="date sale-start" data-pfid="70755"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70755" class="date sale-end" data-pfid="70755"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70755">
+$2.50</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70755">
+$0.50</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70755">
+$0.50</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Microsoft Hosted Exchange Outlook Email - Additional Mailbox - Renewal</span>
+<input type="hidden" id="70754" class="pf-id" value="70754" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_70754" value="7f45115fa6fbaca6084687f609c2d743" />
+<input type="hidden" class="max-retail" id="maxretail_70754" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="226" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$6.00</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$6.00</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_70754" class="price retail-price" data-pfid="70754"
+value="$6.00" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_70754" class="price sale-price" data-pfid="70754"
+value="$6.00" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_70754" class="date sale-start" data-pfid="70754"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_70754" class="date sale-end" data-pfid="70754"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_70754">
+$5.00</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_70754">
+$1.00</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_70754">
+$1.00</span>
+</td>
+</tr>
+<tr class="save-row">
+<td colspan="10">
+<div>
+<a class="save sectionSave black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=3&amp;type=405&amp;section=223&amp;groupId=64&amp;groupname=Hosted+Exchange&amp;tab=1&amp;c=true" class="cancel">Cancel</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="divImport" style="display: none; width: 400px; vertical-align: middle;">
+<iframe id="uploadframe" style="text-align: center;" align="middle" frameborder="0" height="110" width="350"></iframe>
+</div>
+<div id="divGlobalPricing" style="display: none;">
+<div id="spinner" class="ajax-spinner float-left" style="display: none; margin-left: 600px;">
+</div>
+<div id="errorDiv" class="ErrorMessage error-notification notification-box clear-fix ie-clear-fix"
+style="display: none;">
+<a class="close-notification" href="#"><span>Close</span> </a>
+<p id="errorText" class="notification-text red">
+Error setting Global Pricing
+</p>
+</div>
+<div id="divSuccess" class="SuccessMessage success-notification notification-box clear-fix ie-clear-fix" style="clear: both;display:none;">
+<a class="close-notification" href="#"><span>Close</span> </a>
+<p class="notification-text">
+Your changes were successfully saved.
+</p>
+</div>
+<p style="padding-bottom: 15px;">
+Select a pricing structure to apply to all products. You can always make pricing changes to individual products later.
+</p>
+<ul id="ulPricePoint" class="set-pricing-list">
+<li style="padding-bottom: 15px;">
+<input type="radio" id="chk_pricepoint_0" name="chk_pricepoint" value="0" />
+<label for="percentage-markup">
+<strong>Percentage markup</strong></label>
+<p>
+Percentage markups lets you choose the percent above the selected pricing option below.
+</p>
+<ul id="percentageEntry" class="pricing-changes percentage-select" style="width:410px;display: none;">
+<li id="liPercentageEntry">
+<select id="lst_PercentageMarkUp">
+<option value="1">Mininum Retail</option>
+<option value="2">Suggested Retail</option>
+<option value="3">My Retail</option>
+</select>
+<span> +</span>
+<input type="text" id="txtamount" maxlength="3"/>
+<span>%</span>
+<p class="error" style="padding-left:220px;"></p>
+</li>
+</ul>
+</li>
+<li style="padding-bottom: 15px;">
+<input type="radio" id="chk_pricepoint_1" name="chk_pricepoint" value="1"/>
+<label for="minimum-markkup">
+<strong>Mininum retail pricing</strong></label>
+<p>
+Minimum retail price is the lowest price you're allowed to charge for a product.
+</p>
+</li>
+<li>
+<input type="radio" id="chk_pricepoint_2" name="chk_pricepoint" value="2" />
+<label for="suggested-ricing">
+<strong>Suggested retail pricing</strong></label>
+<p>
+Suggested retail price is higher than minimum retail and what we recommend resellers charge.
+</p>
+</li>
+<li style=" border-top:1px solid #c3c3c3;padding-top:5px;">
+<p style="padding-left:0px;">
+<strong>Happy with your current pricing?</strong>
+</p>
+<input type="radio" id="chk_pricepoint_3" name="chk_pricepoint" value="999" />
+<label for="suggested-ricing">Keep product pricing as is.</label>
+</li>
+<li style="padding-bottom: 15px;padding-top:25px;">
+<p style="padding-left:0px;">
+<strong>Note:</strong> It may take up to 48 hours for the published price changes to update.
+</p>
+</li>
+</ul>
+<div id="divSaveConfirmModal" style="width: 400px; clear: both; display: none;height:120px;">
+<div id="divInputs" class="account-access" style="line-height:1.4;vertical-align:middle;text-align:justify;">
+<label>Please Confirm</label>
+<p style="padding-bottom:10px;">
+Are you sure you want to change the pricing of all your products? You cannot undo this.
+</p>
+<p>
+Your new retail pricing will be set to <span id="newPricing" style="font-weight: bold;"></span>pricing.
+</p>
+</div>
+</div>
+<input type="hidden" id="priceModiifedFlag" />
+</div>
+</div>
+</div>
+<div class="uxcore-only">
+<div class="container uxcore-footer">
+<div class="row">
+<div class="col-sm-4 text-right" style="padding-top: 5px;">
+<script type="text/javascript" src="https://seal.starfieldtech.com/getSeal?sealID=N5LDrMam1CrGjIOM0U1ZTjrbiaJmeUnLLEZiLEzMBOzjRsFxoLHqzyH"></script>
+</div>
+<div class="col-sm-7">
+<div class="row">
+Basic Reseller Plan |
+<a href="http://Hosting.LARRYWAKEMAN.COM">View Storefront</a> |
+<a href="https://survey.godaddy.com/pqc/pqc/lpqc.aspx?survey=209&amp;admingroup=32" target="_blank">Feedback</a> |
+<a href="https://support.godaddy.com/help/category/reseller/" target="_blank">Help</a>
+| <a href="mailto:resellersupport@godaddy.com">resellersupport@godaddy.com</a>
+</div>
+<div class="row">
+Call Support (480) 505-8857 |
+Copyright &copy; 2001 - 2015. All Rights Reserved.
+<a href="https://plus.google.com/communities/110833808277616099110"><span class="uxicon uxicon-google-plus-box"></span></a>
+<a href="http://twitter.com/wildwestdomains"><span class="uxicon uxicon-twitter"></span></a>
+<a href="http://www.facebook.com/pages/Wild-West-Domains#!/pages/Wild-West-Domains/127671573927218?ref=ts"><span class="uxicon uxicon-facebook-box"></span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1F9DBF50" />
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+</div></form>
+<script src="//img1.wsimg.com/ux/1.3.7/js/uxcore.en.min.js"></script>
+<script>
+var uxel = ux.eldorado || {};
+uxel.fns = [];
+uxel.ready = function ready(fn) { uxel.fns.push(fn); };
+uxel.data = {
+app: 'rcc',
+market: 'en-us',
+appAlias: 'rcc',
+version: '1.4.27',
+plId: '1',
+shopperId: '{{pc:shopperid}}',
+env: 'prodPhx',
+manifest: 'appheader',
+urlArgs: '?ci=',
+thirdParty: {}
+};
+uxel.texts = {};
+uxel.urls = {};
+ux.eldorado = uxel;
+</script>
+<script type="text/javascript">
+uxel.data.thirdParty.tealium = { js: '//tags.tiqcdn.com/utag/godaddy/godaddy/prod/utag.js' };
+</script>
+<script src="//img1.wsimg.com/ux/eldorado/1.4.27/js/appheader.min.js"></script>
+<script type="text/javascript">
+uxel.data.tokens = { loginApp: '{{pc:loginapp}}', loginPath: '{{pc:currentpage}}' };
+uxel.header.load('https://gui.godaddy.com', 'rcc', undefined, undefined, null);
+</script><!-- Google Analytics config -->
+<script>
+uxel.ready(function() {
+uxel.thirdParty.configGATagManager({
+data: [
+{ 'shopperId': '103245034' },
+{ 'privateLabelId': '510674' },
+{ 'server': 'P3PWRCCWEB003' }
+],
+domain: 'reseller.godaddy.com'
+});
+});
+</script><!-- Google Tag Manager -->
+<noscript>
+<iframe src="//www.googletagmanager.com/ns.html?id=GTM-SXRF" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>
+uxel.ready(function() {
+uxel.thirdParty.initGATagManager('GTM-SXRF');
+});
+<!-- End Google Tag Manager -->
+</script><!-- Manifest appheader -->
+<script src="//img1.wsimg.com/ux/1.3.7/js/uxcontrols.min.js"></script>
+<script>
+$sf = {skin: "app"};
+</script>
+<script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/jquery-1.7.1-jquery-ui-1.8.min.js"></script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/rcc.shared.plugins.js"></script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/header/header-js-20120730.min.js"></script><script id='duel' type="text/javascript" src="https://img3.wsimg.com/starfield/duel/v2.5.1/duel.js?appid=aBwld8TY#YUJ3bGQ4VFl2Mi41LjFwcm9k"></script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/header/superfish-20100511.js"></script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/fastballLibrary0009-channelIntegration-2.0.0.min.js"></script><script>var jsPlusIns_rccReportsTokens = {reportjsAddEventError:"not supported or DOM not loaded",reportjsValidElementError:"Please make sure that you're passing a valid element",reportjsOpacityError:"Opacity not supported by the browser",reportjsFlashError:"Flash Player Installation",reportjsNoTableIdError:"Error: No Table id set, you need to set an id on your table and every row",x:''}</script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/jquery.plugins_20130912.min.js"></script><script>var GDRcc_rccTokens = {GDRccJS11monthsError:"Cannot go back more than 11 months!",GDRccJSYearTimePeriodError:"The time period selected cannot be greater than one year.",GDRccJS6moTimePeriodError:"The time period selected cannot be greater than six months.",GDRccJSChooseDateRange:"Choose a date range",GDRccJSDisplayText:"Display:",GDRccJSOfText:"of",GDRccJSFromText:"From:",GDRccJSToText:"To:",GDRccJSUpdateText:"Update",GDRccJSDateFormat:"The date format should be : mm/dd/yyyy",GDRccJSValidMonth:"Please enter a valid month",GDRccJSValidDay:"Please enter a valid day",GDRccJSValidBetweenDate:"Please enter a valid 4 digit year between {0} and {1}",GDRccJSValidDate:"Please enter a valid date",GDRccJSControlError:"This control can only be used with select elements",GDRccJSTodayText:"Today",GDRccJSThisWeekText:"This Week",GDRccJSLastWeekText:"Last Week",GDRccJSThisMonthText:"This Month",GDRccJSLastMonthText:"Last Month",GDRccJSThisQuarterText:"This Quarter",GDRccJSLastQuarterText:"Last Quarter",GDRccJSLastSixMonthsText:"Last Six Months",x:''}</script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/reports/gd.Rcc20130912.min.js"></script><script>var DWCommon_rccTokens = {DWCommonJSDateFormat:"",DWCommonJSValidMonth:"",DWCommonJSValidDay:"",DWCommonJSValidBetweenDate:"",DWCommonJSValidDate:"",DWCommonJSTagsNotAllowed:"'{0}' tags are not allowed",DWCommonJSAreYouSureRestore:"Are you sure you want to restore to your previously published version?",DWCommonJSUndoChangesText:"Undo Changes",DWCommonJSBrowseText:"Browse...",DWCommonJSSWFWidth:"Enter the Width of SWF file:",DWCommonJSSWFHeight:"Enter the Height of SWF file:",DWCommonJSPreviewText:"preview",DWCommonJSImportFileText:"Import File",DWCommonJSUploadImageText:"Upload Image",DWCommonJSValidHeight:"Please enter a valid height.",DWCommonJSValidWidth:"Please enter a valid width.",DWCommonJSSelectFileToImport:"Please select a file to import.",DWCommonJSPleaseSelectAFile:"Please select a file.",DWCommonJSImportInProgress:"Import in progress...",DWCommonJSInvalidImageFormat:"Invalid image format.",DWCommonJSInvalidFileFormat:"Invalid file format.",DWCommonJSImportCompleteSelectChanges:"File Import Complete. Click &quot;Select&quot; to see the changes",DWCommonJSErrorUploadingFile:"Error uploading file.",DWCommonJSFileUploadComplete:"File upload complete.",DWCommonJSFileImportComplete:"File import complete.",x:''}</script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/dwCommon20131231.min.js"></script><script>var QS_Common_rccTokens = {QSCommonFillInValue:"Please fill in the value.",QSCommonValidValue:"Please enter a valid value.",QSCommonSelectValidValue:"Please enter a valid value.",QSCommonChooseOne:"Choose one",QSCommonVendorError:"Error while getting vendors",QSCommonNA:"Not Applicable",QSCommonStatesError:"Error while getting States",QSCommonSessionExpired:"Your session has expired. Please login.",QSCommonInvalidInputs:"Please correct the following invalid inputs :",QSCommonErrorSaving:"Error saving the details.",x:''}</script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/qsCommon20130912.min.js"></script><script>var PricingJs_rccQuickSetupTokens = {PricingJsMinRetail:"Mininum Retail",PricingJsSuggestedRetail:"Suggested Retail",PricingJsCurrentRetail:"Your Current Retail",PricingJsGlobalPricing:"Global Pricing",PricingJsOK:"OK",PricingJsCancel:"Cancel",PricingJsUpdateTime:"Your product pricing is being updated. These changes usually take 5 minutes. However, it may take up to 48 hours for these changes to take effect. These time frames are estimates and not guaranteed.",PricingJsMoreThan:"% more than",PricingJsDecimalNotAllowed:"Decimal number is not allowed. <br/> Please enter the percentage as a whole number.",PricingJsEnterPercent:"Please enter a percentage.",PricingJsValueBetween:"Please enter a value between 0 and 999.",x:''}</script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/quicksetup/Pricing.min.20130912.js"></script><script>var ProductPricingJs_rccProductsTokens = {ProductPricingJsSetPriceFor:"Set price for {0} - 1 year",ProductPricingJsImportExcel:"Import Excel",ProductPricingJsSessionExpired:"Your session has expired. Please login.",ProductPricingJsFixErrors:"Please fix the following errors :",ProductPricingJsSaveError:"Error while saving the pricing.",ProductPricingJsUpdateMessage:"Your currency preference(s) is being updated. These changes usually take 5 minutes. However, it may take up to <br/> <span style='padding-left:25px;'>48 hours for these changes to take effect. These time frames are estimates and not guaranteed.</span>",x:''}</script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/products/productPricing20130912.min.js"></script><script>var RccPricingJs_rccProductsTokens = {RccPricingJsUpdatesNotSaved:"Your pricing updates are not saved. Are you sure you want to cancel without saving these changes?",RccPricingJsConfirm:"Confirm",RccPricingJsOK:"OK",RccPricingJsCancel:"Cancel",RccPricingJsImportError:"Error in importing pricing sheet.",RccPricingJsInvalidPricingSheet:"Invalid Pricing sheet.",RccPricingJsDateFormat:"The date format should be: mm/dd/yyyy",RccPricingJsValidMonth:"Please enter a valid month.",RccPricingJsValidDay:"Please enter a valid day.",RccPricingJsValidBetweenDate:"Please enter a valid 4 digit year between {0} and {1}.",RccPricingJsValidDate:"Please enter a valid date.",RccPricingJsValidAmount:"Please enter a valid amount.",RccPricingJsFixErrors:"Please fix the following errors.",RccPricingJsSaving:"Saving, please wait...",RccPricingJsValidRetailPrice:"Please enter a valid retail price.",RccPricingJsValidSalePrice:"Please enter a valid sale price.",RccPricingJsRetailGreaterThanMin:"Please enter a retail price greater than your minimum retail price.",RccPricingJsRetailEntry:"Please enter a retail price below {0}.",RccPricingJsSaleEntry:"Please enter a sale price below {0}.",RccPricingJsEndDateGreaterThanStart:"Please enter a end date greater than start date.",RccPricingJsSaleGreaterThanMin:"Please enter a sale price greater than your minimum retail price.",RccPricingJsSaleLessThanRetail:"Please enter a sale price less than your retail price.",x:''}</script><script  type="text/javascript" src="/javascript/products/rccPricing.js"></script>
+<script type="text/javascript" language="javascript">
+var _trafficDomain = 'securepaynet.net';
+$(document).ready(function () {
+fbiLibSetDomainName('securepaynet.net');
+function setMargin() {
+if ($(window).width() <= 1100) {
+$('div.header-container div.tabs ul').css('margin', '0px');
+}
+else {
+$('div.header-container div.tabs ul').css('margin-left', '100px');
+}
+}
+$(window).resize(function () {
+setMargin();
+});
+setMargin();
+if ('False' === 'true') {
+$('#gdLogo').css('background-image', 'https://img1.wsimg.com/rcc/images/suite-logo2.gif');
+}
+});
+</script>
+<script  type="text/javascript" language="javascript" >
+$(document).ready(function () {
+var showStorefrontLink = 'False';
+if (showStorefrontLink.toLowerCase() === 'true')
+$('a.view-store').parent().css('display', 'none');
+else {
+if ($('a.view-store2').length && ($('a.view-store2').css('display') != 'none'))
+$('a.view-store').parent().css('display', 'none');
+else {
+$('a.view-store').parent().css('display', 'inline');
+}
+}
+})
+</script>
+<script language="javascript" type="text/javascript">
+var disableCurrencyOptinAccordian = 'True';
+var currencies = $('#currencyList');
+var showProcessingMsg = 'False';
+var landingPage = 'https://reseller.godaddy.com/Products/Default.aspx?ci=59405';
+var isMCP = 'False';
+var pricing = {};
+var pricingCheck = $('#groupPricingCheck');
+var groupPricingSelect = $('#groupPricingSelect');
+if (groupPricingSelect.length == 1 && groupPricingSelect.find('option:first').val() == "3") {
+pricingCheck.prop('checked', false).prop('disabled', true);
+pricingCheck.parent().css('color', '#CCC');
+}
+groupPricingSelect.change(function () {
+if($(this).find(':selected').val() === "3") {
+pricingCheck.prop('checked', false).prop('disabled', true);
+pricingCheck.parent().css('color', '#CCC');
+} else {
+pricingCheck.prop('disabled', false);
+}
+});
+if(isMCP.toLowerCase() != "true"){
+currencies.find("option[value='USD']").attr('selected', 'selected');
+$('div.currencyOptinSection').addClass('currency-overlay');
+$('#saveCurrencyOptions').unbind('click');
+$('#saveCancelCurrencyOptions').hide();
+$('#currencyList').attr('disabled', 'disabled');
+}
+else{
+currencies.find("option[value='USD']").attr('selected', 'selected');
+}
+if (disableCurrencyOptinAccordian.toLowerCase() == "true") {
+var quickPricingTop;
+if (showProcessingMsg.toLowerCase() == "true") {
+require("starfield/sf.msg.overlay", function () {
+$('#mainContainer').sfMsgOverlay({
+message: "Your currency preference(s) is being updated. These changes usually take 5 minutes. However, it may take up to <br/> <span style='padding-left:25px;'>48 hours for these changes to take effect. These time frames are estimates and not guaranteed.</span>"
+});
+quickPricingTop = $('#mainContainer').position().top;
+$('div.sf-msg-overlay').offset({ top: quickPricingTop + 200, left: $('div.sf-msg-overlay').offset.left }).css('text-align','left');
+});
+} else {
+require("starfield/sf.msg.overlay", function() {
+$('#mainContainer').sfMsgOverlay({
+message: null
+});
+});
+}
+}
+</script>
+<script type="text/javascript">
+$(document).ready(function () {
+globalPricing.Root = '../b-2015-06-23_15-11-00/';
+globalPricing.wsUrl = globalPricing.Root + 'wcf/QuickSetUpWcf/QuickSetup.svc/SaveGlobalPricing';
+globalPricing.updateSavedStepWs = '../b-2015-06-23_15-11-00/wcf/PlDataWcf/PlData.svc/UpdatePlData';
+globalPricing.productsPage = globalPricing.Root + 'Products/Default.aspx?ci=59405';
+globalPricing.rccDashBoard = globalPricing.Root + 'default.aspx?ci=41504';
+globalPricing.showFailureMessage = 'False';
+globalPricing.showPricing = 'True';
+globalPricing.statusUpdateWs = globalPricing.Root + 'wcf/QuickSetUpWcf/QuickSetup.svc/UpdateFailedRequestStatus';
+globalPricing.checkNonUsdForNonMcp = "False";
+})
+</script>
+<script type="text/javascript">
+$(document).ready(function () {
+var rccHeader = $('#rcc-header-container');
+if(rccHeader){
+rccHeader.append('<div class="title-container"><div class="float-left"><a href="ProductOfferings.aspx?suiteid=3&tab=1" class="sf-btn-pil" style="margin: 7px 0 0 7px;"><span class="offerings-sprite btn-back-icon"></span>Back</a></div><div class="float-left"><h1>Hosted Exchange Pricing</h1></div></div>');
+}
+require('starfield/sf.droplist', function () {   $('#priceMatchOption').sfDropList({valueChangeElement: '#valForPriceMatchOption'}); });
+var currHelper = new baseCurrencyHelper('$','$','.','2',',','Prefix');
+productPricing.Tab = 0;
+productPricing.AppRoot = '../b-2015-06-23_15-11-00/';
+productPricing.GroupId = 405;
+productPricing.RenewTabDisplay = 'True';
+productPricing.OfferingTabDisplay = 'True';
+productPricing.acc = new basePricingAccordion(currHelper);
+productPricing.acc.AppRoot = '../b-2015-06-23_15-11-00/';
+productPricing.acc.SuccessDiv = $('#productSuccess');
+productPricing.acc.ErrorDiv = $('#productError');
+productPricing.acc.WaringingDiv = $('#productWarn');
+productPricing.acc.MainContainer = $('#mainContainer');
+productPricing.acc.GroupType = 'PRODUCT';
+productPricing.acc.GroupSectionId = '223' ;
+productPricing.ProductAndSectionId = '64-223' ;
+productPricing.GroupName='Hosted Exchange';
+productPricing.acc.landingPage = 'https://reseller.godaddy.com/Products/Default.aspx?ci=59405';
+productPricing.acc.RestoreMessage = $('#productRestore');
+productPricing.acc.TransactionCurrency = "USD";
+productPricing.acc.PageType="product";
+productPricing.PricingPage = new basePricingPage(currHelper);
+productPricing.RenewalLookup = {'70720':60720,'70721':60721,'70722':60722,'70723':60723,'70724':60724,'70725':60725,'70726':60726,'70727':60727,'70746':60746,'70747':60747,'70748':60748,'70749':60749,'70750':60750,'70751':60751,'70752':60752,'70753':60753,'70728':60728,'70729':60729,'70730':60730,'70731':60731,'70732':60732,'70733':60733,'70734':60734,'70735':60735,'70736':60736,'70737':60737,'70738':60738,'70739':60739,'70740':60740,'70741':60741,'70742':60742,'70743':60743,'70744':60744,'10200':200,'70755':60755,'70754':60754};
+productPricing.PricingPage.initPricing( $('#tabs'));
+globalPricing.messageOverlayControl = $('#mainContainer');
+globalPricing.pricingJoberrorControl = $('#divpricingJobError');
+globalPricing.fromPricingPage=true;
+globalPricing.setPricingLink =$('#lnkResubmitPricing');
+globalPricing.pricingDialogControl = $('#divGlobalPricing');
+globalPricing.redirectPage = "../b-2015-06-23_15-11-00/Products/TldPricing.aspx?ci=41506";
+globalPricing.methods.init();
+productPricing.methods.init();
+});
+function LoadImport(data){
+productPricing.PricingPage.loadImportedRows(data, $('#productWarn'), productPricing.methods.expandAllSections);
+};
+</script>
+</body>
+</html>

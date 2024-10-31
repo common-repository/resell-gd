@@ -1,0 +1,2705 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+Quick Shopping Cart&reg - Reseller Control Center
+</title><meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Script-Type" content="text/javascript" />
+<!--CSS-->
+<link href="https://img2.wsimg.com/rcc/css/header-layout-styles-20130731.css" rel="stylesheet" type="text/css" />
+<link href="https://img2.wsimg.com/rcc/css/rcc-layout-styles-20131014.min.css" rel="stylesheet"  type="text/css"/>
+<link href="https://img2.wsimg.com/rcc/css/footer-20140221a.css" rel="stylesheet"  type="text/css"/>
+<link href="/css/uxcore-only-footer.css" rel="stylesheet" type="text/css"/>
+<link href="https://img2.wsimg.com/rcc/reseller-uxcore-only-20140224/css/uxcore.118.min.css" rel="stylesheet"  type="text/css"/>
+<!-- IE6 Specific Stuff -->
+<!--[if lte IE 6]>
+<style type="text/css" media="screen">
+div.header-container {
+width:expression(((document.compatMode && document.compatMode=='CSS1Compat') ? document.documentElement.clientWidth : document.body.clientWidth) < 990 ? "990px" : "auto");
+}
+</style>
+<![endif]-->
+<!-- IE6 Specific Stuff -->
+<!--[if lte IE 7]>
+<link href="https://img2.wsimg.com/rcc/css/ie6-7-20110822.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 8]>
+<link href="https://img2.wsimg.com/rcc/css/ie8-20100702.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link href="https://img2.wsimg.com/rcc/css/offerings20131014.min.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.sf-tabs-content {padding: 15px 5px 15px 5px;display: none;}
+#ddmatch-btn{padding-right:30px;}
+.match-btn span.dropdown-arrow-container {border-left: 1px solid #cfcfcf;display: block;right: 10px;position: absolute;top: 0;width: 14px;height: 100%;}
+.match-btn span.dropdown-arrow-container span.drop-arrow {margin: 9px 0 0 7px;}
+</style>
+</head>
+<body>
+<form name="aspnetForm" method="post" action="ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=5&amp;type=208&amp;section=158&amp;groupId=23&amp;groupname=Quick+Shopping+Cart%26reg%3b&amp;tab=0" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="vQtQN/+wMMuuzk41bT7GpebEeiKHVcoz9Wph9knnNrMrbXPudA4Rf8Z4op0z9mFFAj05tTer9YBKLZ1oUZvoEQRGYo+ll1kraggpbcbOmB0XlgUp6afVp+/4Xkj3RocPGhNA4xZp+uNVl7BYIVoHykSojzda9AOIinkCbZhLtnRjAOFjB7vvWZ3Wc4jAzAJEX7Lh1Jm+B89ol+5CmmTVdAiI9y/dOOJYU/yKL5KcrCnuXOw/Cna1Ef4CQEuPKZAex4e5seHXsUXIjtFPwEaFRJo5oHoHyeqvmDTMdqQrZYY/XfyBhzJGEOt2nsqbwiCWR5AFJO5HKSbf6v8hAWq9TMIaBkW7a2HizScgvpJMNXD+/fxSTmym3khJpfnw7KTExBrhD+IZ2pQjjBOSgOu1Guh53xTTeQIcg+EH68EuqPCgKOjuTyz7c7GEeUzKavjmSRWeNxsdDczEW0PTdonQ4H7u0VtIuIHPmJy9TbQoOAiZxZI+n4TjWxEeDuJ24QpXsQ3fWfzlq8M/sM0j2BWeLTXOPi0xFAVBQe87+cIdaXu4qro0HL0+T5U/plZL0bAeRaehg4dXhduoM93pYz0pSHO0ZG94xYCOXtaj41E1MKWHO59E6lGE4ZqTR0aKtd8P3uZU0w+sVGM5p19bs6W4mvJm+uVKrTcuIS7/xmgqRl4EVJFR7Erp/CPKogNnNs/FzbnP4frk15P0pxufcOfhmKYqvNngtxdQk6FzeUBrXtUzrFwibUo2MDwEGZ1QTtZS7nO9ZRC40QN5MEaQwlLc3qSzEvH/UTDwG4pg/uNErdxQjo6QkCVRMH4SvH14PWW9Ph/6iAY221w61Q9OnV4cMcgtXqHpz74bBrfpVLhWuT4Dbk9QANu2id+MyEomYO4c2xj9+QLL4WxO6UdADakIWfMEXcWTGYNFue8J1pbPewQCwSvV4fmqhMMFW/0PFmCUMaOpgwDH6fs3o1zfnqx3EEgCZS33stGYPQnhENG3TXDa1hwHcU0P40qS8IrP/EHUlNQbFPZAYtH/DAsxM+mxd1PPQDZenwWhEFWUV/tVZesepmQMY+WCx9tzdSOugO584x04WCVnamIIXn6GtUDaYm/rW/0yf1/cJGJv202SQjnOgoFlGKTB0h9cBrMzJjP2ptD4A9oxazFAfNiOR3qRov4c/T5NJtRoM25k3wK30VcQn+L1e9JL0Qn3JD20DDYs9lCNPGkiAllWEJxNg8Tz1p7OP5+brCz6M8Cmm3ESyhLcYhFMaU+ZyruzQ1w3jDfaA4pXw41qdXqXdFXW9MRrF4vR1OOvuaYRQvCQIX0OBOtXtBz7ODix8jnI9wy0h5wVw+LOkGXkJfldo0PHLiYN2X/qrTV03Yb0ywX6vyUPwblRYj+ab2pnhtszWtYdcYQqGNT6OcYZ+OUhnBNS4QMGUe5mTv/m1VrDUJFt6JjBRaHuH72kWteB2YBhMCm7AnjPdRlcMIzRkdqS6YX4KUng12EiDLlOnqTaHAvHFRtZozkL2usBuk777M5nSQyMvEOf+BJV7ERBKe9fvICTf93sS3Tnz3Xs3MalzqbfVttH4fwmfELamRgufVFGxfVtDyT8PrSqu3+FfDHGe4qqcjf5yqcYMAMpJIP5o2a6geVgD5TOXUOT5+UlPvOsIcPq/J9Sx/UwzNl8td3sD6sIzTnunvECUBtcGQOLmy0KJ3CG5YfmzhMroSHeU6+6x6ioa6LP3mi1WNQsSaF2VaupQ+ZfNNbzIH0hj4UCfdmtaSWzELNksGBL1kUbOm4VzqAJ+7OZcnZODd84yXfuWXqijpezpiz+NI//02VbjtNpE62GeVcKrQa3xEnDEBoCBvo/dMg74ZHQpDC2trtmHl6lJngoDxt+3QLV7FAEpgqdUv1Yy0OZIvF5tNF/wnkN5Rd0oFA/wgvXHmytunVk6xTs0L8vGnWV0K3MgZH9DOwdz7uuNdzw4Crk37jUbnhR/Rxv7lWAbUN63+UD+OAuCljQdb9Qae6jJLeU5smeB7t6El3t96sOy7SWM5uqLt+cnazx6JNejkbs2qY317kbolhe6vTGgkjRH/oPia3AGmI0BR10gds+vBkHkWwaTUz4j3qhX0zzW/BowzaXZ5gsi5P2VMXCG5OjBGUYxEx/+tH/uePmag/Mm/fO7zNFj9vDufWd2W+UiO+pKQiWRYX7pRuGzmtfxJSnBrwCWAi8XbtygQ/bo9ukYBegEv/v+X4D/3ue5GkYPj1OoZekcDA3U3C0tMfmu+pwivBMTbQmdk0seC/pSZH1Nwo85dHrxiLZ7W+4F5iCXUjiFVDVzol9N/CFN6Ff12a7Q7JahOocF036hwNFRohnFCK+dWySiN2J2GeAOqfZJ8l7AwoLWaWyYWaNQJpDumgxxJuRuSSRFzLMsrOvvQdzMopXiDp7E5UvE4cTt8zviLKGDiAkqGdvbom+AAW5MGgtLLd+6huSUY4LZfJeh/7Gy7rPnpxHX5P/kIneaMOjZrTlBqZzohrAS2nCt68HXRBP8prMlMqo+nJjmlDC6XdJCeaOr1Yi0BvS/B58qKpVpLpCcCZiY6LukbFrIaoOJuM9QKtsaUnmgYOrJVMRCWu1if/QRU+S9LDb75IP/JZspf9fQinvWIfu8GwcYhkAXlu33rDmFhP7mqSHue5zON2oD7FCyGoWmCSLskG1N8vZUoYXhFC7Pq+Z400UW8stnTLcd15gjt3TbjhinPKOmyru+S/VS39G/oLEBAafIJHUe7eVoErEOzSVUK6ULZCmCakDROHzc71B6kJmJR3fjt1dbJtWlhRP9KkWP2TWQ/4ktzfz/T3q1BuTSV77EyI9ugFmss3Nz4RQ1dG4A0owM+yZntnr4HWH+bmNTu2ZZcGgPLZRonzN9oE6aamtid30S/X8AKRGA58gd/jWTxb/y1p3E3UPSOj4nRcJj6F/9So6TOc6eiZtP9ojfuVQ9kTtDcDsXB+FPj2mLwoNsRhmalEOo9z+cfOCitvK9S6v7ogikzS8ew==" />
+</div>
+<div id="totalContainer" class="total-container">
+<div style="display:none;"><img src="https://img.securepaynet.net/image.aspx?sitename=www.resellercontrolcenter.com&amp;server=P3PWRCCWEB003&amp;page=/b-2015-06-23_15-11-00/Products/ProductPricing.aspx&amp;isc=&amp;ci=41542&amp;privatelabelid=510674&amp;shopper=103245034&amp;querystring=ci%3d41542%26group%3dproduct%26suiteId%3d5%26type%3d208%26section%3d158%26groupId%3d23%26groupname%3dQuick%2bShopping%2bCart%2526reg%253b%26tab%3d0" alt="" border="0"/>	</div>
+<div class="uxcore-only">
+<header id="uxh">
+<div id="uxh-acct-delegate" style="display:none;" class="delegate-shim">
+<div style="display:none;" class="delegate delegate-rep">
+<div class="container">
+<div class="acct-delegate-text delegate-left">{0} logged in as: <span>{1} {2}</span></div>
+<div class="delegate-right"><a id="exit-impersonation-link" href="https://sso.godaddy.com/logout?app=www&realm=idp" class="delegate-link"><span class="uxicon uxicon-x"></span><span class="text">Stop impersonation</span></a></div>
+</div>
+</div>
+<div style="display:none;" class="delegate delegate-cust">
+<div class="container">
+<div class="acct-delegate-text delegate-left">{0} logged in as: <span>{1} {2}</span></div>
+<div class="delegate-right"><a id="exit-delegation-link" href="javascript: void(0);" data-action="https://sso.godaddy.com/cookie/switchback/" data-sk="WSv4LgM7Bb9a692PjgPEBHG5MeDTHr" class="delegate-link"><span class="uxicon uxicon-x"></span><span class="text">Exit access</span></a></div>
+</div>
+</div>
+</div>
+<nav id="uxh-nav" class="navbar navbar-default uxc-header">
+<div class="container">
+<div id="uxh-nav-header" class="navbar-header">
+<button id="uxh-mobile-nav" type="button" data-toggle="collapse" data-target=".uxc-header-nav" class="navbar-toggle"><span class="sr-only">Toggle Navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a id="uxh-nav-brand" href="//www.godaddy.com/?ci=" class="navbar-brand"><span id="uxhNavBrandLink" class="uxc-gd-logo">Go Daddy</span></a>
+<div id="uxh-nav-product"></div>
+</div>
+<div id="uxh-nav-collapse" class="navbar-collapse collapse uxc-header-nav">
+<ul id="uxh-nav-breadcrumbs" role="menubar" class="nav navbar-nav navbar-left">
+<li id="uxh-nav-mya-link"><a role="menuitem" href="https://mya.godaddy.com/default.aspx?ci=">My Account</a></li>
+<li id="uxh-s-productsmenu" class="dropdown"><a role="button" href="javascript:void(0);" data-toggle="dropdown" class="dropdown-toggle"><span id="uxh-product">Reseller Control Center</span>&nbsp;<b id="uxh-products-arrow" style="display:none;" class="caret uxh-ctrl-s-products"></b></a>
+<ul id="uxh-s-products" role="menu" data-showops="false" class="sf-menu-icns dropdown-menu uxh-ctrl-s-products">
+<li><a href="https://dcc.godaddy.com/default.aspx?ci=&regionsite=www&marketid=en-US" class="menuitem">Domains</a></li>
+<li><a href="https://gateway.godaddy.com?ci=&regionsite=www&prog_id=GoDaddy&marketid=en-US" class="menuitem">Hosting</a></li>
+<li><a href="https://productivity.godaddy.com/emailchooser?ci=&regionsite=www&utm_medium=uxh&utm_source=rcc&prog_id=GoDaddy&marketid=en-US" class="menuitem">Email</a></li>
+</ul>
+</li>
+<li id="uxh-i-server" style="display:none;"></li>
+</ul>
+<ul id="uxh-nav-right" role="menubar" class="nav navbar-nav navbar-right">
+<li id="uxh-nav-support"><a id="uxhNavSupportLink" role="menuitem" href="https://www.godaddy.com/help" target="_blank">Help</a></li>
+<li id="uxh-nav-user" class="dropdown"><a id="uxh-nav-user-link" role="button" href="javascript:void(0);" data-toggle="dropdown" class="dropdown-toggle"><span id="uxh-s-name-prefix" style="display:none;">Customer #</span><span id="uxh-s-name">Hello</span>&nbsp;<b class="caret"></b></a>
+<ul id="uxh-nav-user-menu" role="menu" class="dropdown-menu shopper-menu">
+<li id="uxh-s-header" class="uxh-logged-in shopper-header dropdown-header">
+<div class="shopper-header-content">
+<div id="uxh-s-fullname" style="display:none;" class="uxc-nowrap"></div>
+<div id="uxh-s-status" style="display:none;" class="uxc-nowrap"></div>
+<div class="uxc-details">
+<div id="uxh-mi-custid" style="display:none;" class="uxc-nowrap"><span class="uxc-shopper-menu-label">Customer #:</span><span id="uxh-s-id"></span></div>
+<div id="uxh-mi-mgrid" style="display:none;" class="uxc-nowrap"><span class="uxc-shopper-menu-label">Manager ID:</span><span id="uxh-mgr-id"></span></div>
+<div id="uxh-mi-mgrname" style="display:none;" class="uxc-nowrap"><span class="uxc-shopper-menu-label">Manager Name:</span><span id="uxh-mgr-name"></span></div>
+<div id="uxh-vip-info" style="display:none;" class="uxc-nowrap"><span id="uxh-vip-label" class="uxc-shopper-menu-label">VIP Acct Exec:</span>
+<div id="uhx-vip-details">
+<div id="uxh-vip-repname"></div>
+<div id="uxh-vip-phone"></div>
+<div><a id="uxh-vip-email" href="javascript:void(0);"></a></div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li role="presentation" class="divider uxh-no-delegate"></li>
+<li id="uxh-nav-logged-in" class="uxh-logged-in uxh-no-delegate"><a role="menuitem" href="https://idp.godaddy.com/logout.aspx?spkey=GDRCC">Log Out</a></li>
+<li id="uxh-nav-logged-out" class="uxh-logged-out"><a role="menuitem" href="https://sso.godaddy.com?realm=idp&app={{pc:loginapp}}&path={{pc:currentpage}}">Log In</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<nav id="uxh-nav-app" role="navigation" class="navbar uxc-nav">
+<div class="container">
+<div id="uxh-nav-app-active" data-toggle="collapse" data-target="#uxh-nav-app-collapse" data-default-caption="Menu" class="collapsed"><span id="uxh-nav-app-caption">Menu</span><b class="caret"></b></div>
+<div id="uxh-nav-app-collapse" class="navbar-collapse collapse">
+<ul id="uxh-nav-app-menu" class="nav navbar-nav">
+<li><a href="https://reseller.godaddy.com/default.aspx">Dashboard</a></li>
+<li class="dropdown">
+<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Reports <b class="caret"></b></a>
+<ul class="dropdown-menu" role="menu">
+<li>
+<ul class="dropdown-columns">
+<li>
+<ul>
+<li>
+<a>Sales and Commissions</a>
+<ul>
+<li><a href="https://reseller.godaddy.com/Reports/CommissionReport.aspx">Commissions</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/ProductCommissionReport.aspx">Product Commissions</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/PaymentHistoryReport.aspx">Payment History</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/RenewalsReport.aspx">Renewals</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/MarketingSourceCodeReport.aspx">Marketing Source Codes</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/ProductSalesReport.aspx">Product Sales</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>
+<a>Customers</a>
+<ul>
+<li><a href="https://reseller.godaddy.com/Reports/CustomerLookUpReport.aspx">Customer Lookup</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/CustomerSalesReport.aspx">Customer Sales</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/DiscountCustomerSalesReport.aspx">Discount Customer Sales</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>
+<a>Domains</a>
+<ul>
+<li><a href="https://reseller.godaddy.com/Reports/DomainLookupReport.aspx">Domain Lookup</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/domainsregisteredreport.aspx">Domain Registrations</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/PendingTransfersReport.aspx">Pending Transfers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Storefront <b class="caret"></b></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="https://reseller.godaddy.com/StorefrontDesign/ColorPalette.aspx">Storefront Designer</a></li>
+<li><a href="https://reseller.godaddy.com/MobileDesign/Default.aspx">Mobile Designer</a></li>
+<li><a href="https://reseller.godaddy.com/StorefrontDesign/SocialMedia.aspx">Social Media</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="https://reseller.godaddy.com/Products/Currency.aspx">Settings</a></li>
+<li><a href="https://reseller.godaddy.com/Products/ProductOfferings.aspx?suiteId=1">Hosting</a></li>
+<li><a href="https://reseller.godaddy.com/Products/DomainOfferings.aspx">Domains</a></li>
+<li><a href="https://reseller.godaddy.com/Products/ProductOfferings.aspx?suiteId=7">Domain Services</a></li>
+<li><a href="https://reseller.godaddy.com/Products/ProductOfferings.aspx?suiteId=5">Site Builders</a></li>
+<li><a href="https://reseller.godaddy.com/Products/ProductOfferings.aspx?suiteId=2">SSL &amp; Security</a></li>
+<li><a href="https://reseller.godaddy.com/Products/ProductOfferings.aspx?suiteId=3">Email &amp; Productivity</a></li>
+<li><a href="https://reseller.godaddy.com/Products/ProductOfferings.aspx?suiteId=4">Marketing Tools</a></li>
+<li><a href="https://reseller.godaddy.com/Products/ProductOfferings.aspx?suiteId=6">Product Add ons</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Promotions <b class="caret"></b></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="https://reseller.godaddy.com/Promotions/DomainPromos.aspx">Domains Promotions</a></li>
+<li><a href="https://reseller.godaddy.com/Promotions/SpecialPromos.aspx">Special Promotions</a></li>
+<li><a href="https://reseller.godaddy.com/Promotions/CustomPromos.aspx">Custom Promotions</a></li>
+<li><a href="https://reseller.godaddy.com/Promotions/OrderLevelPromos.aspx">Order Level Promotions</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="https://reseller.godaddy.com/MarketingTools/default.aspx">Free Products</a></li>
+<li><a href="https://reseller.godaddy.com/MarketingTools/BannerArtwork.aspx">Banner Artwork</a></li>
+<li><a href="https://reseller.godaddy.com/MarketingTools/MarketingSourceCodes.aspx">Marketing Source Codes</a></li>
+<li><a href="https://reseller.godaddy.com/MarketingTools/AdvancedMarketing.aspx">Advanced Marketing</a></li>
+<li><a href="https://reseller.godaddy.com/MarketingTools/GoogleAdWords.aspx">Google Adwords &reg;</a></li>
+<li><a href="https://reseller.godaddy.com/MarketingTools/Analytics.aspx">Google Analytics</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Settings <b class="caret"></b></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="https://reseller.godaddy.com/Settings/default.aspx">Contact Information</a></li>
+<li><a href="https://reseller.godaddy.com/Settings/CustomDomainSettings.aspx">Storefront Domains</a></li>
+<li><a href="https://reseller.godaddy.com/Settings/Payee.aspx">Payee Setup</a></li>
+<li><a href="https://reseller.godaddy.com/Settings/Support.aspx">Support Options</a></li>
+<li><a href="https://reseller.godaddy.com/Settings/EventNotification.aspx">Notification Preferences</a></li>
+<li><a href="https://reseller.godaddy.com/SelectReseller.aspx">Reseller Accounts</a></li>
+<li><a href="https://reseller.godaddy.com/QuickSetUp/Default.aspx">Quick Setup
+</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+</div>
+<div id="dialogExpired" style="display:none;" title="Session Timeout" >
+<br/>
+<div class="yellow-notification-box clear-fix ie-clear-fix">
+<p class="notification-text">
+Your session has expired.
+</p>
+</div>
+</div>
+<div id="dialogWarning" style="display:none;" title="Session Timeout" >
+<div style="padding: 15px 20px 0 20px;">
+<div class="yellow-notification-box clear-fix ie-clear-fix">
+<p class="notification-text">Your session will expire in&nbsp;<span id="dialogText-warning"></span>&nbsp;seconds</p>
+</div>
+</div>
+</div>
+<div class="main-container clear-fix ie-clear-fix">
+<div class="uxcore-only">
+<ol class="breadcrumb">
+<li>Products</li>
+<li>Site Builders</li>
+<li class="active">Quick Shopping Cart&reg</li>
+</ol>
+</div>
+<div id="divpricingJobError" class="error-notification notification-box" style="display: none;">
+<p class="notification-text">
+<span class="success-span">We couldn't process your global pricing change at this time. <a id="lnkResubmitPricing" href="#" >Please try again.</a></span>
+</p>
+</div>
+<div id="productRestore" class="pricingRestoreWarning msgDiv" data-style="warn" style="display: none;">
+Product Pricing is restored to Suggested Retail. Please click Save to make the changes permanant.
+</div>
+<div id="productError" class="pricingSaveError msgDiv" data-style="error" style="display: none">
+Error saving your changes.
+</div>
+<div id="productSuccess" class="pricingSaveSuccess msgDiv" data-style="success" style="display: none">
+Your changes have been saved!
+</div>
+<div id="productImportSuccess" class="pricingSaveSuccess msgDiv" data-style="success" style="display: none">
+Your changes have been saved!
+</div>
+<div id="productWarn" class="pricingSaveWarning msgDiv" data-style="warn" style="display: none;">
+Your changes have been cancelled.
+</div>
+<div id="pendingChangesWarn" class="pendingSaveWarning msgDiv" data-style="warn" style="display: none;">
+You have pending changes.  Please click Save or Cancel to continue.
+</div>
+<div id="priceMatchWarn" class="pricingSaveWarning msgDiv" data-style="warn" style="display: none;">
+Your renewal retail product pricing has been synched with the new retail product pricing. Please review the changes below, and click <strong>Save</strong> to update.
+</div>
+<div id="mainContainer">
+<div class="rounded-wrapper">
+<div class="rounded-wrapper-top rounded-fade-background">
+<h3 class="collapse-header">Quick Pricing Options</h3>
+</div>
+<div id="quickPricing" class="rounded-wrapper-content free-product-background">
+<div id="topWrapper" class="accordian-padding-bottom">
+<div>
+<div class="float-left offerings-sprite graphic-money" style="margin: 10px 15px 10px 0;">
+</div>
+<div class="float-left account-access" style="width: 800px; margin-top: 25px;">
+Setting your pricing is easy. Change prices for the selected product or across your entire product group. You can also set limited-time sale prices and change your default storefront display currency.
+</div>
+</div>
+<a id="acc"></a>
+<div class="collapse-bar collapse-bar-background"  style="clear: both;">
+<a href="javascript:void(0);" class="plus a1"></a>
+<span class="collapse-title">Set sale prices and dates.</span>
+<span class="collapse-text">Use to offer limited-time discount pricing.</span>
+</div>
+<div style="position: relative; display: none;" class="setSaleDateAccordian accordian-container">
+<div class="accordian-padding-top">
+<div class="accordian-label">
+Sale start/end dates:</div><div style="margin-bottom: 10px;">
+<input id="saleStart" type="text" name="date-from" />
+<span style="padding:0 5px 0 5px;">to</span>
+<input id="saleEnd" type="text" name="date-to" />
+</div>
+</div>
+<div>
+<input type="checkbox" id="datesOnly" value="1" /> Only update sale dates.
+</div>
+<div style="margin-top:20px;">
+<div>
+<div class="accordian-label">
+Sale price:</div>
+<div class="accordian-padding-bottom">
+<select id="salePriceOption">
+<option value="0">Suggested Retail Price</option>
+<option value="2">Your Retail Price</option>
+</select>&nbsp;-&nbsp;<input type="text" id="salePercent" style="width:100px;" maxlength="3"  />&nbsp;%</div>
+</div>
+</div>
+<div>
+<div class="accordian-label">
+Apply Pricing to:</div>
+<div class="accordian-padding-bottom">
+<select id="saleSelect">
+<option value="0">All New &amp; Renewals</option>
+<option value="1">New Only</option>
+<option value="2">Renewals Only</option>
+</select>
+</div>
+</div>
+<div class="accordian-padding-bottom" >
+<a href="#acc" id="salePreview" class="sf-btn-pil"><span class="sf-icn-pil sf-icn-pil-edit"></span>Preview Sale Dates/Pricing</a>
+<span class="preview-text">
+See sales prices in the pricing table below.</span></div>
+<span class="ajax-spinner" id="salePreviewSpinner" style="display: none;margin-top:35px;margin-left:200px;">&nbsp;</span>
+<div id="salePreviewSaveCancel" class="accordian-padding-bottom"  style="display: none;">
+<a id="salePreviewSave" class="black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">
+Save</a> &nbsp;&nbsp;<a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=5&amp;type=208&amp;section=158&amp;groupId=23&amp;groupname=Quick+Shopping+Cart&amp;reg;&amp;tab=0&amp;c=true">Cancel</a></div>
+</div>
+<div class="collapse-bar collapse-bar-background">
+<a href="javascript:void(0);" class="plus a2"></a>
+<span class="collapse-title">Set prices for entire product group.</span>
+<span class="collapse-text">Use for bulk pricing updates.</span>
+</div>
+<div style="display: none;" class="accordian-container">
+<div class="accordian-padding-bottom accordian-padding-top">
+Select the price you want to change. Then, add a dollar amount or percentage increase to your starting price.
+</div>
+<div class="accordian-padding-bottom float-left" style="margin-right:10px;">
+<div class="accordian-label">
+Price to change:</div>
+<div>
+<select id="bulkPricingPriceToModify">
+<option value="1">Your Retail Price</option>
+<option value="2">Your Sale Price</option>
+<option value="3">Your Sale & Retail Price</option>
+</select></div>
+</div>
+<div class="accordian-padding-bottom float-left" style="margin-right:10px;">
+<div class="accordian-label">
+Starting price:</div>
+<div>
+<select id="bulkPricingPointSelect" style="width: 250px;">
+<option value="1">Suggested Retail Price</option>
+<option value="2">Suggested Retail Price +
+$</option>
+<option value="3">Suggested Retail Price + %</option>
+<option value="4">Minimum Retail Price</option>
+<option value="5">Minimum Retail Price +
+$</option>
+<option value="6">Minimum Retail Price + %</option>
+<option value="7">My Retail Price -
+$</option>
+<option value="8">My Retail Price - % </option>
+<option value="9">My Retail Price +
+$</option>
+<option value="10">My Retail Price + % </option>
+</select></div>
+</div>
+<div class="accordian-padding-bottom float-left" style="margin-right: 10px;">
+<div class="accordian-label" id="bulkAmountLabel" style="display: none;">
+Amount (% or $)</div>
+<div style="clear: both;">
+<span id="bulkAmountDiv" class="float-left;" style="display: none;">
+<input id="bulkPricingAmount" name="bulkPricingAmount" type="text" maxlength="25"
+style="width: 50px;" />
+</span>
+</div>
+</div>
+<div class="accordian-padding-bottom float-left" style="margin-right: 10px;">
+<div style="clear: both;">
+<a href="#acc" id="bulkPricingPreview" class="sf-btn-pil" style="display:inline-block;vertical-align:text-bottom;margin:15px 0 0 0;"><span class="sf-icn-pil sf-icn-pil-edit"></span>Calculate</a>
+</div>
+</div>
+<div class="accordian-padding-bottom" style="clear:both;">
+Don't like the last pricing change you made?&nbsp;&nbsp;
+<a href="javascript:void(0);" id="lnkRestore" class="sf-btn-pil"><span class="sf-icn-pil sf-icn-pil-edit"></span>Restore Pricing to Suggested Retail</a>
+</div>
+<div id="bulkPricingSaveCancel" class="accordian-padding-bottom" style="display: none;">
+<a id="bulkPricingSave" class="black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">
+Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=5&amp;type=208&amp;section=158&amp;groupId=23&amp;groupname=Quick+Shopping+Cart&amp;reg;&amp;tab=0&amp;c=true">Cancel</a>
+</div><div id="restorePopIn" style="display: none;">
+Are you sure  you want to restore suggested retail pricing? This change affects every product in your catalog.
+</div>
+</div>
+<div class="collapse-bar collapse-bar-background">
+<a href="javascript:void(0);" class="plus"></a>
+<span class="collapse-title">Change display currency.</span>
+<span class="collapse-text">Use to change the currency for pricing shown in the Reseller Control Center.</span>
+</div>
+<div style="display: none;" class="currencyOptinSection accordian-container">
+<div id="saveCurrencyError" data-style="error" style="display: none;line-height:2;height: 210px; overflow-y: auto; overflow-x: auto;">
+Error saving your changes.
+</div>
+<div class="accordian-padding-top">
+<div class="accordian-label">
+Select Reseller Control Center Display Currency:
+</div>
+<div class="accordian-label">
+<select id="currencyList" style="width: 250px;">
+<option value="AED">United Arab Emirates Dirham (&#1583;&#46;&#1573;)</option><option value="ARS">Argentine Peso (AR$)</option><option value="AUD">Australian Dollar (A$)</option><option value="BRL">Brazilian Real (R$)</option><option value="CAD">Canadian Dollar (C$)</option><option value="CHF">Swiss Franc (CHF)</option><option value="CLP">Chilean Peso (CL$)</option><option value="CNY">Chinese Yuan (&#165;)</option><option value="COP">Colombian Peso (CO$)</option><option value="CZK">Czech Republic Koruna (&#75;&#269;)</option><option value="DKK">Danish Krone (kr)</option><option value="EGP">Egyptian Pound (&#163;)</option><option value="EUR">Euro (&euro;)</option><option value="GBP">British Pound (&#163;)</option><option value="HKD">Hong Kong Dollar (HK$)</option><option value="HUF">Hungary Forint (&#70;&#116;)</option><option value="IDR">Indonesian Rupiah (Rp)</option><option value="ILS">Israeli New Shekel (&#8362;)</option><option value="INR">Indian Rupee (&#8360;)</option><option value="JPY">Japanese Yen (&#165;)</option><option value="KRW">South Korean Won (&#65510;)</option><option value="MAD">Moroccan Dirham (&#46;&#1583;&#46;&#1605;)</option><option value="MXN">Mexican Peso (MXN)</option><option value="MYR">Malaysian Ringgit (RM)</option><option value="NOK">Norway Krone (&#107;&#114;)</option><option value="NZD">New Zealand Dollar (NZ$)</option><option value="PEN">Peruvian Nuevo sol (S/.)</option><option value="PHP">Philippine Peso (&#8369;)</option><option value="PKR">Pakistan Rupee (&#8360;)</option><option value="PLN">Polish Zloty (z&#322;)</option><option value="RON">Romania Leu (&#108;&#101;&#105;)</option><option value="RUB">Russia Ruble (&#1088;&#1091;&#1073;)</option><option value="SAR">Saudi Arabia Riyal (&#65020;)</option><option value="SEK">Swedish Krona (kr)</option><option value="SGD">Singapore Dollar (SG$)</option><option value="THB">Thai Baht (&#x0E3F;)</option><option value="TRY">Turkey Lira (TL)</option><option value="TWD">New Taiwan Dollar (NT$)</option><option value="UAH">Ukrainian Hryvnia (&#8372;)</option><option value="USD">United States Dollar ($)</option><option value="UYU">Peso Uruguayo (&#36;&#85;)</option><option value="VEF">Venezuelan bolivar (Bs.)</option><option value="VND">Vietnamese Dong (&#8363;)</option><option value="ZAR">South Africa Rand (&#82;)</option>
+</select>
+</div>
+<div style="margin-bottom:20px;padding-top:10px;">
+The RCC display currency is how prices appear when managing them in the RCC.<br/><br/>Display and transactional currencies for your storefront are managed under <a href="https://reseller.godaddy.com/Products/Currency.aspx?ci=59405">Settings.</a>
+</div>
+</div>
+<div id="saveCancelCurrencyOptions" class="accordian-padding-bottom">
+<a id="saveCurrencyOptions" class="black-css3-button" style="margin-right: 10px;"
+href="javascript:void(0);">Save</a><a id="cancelCurrencyOptions" href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=5&amp;type=208&amp;section=158&amp;groupId=23&amp;groupname=Quick+Shopping+Cart&amp;reg;&amp;tab=0&amp;c=true">Cancel</a>
+</div>
+</div>
+</div>
+</div>
+</div>  <div id="processingPopIn" style="display:none;">
+We are processing your request for pricing updates. Please wait a few minutes before making additional updates.
+</div>
+<div style="margin-top: 20px;">
+</div>
+<div class="dialogdiv" id="importExcelPopin" style="display: none;">
+</div>
+<div id="tabs" class="sf-tabs-content-wrap">
+<div class="sf-tabs-content" data-title="New">
+<input type="hidden" class="tabIdx" />
+<div style="padding-bottom: 20px;">
+<div class="productTitle" style="margin-left: 10px;">
+Quick Shopping Cart&reg
+</div>
+</div>
+<div class="table-top">
+<div class="table-top-right-curve">
+</div>
+<div class="table-top-middle">
+<div class="float-left import-export">
+<a href="Export.aspx?suiteid=5&group=product&type=208&name=Quick+Shopping+Cart%26reg&ci=41543" class="offerings-sprite act-icon-export"><span>Export Prices</span></a>
+</div>
+<div class="float-left import-export">
+<a href="javascript:void(0);" id="lnkImportOffering" class="offerings-sprite act-icon-import"><span>Import Prices</span></a>
+</div>
+<div class="float-right last-updated" id="RegisterLastUpdateDate">
+</div>
+</div>
+</div>
+<div class="groupWrapper" style="clear: both;" id="regGroupWrapper">
+<div class="collapse-bar collapse-bar-background" style="clear: both; margin-top: 0;">
+<input type="hidden" class="ProductGroupId" value="23" />
+<input type="hidden" class="PricingSectionId" value="158" />
+<input type="hidden" class="ProductGroupIdAndPricingSectionId" value="23-158" />
+<a href="javascript:void(0);" class="plus"></a><span class="collapse-title">
+Quick Shopping Cart Economy Packages</span>
+</div>
+<div class="mainpricingSection" style="display: none;">
+<!--- Main Table Starts Here -->
+<div class="main-table-style" style="clear: both;">
+<table class="regTable" cellspacing="0" cellpadding="0">
+<tr class="header">
+<th>Product</th>
+<th class="rightHeader">Min. Retail</th>
+<th class="rightHeader">Suggested<br />Retail</th>
+<th class="rightHeader">Your Retail</th>
+<th class="rightHeader">Your Sale</th>
+<th>Start Sale</th>
+<th>End Sale</th>
+<th class="rightHeader">Base Buy<br />Rate</th>
+<th class="rightHeader">Retail Profit</th>
+<th class="rightHeader">Sale Profit</th>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart - Economy Edition - Monthly (recurring)</span>
+<input type="hidden" id="270077" class="pf-id" value="270077" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_270077" value="027fb922a980d22b851a49ea62cdc239" />
+<input type="hidden" class="max-retail" id="maxretail_270077" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="158" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$9.99</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$9.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_270077" class="price retail-price" data-pfid="270077"
+value="$9.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_270077" class="price sale-price" data-pfid="270077"
+value="$9.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_270077" class="date sale-start" data-pfid="270077"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_270077" class="date sale-end" data-pfid="270077"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_270077">
+$8.95</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_270077">
+$1.04</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_270077">
+$1.04</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart - Economy Edition - 1 year (recurring)</span>
+<input type="hidden" id="6790" class="pf-id" value="6790" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6790" value="d58e1c0f2b8241d9717b3119d3d1a99d" />
+<input type="hidden" class="max-retail" id="maxretail_6790" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="158" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$107.84</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$119.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6790" class="price retail-price" data-pfid="6790"
+value="$119.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6790" class="price sale-price" data-pfid="6790"
+value="$119.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6790" class="date sale-start" data-pfid="6790"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6790" class="date sale-end" data-pfid="6790"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6790">
+$96.66</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6790">
+$23.22</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6790">
+$23.22</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart - Economy Edition - 2 years (recurring)</span>
+<input type="hidden" id="6791" class="pf-id" value="6791" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6791" value="39b2a6e6a7519a79f896516e3232c63c" />
+<input type="hidden" class="max-retail" id="maxretail_6791" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="158" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$191.75</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$239.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6791" class="price retail-price" data-pfid="6791"
+value="$239.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6791" class="price sale-price" data-pfid="6791"
+value="$239.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6791" class="date sale-start" data-pfid="6791"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6791" class="date sale-end" data-pfid="6791"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6791">
+$168.79</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6791">
+$70.97</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6791">
+$70.97</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart - Economy Edition - 3 years (recurring)</span>
+<input type="hidden" id="6792" class="pf-id" value="6792" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6792" value="ad4b50f2bccaad294236ba81f3e727a3" />
+<input type="hidden" class="max-retail" id="maxretail_6792" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="158" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$251.74</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$359.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6792" class="price retail-price" data-pfid="6792"
+value="$359.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6792" class="price sale-price" data-pfid="6792"
+value="$359.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6792" class="date sale-start" data-pfid="6792"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6792" class="date sale-end" data-pfid="6792"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6792">
+$216.50</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6792">
+$143.14</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6792">
+$143.14</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart - Economy Edition - 4 years (recurring)</span>
+<input type="hidden" id="6793" class="pf-id" value="6793" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6793" value="f3675c98133be8449d34145a103f9d42" />
+<input type="hidden" class="max-retail" id="maxretail_6793" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="158" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$335.66</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$479.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6793" class="price retail-price" data-pfid="6793"
+value="$479.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6793" class="price sale-price" data-pfid="6793"
+value="$479.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6793" class="date sale-start" data-pfid="6793"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6793" class="date sale-end" data-pfid="6793"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6793">
+$288.67</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6793">
+$190.85</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6793">
+$190.85</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart - Economy Edition - 5 years (recurring)</span>
+<input type="hidden" id="6794" class="pf-id" value="6794" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6794" value="f8869cac839e0452261cc39b12f8f8c6" />
+<input type="hidden" class="max-retail" id="maxretail_6794" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="158" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$419.58</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$599.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6794" class="price retail-price" data-pfid="6794"
+value="$599.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6794" class="price sale-price" data-pfid="6794"
+value="$599.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6794" class="date sale-start" data-pfid="6794"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6794" class="date sale-end" data-pfid="6794"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6794">
+$360.83</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6794">
+$238.57</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6794">
+$238.57</span>
+</td>
+</tr>
+<tr class="save-row">
+<td colspan="10">
+<div>
+<a class="save sectionSave black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=5&amp;type=208&amp;section=158&amp;groupId=23&amp;groupname=Quick+Shopping+Cart&amp;reg;&amp;tab=0&amp;c=true" class="cancel">Cancel</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="collapse-bar collapse-bar-background" style="clear: both; margin-top: 0;">
+<input type="hidden" class="ProductGroupId" value="23" />
+<input type="hidden" class="PricingSectionId" value="160" />
+<input type="hidden" class="ProductGroupIdAndPricingSectionId" value="23-160" />
+<a href="javascript:void(0);" class="plus"></a><span class="collapse-title">
+Quick Shopping Cart Deluxe Packages</span>
+</div>
+<div class="mainpricingSection" style="display: none;">
+<!--- Main Table Starts Here -->
+<div class="main-table-style" style="clear: both;">
+<table class="regTable" cellspacing="0" cellpadding="0">
+<tr class="header">
+<th>Product</th>
+<th class="rightHeader">Min. Retail</th>
+<th class="rightHeader">Suggested<br />Retail</th>
+<th class="rightHeader">Your Retail</th>
+<th class="rightHeader">Your Sale</th>
+<th>Start Sale</th>
+<th>End Sale</th>
+<th class="rightHeader">Base Buy<br />Rate</th>
+<th class="rightHeader">Retail Profit</th>
+<th class="rightHeader">Sale Profit</th>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart - Deluxe Edition - Monthly (recurring)</span>
+<input type="hidden" id="270078" class="pf-id" value="270078" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_270078" value="199b86a8d623465ecd332eb8eb0ec4e7" />
+<input type="hidden" class="max-retail" id="maxretail_270078" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="160" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$29.99</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$29.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_270078" class="price retail-price" data-pfid="270078"
+value="$29.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_270078" class="price sale-price" data-pfid="270078"
+value="$29.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_270078" class="date sale-start" data-pfid="270078"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_270078" class="date sale-end" data-pfid="270078"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_270078">
+$23.95</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_270078">
+$6.04</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_270078">
+$6.04</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart - Deluxe Edition - 1 year (recurring)</span>
+<input type="hidden" id="6800" class="pf-id" value="6800" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6800" value="6b54c9a11c770d5d5da77b059286f6ec" />
+<input type="hidden" class="max-retail" id="maxretail_6800" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="160" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$323.84</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$359.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6800" class="price retail-price" data-pfid="6800"
+value="$359.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6800" class="price sale-price" data-pfid="6800"
+value="$359.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6800" class="date sale-start" data-pfid="6800"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6800" class="date sale-end" data-pfid="6800"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6800">
+$258.66</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6800">
+$101.22</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6800">
+$101.22</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart - Deluxe Edition - 2 years (recurring)</span>
+<input type="hidden" id="6801" class="pf-id" value="6801" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6801" value="600e7a3de61a4e4a0015021b34c513c4" />
+<input type="hidden" class="max-retail" id="maxretail_6801" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="160" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$575.75</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$719.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6801" class="price retail-price" data-pfid="6801"
+value="$719.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6801" class="price sale-price" data-pfid="6801"
+value="$719.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6801" class="date sale-start" data-pfid="6801"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6801" class="date sale-end" data-pfid="6801"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6801">
+$492.31</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6801">
+$227.45</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6801">
+$227.45</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart - Deluxe Edition - 3 years (recurring)</span>
+<input type="hidden" id="6802" class="pf-id" value="6802" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6802" value="c0432a719905fb7a9f867dcd5312f51f" />
+<input type="hidden" class="max-retail" id="maxretail_6802" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="160" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$755.74</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1,079.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6802" class="price retail-price" data-pfid="6802"
+value="$1,079.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6802" class="price sale-price" data-pfid="6802"
+value="$1,079.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6802" class="date sale-start" data-pfid="6802"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6802" class="date sale-end" data-pfid="6802"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6802">
+$646.16</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6802">
+$433.48</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6802">
+$433.48</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart - Deluxe Edition - 4 years (recurring)</span>
+<input type="hidden" id="6803" class="pf-id" value="6803" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6803" value="f7f23b58b24ec68c207ef1444a3b2474" />
+<input type="hidden" class="max-retail" id="maxretail_6803" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="160" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1,007.66</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1,439.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6803" class="price retail-price" data-pfid="6803"
+value="$1,439.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6803" class="price sale-price" data-pfid="6803"
+value="$1,439.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6803" class="date sale-start" data-pfid="6803"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6803" class="date sale-end" data-pfid="6803"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6803">
+$866.59</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6803">
+$572.93</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6803">
+$572.93</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart - Deluxe Edition - 5 years (recurring)</span>
+<input type="hidden" id="6804" class="pf-id" value="6804" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6804" value="3cca98cc2dced812ca9e75c54cb226a6" />
+<input type="hidden" class="max-retail" id="maxretail_6804" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="160" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1,259.58</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1,799.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6804" class="price retail-price" data-pfid="6804"
+value="$1,799.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6804" class="price sale-price" data-pfid="6804"
+value="$1,799.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6804" class="date sale-start" data-pfid="6804"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6804" class="date sale-end" data-pfid="6804"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6804">
+$1,083.23</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6804">
+$716.17</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6804">
+$716.17</span>
+</td>
+</tr>
+<tr class="save-row">
+<td colspan="10">
+<div>
+<a class="save sectionSave black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=5&amp;type=208&amp;section=158&amp;groupId=23&amp;groupname=Quick+Shopping+Cart&amp;reg;&amp;tab=0&amp;c=true" class="cancel">Cancel</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="collapse-bar collapse-bar-background" style="clear: both; margin-top: 0;">
+<input type="hidden" class="ProductGroupId" value="23" />
+<input type="hidden" class="PricingSectionId" value="162" />
+<input type="hidden" class="ProductGroupIdAndPricingSectionId" value="23-162" />
+<a href="javascript:void(0);" class="plus"></a><span class="collapse-title">
+Quick Shopping Cart Premium Packages</span>
+</div>
+<div class="mainpricingSection" style="display: none;">
+<!--- Main Table Starts Here -->
+<div class="main-table-style" style="clear: both;">
+<table class="regTable" cellspacing="0" cellpadding="0">
+<tr class="header">
+<th>Product</th>
+<th class="rightHeader">Min. Retail</th>
+<th class="rightHeader">Suggested<br />Retail</th>
+<th class="rightHeader">Your Retail</th>
+<th class="rightHeader">Your Sale</th>
+<th>Start Sale</th>
+<th>End Sale</th>
+<th class="rightHeader">Base Buy<br />Rate</th>
+<th class="rightHeader">Retail Profit</th>
+<th class="rightHeader">Sale Profit</th>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart - Premium Edition - Monthly (recurring)</span>
+<input type="hidden" id="270079" class="pf-id" value="270079" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_270079" value="3dba69a4047dad76b4c1610f40b6cc24" />
+<input type="hidden" class="max-retail" id="maxretail_270079" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="162" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$49.99</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$49.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_270079" class="price retail-price" data-pfid="270079"
+value="$49.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_270079" class="price sale-price" data-pfid="270079"
+value="$49.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_270079" class="date sale-start" data-pfid="270079"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_270079" class="date sale-end" data-pfid="270079"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_270079">
+$40.95</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_270079">
+$9.04</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_270079">
+$9.04</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart - Premium Edition - 1 year (recurring)</span>
+<input type="hidden" id="6810" class="pf-id" value="6810" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6810" value="6c9fa9cb9ed7c96b55511a0ead3dcdbd" />
+<input type="hidden" class="max-retail" id="maxretail_6810" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="162" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$539.84</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$599.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6810" class="price retail-price" data-pfid="6810"
+value="$599.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6810" class="price sale-price" data-pfid="6810"
+value="$599.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6810" class="date sale-start" data-pfid="6810"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6810" class="date sale-end" data-pfid="6810"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6810">
+$442.26</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6810">
+$157.62</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6810">
+$157.62</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart - Premium Edition - 2 years (recurring)</span>
+<input type="hidden" id="6811" class="pf-id" value="6811" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6811" value="9dc5272256ca205b934800e639954e70" />
+<input type="hidden" class="max-retail" id="maxretail_6811" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="162" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$959.75</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1,199.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6811" class="price retail-price" data-pfid="6811"
+value="$1,199.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6811" class="price sale-price" data-pfid="6811"
+value="$1,199.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6811" class="date sale-start" data-pfid="6811"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6811" class="date sale-end" data-pfid="6811"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6811">
+$830.23</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6811">
+$369.53</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6811">
+$369.53</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart - Premium Edition - 3 years (recurring)</span>
+<input type="hidden" id="6812" class="pf-id" value="6812" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6812" value="dfe0f7a737176812cece6a40440d90d5" />
+<input type="hidden" class="max-retail" id="maxretail_6812" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="162" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1,259.74</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1,799.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6812" class="price retail-price" data-pfid="6812"
+value="$1,799.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6812" class="price sale-price" data-pfid="6812"
+value="$1,799.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6812" class="date sale-start" data-pfid="6812"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6812" class="date sale-end" data-pfid="6812"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6812">
+$1,089.68</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6812">
+$709.96</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6812">
+$709.96</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart - Premium Edition - 4 years (recurring)</span>
+<input type="hidden" id="6813" class="pf-id" value="6813" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6813" value="3ad3e89c5997979945c9bb3146769845" />
+<input type="hidden" class="max-retail" id="maxretail_6813" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="162" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1,679.66</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$2,399.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6813" class="price retail-price" data-pfid="6813"
+value="$2,399.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6813" class="price sale-price" data-pfid="6813"
+value="$2,399.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6813" class="date sale-start" data-pfid="6813"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6813" class="date sale-end" data-pfid="6813"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6813">
+$1,452.90</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6813">
+$946.62</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6813">
+$946.62</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart - Premium Edition - 5 years (recurring)</span>
+<input type="hidden" id="6814" class="pf-id" value="6814" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6814" value="1cfd83c5347496d40dbf263c89b654d0" />
+<input type="hidden" class="max-retail" id="maxretail_6814" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="162" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$2,099.58</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$2,999.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6814" class="price retail-price" data-pfid="6814"
+value="$2,999.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6814" class="price sale-price" data-pfid="6814"
+value="$2,999.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6814" class="date sale-start" data-pfid="6814"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6814" class="date sale-end" data-pfid="6814"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6814">
+$1,805.63</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6814">
+$1,193.77</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6814">
+$1,193.77</span>
+</td>
+</tr>
+<tr class="save-row">
+<td colspan="10">
+<div>
+<a class="save sectionSave black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=5&amp;type=208&amp;section=158&amp;groupId=23&amp;groupname=Quick+Shopping+Cart&amp;reg;&amp;tab=0&amp;c=true" class="cancel">Cancel</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sf-tabs-content" data-title="Renewals">
+<input type="hidden" class="tabIdx" />
+<div style="padding-bottom: 20px;">
+<div class="productTitle" style="margin-left: 10px;">
+Quick Shopping Cart&reg
+Renewals
+</div>
+</div>
+<div class="table-top">
+<div class="table-top-right-curve">
+</div>
+<div class="table-top-middle">
+<div class="float-left import-export">
+<a href="Export.aspx?suiteid=5&group=product&type=208&name=Quick+Shopping+Cart%26reg&ci=41543" class="offerings-sprite act-icon-export"><span>Export Prices</span></a>
+</div>
+<div class="float-left import-export">
+<a href="javascript:void(0);" id="lnkImportRenewal" class="offerings-sprite act-icon-import"><span>Import Prices</span></a>
+</div>
+<div class="float-left" style="margin: 12px 0 0 15px; border-left: 1px dashed #c9c9c9; padding-left: 15px;">
+<ul class="banner-size-dropdown">
+<li>
+<a href="javascript:void(0);" id="ddmatch-btn" class="match-btn sf-btn-pil"><span class="sf-icn-pil sf-icn-pil-edit"></span>Match New Product Pricing <span class="dropdown-arrow-container"><span class="sf-icn-descend sf-icn drop-arrow"></span></span></a>
+<ul id="priceMatch" style="margin: -5px 0 0 13px;">
+<li><a href="javascript:void(0);" class="lnk_selectbanner" data-value="0">All Prices</a></li>
+<li><a href="javascript:void(0);" class="lnk_selectbanner" data-value="1">Retail Prices</a></li>
+<li><a href="javascript:void(0);" class="lnk_selectbanner" data-value="2">Sale Prices</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="float-left ajax-spinner" id="matchSpinner" style="margin-left: 375px; display: none;"></div>
+<div class="float-right last-updated" id="RenewLastUpdateDate">
+</div>
+</div>
+</div>
+<div class="groupWrapper" style="clear: both;" id="renewWrapper">
+<div class="collapse-bar collapse-bar-background" style="clear: both; margin-top: 0;">
+<input type="hidden" class="ProductGroupId" value="23" />
+<input type="hidden" class="PricingSectionId" value="159" />
+<input type="hidden" class="ProductGroupIdAndPricingSectionId" value="23-159" />
+<a href="javascript:void(0);" class="plus"></a><span class="collapse-title">
+Quick Shopping Cart Economy Package Renewal</span>
+</div>
+<div class="mainpricingSection" style="display: none;">
+<!--- Main Table Starts Here -->
+<div class="main-table-style">
+<table class="renewTable" cellspacing="0" cellpadding="0">
+<tr class="header">
+<th>Product</th>
+<th class="rightHeader">Min. Retail</th>
+<th class="rightHeader">Suggested<br />Retail</th>
+<th class="rightHeader">Your Retail</th>
+<th class="rightHeader">Your Sale</th>
+<th>Start Sale</th>
+<th>End Sale</th>
+<th class="rightHeader">Base Buy<br />Rate</th>
+<th class="rightHeader">Retail Profit</th>
+<th class="rightHeader">Sale Profit</th>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart Renewal - Economy Edition - Monthly (recurring)</span>
+<input type="hidden" id="280077" class="pf-id" value="280077" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_280077" value="56c7e70b91c93ad674c22d33e5895023" />
+<input type="hidden" class="max-retail" id="maxretail_280077" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="159" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$9.99</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$9.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_280077" class="price retail-price" data-pfid="280077"
+value="$9.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_280077" class="price sale-price" data-pfid="280077"
+value="$9.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_280077" class="date sale-start" data-pfid="280077"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_280077" class="date sale-end" data-pfid="280077"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_280077">
+$8.95</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_280077">
+$1.04</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_280077">
+$1.04</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart Renewal - Economy Edition - 1 year (recurring)</span>
+<input type="hidden" id="16790" class="pf-id" value="16790" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16790" value="edfe21b1f510e30de1bf42d489393ec6" />
+<input type="hidden" class="max-retail" id="maxretail_16790" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="159" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$107.84</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$119.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16790" class="price retail-price" data-pfid="16790"
+value="$119.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16790" class="price sale-price" data-pfid="16790"
+value="$119.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16790" class="date sale-start" data-pfid="16790"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16790" class="date sale-end" data-pfid="16790"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16790">
+$96.66</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16790">
+$23.22</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16790">
+$23.22</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart Renewal - Economy Edition - 2 years (recurring)</span>
+<input type="hidden" id="16791" class="pf-id" value="16791" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16791" value="beb1cf909ee7cdfb5acb1b7d24734080" />
+<input type="hidden" class="max-retail" id="maxretail_16791" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="159" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$191.75</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$239.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16791" class="price retail-price" data-pfid="16791"
+value="$239.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16791" class="price sale-price" data-pfid="16791"
+value="$239.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16791" class="date sale-start" data-pfid="16791"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16791" class="date sale-end" data-pfid="16791"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16791">
+$168.79</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16791">
+$70.97</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16791">
+$70.97</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart Renewal - Economy Edition - 3 years (recurring)</span>
+<input type="hidden" id="16792" class="pf-id" value="16792" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16792" value="fa787978a55bafb9e2ae063df611f534" />
+<input type="hidden" class="max-retail" id="maxretail_16792" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="159" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$251.74</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$359.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16792" class="price retail-price" data-pfid="16792"
+value="$359.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16792" class="price sale-price" data-pfid="16792"
+value="$359.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16792" class="date sale-start" data-pfid="16792"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16792" class="date sale-end" data-pfid="16792"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16792">
+$216.50</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16792">
+$143.14</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16792">
+$143.14</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart Renewal - Economy Edition - 4 years (recurring)</span>
+<input type="hidden" id="16793" class="pf-id" value="16793" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16793" value="6bb046b39739e555741a06d20a9f16dc" />
+<input type="hidden" class="max-retail" id="maxretail_16793" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="159" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$335.66</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$479.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16793" class="price retail-price" data-pfid="16793"
+value="$479.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16793" class="price sale-price" data-pfid="16793"
+value="$479.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16793" class="date sale-start" data-pfid="16793"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16793" class="date sale-end" data-pfid="16793"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16793">
+$288.67</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16793">
+$190.85</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16793">
+$190.85</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart Renewal - Economy Edition - 5 years (recurring)</span>
+<input type="hidden" id="16794" class="pf-id" value="16794" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16794" value="e03b5858be19dfa6a7aa05fc8e8f3829" />
+<input type="hidden" class="max-retail" id="maxretail_16794" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="159" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$419.58</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$599.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16794" class="price retail-price" data-pfid="16794"
+value="$599.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16794" class="price sale-price" data-pfid="16794"
+value="$599.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16794" class="date sale-start" data-pfid="16794"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16794" class="date sale-end" data-pfid="16794"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16794">
+$360.83</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16794">
+$238.57</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16794">
+$238.57</span>
+</td>
+</tr>
+<tr class="save-row">
+<td colspan="10">
+<div>
+<a class="save sectionSave black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=5&amp;type=208&amp;section=158&amp;groupId=23&amp;groupname=Quick+Shopping+Cart&amp;reg;&amp;tab=0&amp;c=true" class="cancel">Cancel</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="collapse-bar collapse-bar-background" style="clear: both; margin-top: 0;">
+<input type="hidden" class="ProductGroupId" value="23" />
+<input type="hidden" class="PricingSectionId" value="161" />
+<input type="hidden" class="ProductGroupIdAndPricingSectionId" value="23-161" />
+<a href="javascript:void(0);" class="plus"></a><span class="collapse-title">
+Quick Shopping Cart Deluxe Package Renewal</span>
+</div>
+<div class="mainpricingSection" style="display: none;">
+<!--- Main Table Starts Here -->
+<div class="main-table-style">
+<table class="renewTable" cellspacing="0" cellpadding="0">
+<tr class="header">
+<th>Product</th>
+<th class="rightHeader">Min. Retail</th>
+<th class="rightHeader">Suggested<br />Retail</th>
+<th class="rightHeader">Your Retail</th>
+<th class="rightHeader">Your Sale</th>
+<th>Start Sale</th>
+<th>End Sale</th>
+<th class="rightHeader">Base Buy<br />Rate</th>
+<th class="rightHeader">Retail Profit</th>
+<th class="rightHeader">Sale Profit</th>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart Renewal - Deluxe Edition -  Monthly (recurring)</span>
+<input type="hidden" id="280078" class="pf-id" value="280078" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_280078" value="ee9c4dba4a130bf940bfe1d8a0eb0861" />
+<input type="hidden" class="max-retail" id="maxretail_280078" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="161" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$29.99</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$29.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_280078" class="price retail-price" data-pfid="280078"
+value="$29.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_280078" class="price sale-price" data-pfid="280078"
+value="$29.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_280078" class="date sale-start" data-pfid="280078"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_280078" class="date sale-end" data-pfid="280078"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_280078">
+$23.95</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_280078">
+$6.04</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_280078">
+$6.04</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart Renewal - Deluxe Edition - 1 year (recurring)</span>
+<input type="hidden" id="16800" class="pf-id" value="16800" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16800" value="dcdff05c82c15133512b699ac72b8d87" />
+<input type="hidden" class="max-retail" id="maxretail_16800" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="161" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$323.84</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$359.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16800" class="price retail-price" data-pfid="16800"
+value="$359.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16800" class="price sale-price" data-pfid="16800"
+value="$359.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16800" class="date sale-start" data-pfid="16800"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16800" class="date sale-end" data-pfid="16800"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16800">
+$258.66</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16800">
+$101.22</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16800">
+$101.22</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart Renewal - Deluxe Edition - 2 years (recurring)</span>
+<input type="hidden" id="16801" class="pf-id" value="16801" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16801" value="4d7d04f72e853b7b1e6a7d4d56508bc5" />
+<input type="hidden" class="max-retail" id="maxretail_16801" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="161" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$575.75</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$719.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16801" class="price retail-price" data-pfid="16801"
+value="$719.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16801" class="price sale-price" data-pfid="16801"
+value="$719.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16801" class="date sale-start" data-pfid="16801"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16801" class="date sale-end" data-pfid="16801"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16801">
+$492.31</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16801">
+$227.45</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16801">
+$227.45</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart Renewal - Deluxe Edition - 3 years (recurring)</span>
+<input type="hidden" id="16802" class="pf-id" value="16802" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16802" value="24e6affa5ed6ae5bc94ab45628dc3410" />
+<input type="hidden" class="max-retail" id="maxretail_16802" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="161" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$755.74</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1,079.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16802" class="price retail-price" data-pfid="16802"
+value="$1,079.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16802" class="price sale-price" data-pfid="16802"
+value="$1,079.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16802" class="date sale-start" data-pfid="16802"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16802" class="date sale-end" data-pfid="16802"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16802">
+$646.16</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16802">
+$433.48</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16802">
+$433.48</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart Renewal - Deluxe Edition - 4 years (recurring)</span>
+<input type="hidden" id="16803" class="pf-id" value="16803" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16803" value="5a60b12804939c854ad70dd8be09bee7" />
+<input type="hidden" class="max-retail" id="maxretail_16803" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="161" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1,007.66</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1,439.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16803" class="price retail-price" data-pfid="16803"
+value="$1,439.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16803" class="price sale-price" data-pfid="16803"
+value="$1,439.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16803" class="date sale-start" data-pfid="16803"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16803" class="date sale-end" data-pfid="16803"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16803">
+$866.59</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16803">
+$572.93</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16803">
+$572.93</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart Renewal - Deluxe Edition - 5 years (recurring)</span>
+<input type="hidden" id="16804" class="pf-id" value="16804" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16804" value="6fb11467bc3a261bd95c6880a2174bc4" />
+<input type="hidden" class="max-retail" id="maxretail_16804" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="161" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1,259.58</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1,799.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16804" class="price retail-price" data-pfid="16804"
+value="$1,799.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16804" class="price sale-price" data-pfid="16804"
+value="$1,799.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16804" class="date sale-start" data-pfid="16804"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16804" class="date sale-end" data-pfid="16804"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16804">
+$1,083.23</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16804">
+$716.17</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16804">
+$716.17</span>
+</td>
+</tr>
+<tr class="save-row">
+<td colspan="10">
+<div>
+<a class="save sectionSave black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=5&amp;type=208&amp;section=158&amp;groupId=23&amp;groupname=Quick+Shopping+Cart&amp;reg;&amp;tab=0&amp;c=true" class="cancel">Cancel</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="collapse-bar collapse-bar-background" style="clear: both; margin-top: 0;">
+<input type="hidden" class="ProductGroupId" value="23" />
+<input type="hidden" class="PricingSectionId" value="163" />
+<input type="hidden" class="ProductGroupIdAndPricingSectionId" value="23-163" />
+<a href="javascript:void(0);" class="plus"></a><span class="collapse-title">
+Quick Shopping Cart Premium Package Renewal</span>
+</div>
+<div class="mainpricingSection" style="display: none;">
+<!--- Main Table Starts Here -->
+<div class="main-table-style">
+<table class="renewTable" cellspacing="0" cellpadding="0">
+<tr class="header">
+<th>Product</th>
+<th class="rightHeader">Min. Retail</th>
+<th class="rightHeader">Suggested<br />Retail</th>
+<th class="rightHeader">Your Retail</th>
+<th class="rightHeader">Your Sale</th>
+<th>Start Sale</th>
+<th>End Sale</th>
+<th class="rightHeader">Base Buy<br />Rate</th>
+<th class="rightHeader">Retail Profit</th>
+<th class="rightHeader">Sale Profit</th>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart Renewal - Premium Edition -  Monthly (recurring)</span>
+<input type="hidden" id="280079" class="pf-id" value="280079" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_280079" value="4862e703322b470c45dd36a422c8ad94" />
+<input type="hidden" class="max-retail" id="maxretail_280079" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="163" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$49.99</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$49.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_280079" class="price retail-price" data-pfid="280079"
+value="$49.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_280079" class="price sale-price" data-pfid="280079"
+value="$49.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_280079" class="date sale-start" data-pfid="280079"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_280079" class="date sale-end" data-pfid="280079"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_280079">
+$40.95</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_280079">
+$9.04</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_280079">
+$9.04</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart Renewal - Premium Edition - 1 year (recurring)</span>
+<input type="hidden" id="16810" class="pf-id" value="16810" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16810" value="f412124bcee607179d98d40db70dc9b7" />
+<input type="hidden" class="max-retail" id="maxretail_16810" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="163" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$539.84</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$599.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16810" class="price retail-price" data-pfid="16810"
+value="$599.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16810" class="price sale-price" data-pfid="16810"
+value="$599.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16810" class="date sale-start" data-pfid="16810"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16810" class="date sale-end" data-pfid="16810"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16810">
+$442.26</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16810">
+$157.62</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16810">
+$157.62</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart Renewal - Premium Edition - 2 years (recurring)</span>
+<input type="hidden" id="16811" class="pf-id" value="16811" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16811" value="b615fddee48240774eac96176e3a0220" />
+<input type="hidden" class="max-retail" id="maxretail_16811" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="163" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$959.75</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1,199.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16811" class="price retail-price" data-pfid="16811"
+value="$1,199.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16811" class="price sale-price" data-pfid="16811"
+value="$1,199.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16811" class="date sale-start" data-pfid="16811"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16811" class="date sale-end" data-pfid="16811"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16811">
+$830.23</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16811">
+$369.53</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16811">
+$369.53</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart Renewal - Premium Edition - 3 years (recurring)</span>
+<input type="hidden" id="16812" class="pf-id" value="16812" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16812" value="4f64a0421ed13ab63cfeed044d37a931" />
+<input type="hidden" class="max-retail" id="maxretail_16812" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="163" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1,259.74</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1,799.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16812" class="price retail-price" data-pfid="16812"
+value="$1,799.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16812" class="price sale-price" data-pfid="16812"
+value="$1,799.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16812" class="date sale-start" data-pfid="16812"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16812" class="date sale-end" data-pfid="16812"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16812">
+$1,089.68</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16812">
+$709.96</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16812">
+$709.96</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart Renewal - Premium Edition - 4 years (recurring)</span>
+<input type="hidden" id="16813" class="pf-id" value="16813" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16813" value="9e938c5ee8a09c6bc17d7a25021d26af" />
+<input type="hidden" class="max-retail" id="maxretail_16813" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="163" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1,679.66</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$2,399.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16813" class="price retail-price" data-pfid="16813"
+value="$2,399.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16813" class="price sale-price" data-pfid="16813"
+value="$2,399.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16813" class="date sale-start" data-pfid="16813"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16813" class="date sale-end" data-pfid="16813"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16813">
+$1,452.90</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16813">
+$946.62</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16813">
+$946.62</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Quick Shopping Cart Renewal - Premium Edition - 5 years (recurring)</span>
+<input type="hidden" id="16814" class="pf-id" value="16814" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16814" value="24437189c82c79c1674bb87b73a38311" />
+<input type="hidden" class="max-retail" id="maxretail_16814" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="163" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$2,099.58</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$2,999.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16814" class="price retail-price" data-pfid="16814"
+value="$2,999.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16814" class="price sale-price" data-pfid="16814"
+value="$2,999.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16814" class="date sale-start" data-pfid="16814"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16814" class="date sale-end" data-pfid="16814"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16814">
+$1,805.63</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16814">
+$1,193.77</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16814">
+$1,193.77</span>
+</td>
+</tr>
+<tr class="save-row">
+<td colspan="10">
+<div>
+<a class="save sectionSave black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=5&amp;type=208&amp;section=158&amp;groupId=23&amp;groupname=Quick+Shopping+Cart&amp;reg;&amp;tab=0&amp;c=true" class="cancel">Cancel</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="divImport" style="display: none; width: 400px; vertical-align: middle;">
+<iframe id="uploadframe" style="text-align: center;" align="middle" frameborder="0" height="110" width="350"></iframe>
+</div>
+<div id="divGlobalPricing" style="display: none;">
+<div id="spinner" class="ajax-spinner float-left" style="display: none; margin-left: 600px;">
+</div>
+<div id="errorDiv" class="ErrorMessage error-notification notification-box clear-fix ie-clear-fix"
+style="display: none;">
+<a class="close-notification" href="#"><span>Close</span> </a>
+<p id="errorText" class="notification-text red">
+Error setting Global Pricing
+</p>
+</div>
+<div id="divSuccess" class="SuccessMessage success-notification notification-box clear-fix ie-clear-fix" style="clear: both;display:none;">
+<a class="close-notification" href="#"><span>Close</span> </a>
+<p class="notification-text">
+Your changes were successfully saved.
+</p>
+</div>
+<p style="padding-bottom: 15px;">
+Select a pricing structure to apply to all products. You can always make pricing changes to individual products later.
+</p>
+<ul id="ulPricePoint" class="set-pricing-list">
+<li style="padding-bottom: 15px;">
+<input type="radio" id="chk_pricepoint_0" name="chk_pricepoint" value="0" />
+<label for="percentage-markup">
+<strong>Percentage markup</strong></label>
+<p>
+Percentage markups lets you choose the percent above the selected pricing option below.
+</p>
+<ul id="percentageEntry" class="pricing-changes percentage-select" style="width:410px;display: none;">
+<li id="liPercentageEntry">
+<select id="lst_PercentageMarkUp">
+<option value="1">Mininum Retail</option>
+<option value="2">Suggested Retail</option>
+<option value="3">My Retail</option>
+</select>
+<span> +</span>
+<input type="text" id="txtamount" maxlength="3"/>
+<span>%</span>
+<p class="error" style="padding-left:220px;"></p>
+</li>
+</ul>
+</li>
+<li style="padding-bottom: 15px;">
+<input type="radio" id="chk_pricepoint_1" name="chk_pricepoint" value="1"/>
+<label for="minimum-markkup">
+<strong>Mininum retail pricing</strong></label>
+<p>
+Minimum retail price is the lowest price you're allowed to charge for a product.
+</p>
+</li>
+<li>
+<input type="radio" id="chk_pricepoint_2" name="chk_pricepoint" value="2" />
+<label for="suggested-ricing">
+<strong>Suggested retail pricing</strong></label>
+<p>
+Suggested retail price is higher than minimum retail and what we recommend resellers charge.
+</p>
+</li>
+<li style=" border-top:1px solid #c3c3c3;padding-top:5px;">
+<p style="padding-left:0px;">
+<strong>Happy with your current pricing?</strong>
+</p>
+<input type="radio" id="chk_pricepoint_3" name="chk_pricepoint" value="999" />
+<label for="suggested-ricing">Keep product pricing as is.</label>
+</li>
+<li style="padding-bottom: 15px;padding-top:25px;">
+<p style="padding-left:0px;">
+<strong>Note:</strong> It may take up to 48 hours for the published price changes to update.
+</p>
+</li>
+</ul>
+<div id="divSaveConfirmModal" style="width: 400px; clear: both; display: none;height:120px;">
+<div id="divInputs" class="account-access" style="line-height:1.4;vertical-align:middle;text-align:justify;">
+<label>Please Confirm</label>
+<p style="padding-bottom:10px;">
+Are you sure you want to change the pricing of all your products? You cannot undo this.
+</p>
+<p>
+Your new retail pricing will be set to <span id="newPricing" style="font-weight: bold;"></span>pricing.
+</p>
+</div>
+</div>
+<input type="hidden" id="priceModiifedFlag" />
+</div>
+</div>
+</div>
+<div class="uxcore-only">
+<div class="container uxcore-footer">
+<div class="row">
+<div class="col-sm-4 text-right" style="padding-top: 5px;">
+<script type="text/javascript" src="https://seal.starfieldtech.com/getSeal?sealID=N5LDrMam1CrGjIOM0U1ZTjrbiaJmeUnLLEZiLEzMBOzjRsFxoLHqzyH"></script>
+</div>
+<div class="col-sm-7">
+<div class="row">
+Basic Reseller Plan |
+<a href="http://Hosting.LARRYWAKEMAN.COM">View Storefront</a> |
+<a href="https://survey.godaddy.com/pqc/pqc/lpqc.aspx?survey=209&amp;admingroup=32" target="_blank">Feedback</a> |
+<a href="https://support.godaddy.com/help/category/reseller/" target="_blank">Help</a>
+| <a href="mailto:resellersupport@godaddy.com">resellersupport@godaddy.com</a>
+</div>
+<div class="row">
+Call Support (480) 505-8857 |
+Copyright &copy; 2001 - 2015. All Rights Reserved.
+<a href="https://plus.google.com/communities/110833808277616099110"><span class="uxicon uxicon-google-plus-box"></span></a>
+<a href="http://twitter.com/wildwestdomains"><span class="uxicon uxicon-twitter"></span></a>
+<a href="http://www.facebook.com/pages/Wild-West-Domains#!/pages/Wild-West-Domains/127671573927218?ref=ts"><span class="uxicon uxicon-facebook-box"></span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1F9DBF50" />
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+</div></form>
+<script src="//img1.wsimg.com/ux/1.3.7/js/uxcore.en.min.js"></script>
+<script>
+var uxel = ux.eldorado || {};
+uxel.fns = [];
+uxel.ready = function ready(fn) { uxel.fns.push(fn); };
+uxel.data = {
+app: 'rcc',
+market: 'en-us',
+appAlias: 'rcc',
+version: '1.4.27',
+plId: '1',
+shopperId: '{{pc:shopperid}}',
+env: 'prodPhx',
+manifest: 'appheader',
+urlArgs: '?ci=',
+thirdParty: {}
+};
+uxel.texts = {};
+uxel.urls = {};
+ux.eldorado = uxel;
+</script>
+<script type="text/javascript">
+uxel.data.thirdParty.tealium = { js: '//tags.tiqcdn.com/utag/godaddy/godaddy/prod/utag.js' };
+</script>
+<script src="//img1.wsimg.com/ux/eldorado/1.4.27/js/appheader.min.js"></script>
+<script type="text/javascript">
+uxel.data.tokens = { loginApp: '{{pc:loginapp}}', loginPath: '{{pc:currentpage}}' };
+uxel.header.load('https://gui.godaddy.com', 'rcc', undefined, undefined, null);
+</script><!-- Google Analytics config -->
+<script>
+uxel.ready(function() {
+uxel.thirdParty.configGATagManager({
+data: [
+{ 'shopperId': '103245034' },
+{ 'privateLabelId': '510674' },
+{ 'server': 'P3PWRCCWEB003' }
+],
+domain: 'reseller.godaddy.com'
+});
+});
+</script><!-- Google Tag Manager -->
+<noscript>
+<iframe src="//www.googletagmanager.com/ns.html?id=GTM-SXRF" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>
+uxel.ready(function() {
+uxel.thirdParty.initGATagManager('GTM-SXRF');
+});
+<!-- End Google Tag Manager -->
+</script><!-- Manifest appheader -->
+<script src="//img1.wsimg.com/ux/1.3.7/js/uxcontrols.min.js"></script>
+<script>
+$sf = {skin: "app"};
+</script>
+<script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/jquery-1.7.1-jquery-ui-1.8.min.js"></script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/rcc.shared.plugins.js"></script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/header/header-js-20120730.min.js"></script><script id='duel' type="text/javascript" src="https://img3.wsimg.com/starfield/duel/v2.5.1/duel.js?appid=aBwld8TY#YUJ3bGQ4VFl2Mi41LjFwcm9k"></script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/header/superfish-20100511.js"></script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/fastballLibrary0009-channelIntegration-2.0.0.min.js"></script><script>var jsPlusIns_rccReportsTokens = {reportjsAddEventError:"not supported or DOM not loaded",reportjsValidElementError:"Please make sure that you're passing a valid element",reportjsOpacityError:"Opacity not supported by the browser",reportjsFlashError:"Flash Player Installation",reportjsNoTableIdError:"Error: No Table id set, you need to set an id on your table and every row",x:''}</script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/jquery.plugins_20130912.min.js"></script><script>var GDRcc_rccTokens = {GDRccJS11monthsError:"Cannot go back more than 11 months!",GDRccJSYearTimePeriodError:"The time period selected cannot be greater than one year.",GDRccJS6moTimePeriodError:"The time period selected cannot be greater than six months.",GDRccJSChooseDateRange:"Choose a date range",GDRccJSDisplayText:"Display:",GDRccJSOfText:"of",GDRccJSFromText:"From:",GDRccJSToText:"To:",GDRccJSUpdateText:"Update",GDRccJSDateFormat:"The date format should be : mm/dd/yyyy",GDRccJSValidMonth:"Please enter a valid month",GDRccJSValidDay:"Please enter a valid day",GDRccJSValidBetweenDate:"Please enter a valid 4 digit year between {0} and {1}",GDRccJSValidDate:"Please enter a valid date",GDRccJSControlError:"This control can only be used with select elements",GDRccJSTodayText:"Today",GDRccJSThisWeekText:"This Week",GDRccJSLastWeekText:"Last Week",GDRccJSThisMonthText:"This Month",GDRccJSLastMonthText:"Last Month",GDRccJSThisQuarterText:"This Quarter",GDRccJSLastQuarterText:"Last Quarter",GDRccJSLastSixMonthsText:"Last Six Months",x:''}</script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/reports/gd.Rcc20130912.min.js"></script><script>var DWCommon_rccTokens = {DWCommonJSDateFormat:"",DWCommonJSValidMonth:"",DWCommonJSValidDay:"",DWCommonJSValidBetweenDate:"",DWCommonJSValidDate:"",DWCommonJSTagsNotAllowed:"'{0}' tags are not allowed",DWCommonJSAreYouSureRestore:"Are you sure you want to restore to your previously published version?",DWCommonJSUndoChangesText:"Undo Changes",DWCommonJSBrowseText:"Browse...",DWCommonJSSWFWidth:"Enter the Width of SWF file:",DWCommonJSSWFHeight:"Enter the Height of SWF file:",DWCommonJSPreviewText:"preview",DWCommonJSImportFileText:"Import File",DWCommonJSUploadImageText:"Upload Image",DWCommonJSValidHeight:"Please enter a valid height.",DWCommonJSValidWidth:"Please enter a valid width.",DWCommonJSSelectFileToImport:"Please select a file to import.",DWCommonJSPleaseSelectAFile:"Please select a file.",DWCommonJSImportInProgress:"Import in progress...",DWCommonJSInvalidImageFormat:"Invalid image format.",DWCommonJSInvalidFileFormat:"Invalid file format.",DWCommonJSImportCompleteSelectChanges:"File Import Complete. Click &quot;Select&quot; to see the changes",DWCommonJSErrorUploadingFile:"Error uploading file.",DWCommonJSFileUploadComplete:"File upload complete.",DWCommonJSFileImportComplete:"File import complete.",x:''}</script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/dwCommon20131231.min.js"></script><script>var QS_Common_rccTokens = {QSCommonFillInValue:"Please fill in the value.",QSCommonValidValue:"Please enter a valid value.",QSCommonSelectValidValue:"Please enter a valid value.",QSCommonChooseOne:"Choose one",QSCommonVendorError:"Error while getting vendors",QSCommonNA:"Not Applicable",QSCommonStatesError:"Error while getting States",QSCommonSessionExpired:"Your session has expired. Please login.",QSCommonInvalidInputs:"Please correct the following invalid inputs :",QSCommonErrorSaving:"Error saving the details.",x:''}</script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/qsCommon20130912.min.js"></script><script>var PricingJs_rccQuickSetupTokens = {PricingJsMinRetail:"Mininum Retail",PricingJsSuggestedRetail:"Suggested Retail",PricingJsCurrentRetail:"Your Current Retail",PricingJsGlobalPricing:"Global Pricing",PricingJsOK:"OK",PricingJsCancel:"Cancel",PricingJsUpdateTime:"Your product pricing is being updated. These changes usually take 5 minutes. However, it may take up to 48 hours for these changes to take effect. These time frames are estimates and not guaranteed.",PricingJsMoreThan:"% more than",PricingJsDecimalNotAllowed:"Decimal number is not allowed. <br/> Please enter the percentage as a whole number.",PricingJsEnterPercent:"Please enter a percentage.",PricingJsValueBetween:"Please enter a value between 0 and 999.",x:''}</script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/quicksetup/Pricing.min.20130912.js"></script><script>var ProductPricingJs_rccProductsTokens = {ProductPricingJsSetPriceFor:"Set price for {0} - 1 year",ProductPricingJsImportExcel:"Import Excel",ProductPricingJsSessionExpired:"Your session has expired. Please login.",ProductPricingJsFixErrors:"Please fix the following errors :",ProductPricingJsSaveError:"Error while saving the pricing.",ProductPricingJsUpdateMessage:"Your currency preference(s) is being updated. These changes usually take 5 minutes. However, it may take up to <br/> <span style='padding-left:25px;'>48 hours for these changes to take effect. These time frames are estimates and not guaranteed.</span>",x:''}</script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/products/productPricing20130912.min.js"></script><script>var RccPricingJs_rccProductsTokens = {RccPricingJsUpdatesNotSaved:"Your pricing updates are not saved. Are you sure you want to cancel without saving these changes?",RccPricingJsConfirm:"Confirm",RccPricingJsOK:"OK",RccPricingJsCancel:"Cancel",RccPricingJsImportError:"Error in importing pricing sheet.",RccPricingJsInvalidPricingSheet:"Invalid Pricing sheet.",RccPricingJsDateFormat:"The date format should be: mm/dd/yyyy",RccPricingJsValidMonth:"Please enter a valid month.",RccPricingJsValidDay:"Please enter a valid day.",RccPricingJsValidBetweenDate:"Please enter a valid 4 digit year between {0} and {1}.",RccPricingJsValidDate:"Please enter a valid date.",RccPricingJsValidAmount:"Please enter a valid amount.",RccPricingJsFixErrors:"Please fix the following errors.",RccPricingJsSaving:"Saving, please wait...",RccPricingJsValidRetailPrice:"Please enter a valid retail price.",RccPricingJsValidSalePrice:"Please enter a valid sale price.",RccPricingJsRetailGreaterThanMin:"Please enter a retail price greater than your minimum retail price.",RccPricingJsRetailEntry:"Please enter a retail price below {0}.",RccPricingJsSaleEntry:"Please enter a sale price below {0}.",RccPricingJsEndDateGreaterThanStart:"Please enter a end date greater than start date.",RccPricingJsSaleGreaterThanMin:"Please enter a sale price greater than your minimum retail price.",RccPricingJsSaleLessThanRetail:"Please enter a sale price less than your retail price.",x:''}</script><script  type="text/javascript" src="/javascript/products/rccPricing.js"></script>
+<script type="text/javascript" language="javascript">
+var _trafficDomain = 'securepaynet.net';
+$(document).ready(function () {
+fbiLibSetDomainName('securepaynet.net');
+function setMargin() {
+if ($(window).width() <= 1100) {
+$('div.header-container div.tabs ul').css('margin', '0px');
+}
+else {
+$('div.header-container div.tabs ul').css('margin-left', '100px');
+}
+}
+$(window).resize(function () {
+setMargin();
+});
+setMargin();
+if ('False' === 'true') {
+$('#gdLogo').css('background-image', 'https://img1.wsimg.com/rcc/images/suite-logo2.gif');
+}
+});
+</script>
+<script  type="text/javascript" language="javascript" >
+$(document).ready(function () {
+var showStorefrontLink = 'False';
+if (showStorefrontLink.toLowerCase() === 'true')
+$('a.view-store').parent().css('display', 'none');
+else {
+if ($('a.view-store2').length && ($('a.view-store2').css('display') != 'none'))
+$('a.view-store').parent().css('display', 'none');
+else {
+$('a.view-store').parent().css('display', 'inline');
+}
+}
+})
+</script>
+<script language="javascript" type="text/javascript">
+var disableCurrencyOptinAccordian = 'True';
+var currencies = $('#currencyList');
+var showProcessingMsg = 'False';
+var landingPage = 'https://reseller.godaddy.com/Products/Default.aspx?ci=59405';
+var isMCP = 'False';
+var pricing = {};
+var pricingCheck = $('#groupPricingCheck');
+var groupPricingSelect = $('#groupPricingSelect');
+if (groupPricingSelect.length == 1 && groupPricingSelect.find('option:first').val() == "3") {
+pricingCheck.prop('checked', false).prop('disabled', true);
+pricingCheck.parent().css('color', '#CCC');
+}
+groupPricingSelect.change(function () {
+if($(this).find(':selected').val() === "3") {
+pricingCheck.prop('checked', false).prop('disabled', true);
+pricingCheck.parent().css('color', '#CCC');
+} else {
+pricingCheck.prop('disabled', false);
+}
+});
+if(isMCP.toLowerCase() != "true"){
+currencies.find("option[value='USD']").attr('selected', 'selected');
+$('div.currencyOptinSection').addClass('currency-overlay');
+$('#saveCurrencyOptions').unbind('click');
+$('#saveCancelCurrencyOptions').hide();
+$('#currencyList').attr('disabled', 'disabled');
+}
+else{
+currencies.find("option[value='USD']").attr('selected', 'selected');
+}
+if (disableCurrencyOptinAccordian.toLowerCase() == "true") {
+var quickPricingTop;
+if (showProcessingMsg.toLowerCase() == "true") {
+require("starfield/sf.msg.overlay", function () {
+$('#mainContainer').sfMsgOverlay({
+message: "Your currency preference(s) is being updated. These changes usually take 5 minutes. However, it may take up to <br/> <span style='padding-left:25px;'>48 hours for these changes to take effect. These time frames are estimates and not guaranteed.</span>"
+});
+quickPricingTop = $('#mainContainer').position().top;
+$('div.sf-msg-overlay').offset({ top: quickPricingTop + 200, left: $('div.sf-msg-overlay').offset.left }).css('text-align','left');
+});
+} else {
+require("starfield/sf.msg.overlay", function() {
+$('#mainContainer').sfMsgOverlay({
+message: null
+});
+});
+}
+}
+</script>
+<script type="text/javascript">
+$(document).ready(function () {
+globalPricing.Root = '../b-2015-06-23_15-11-00/';
+globalPricing.wsUrl = globalPricing.Root + 'wcf/QuickSetUpWcf/QuickSetup.svc/SaveGlobalPricing';
+globalPricing.updateSavedStepWs = '../b-2015-06-23_15-11-00/wcf/PlDataWcf/PlData.svc/UpdatePlData';
+globalPricing.productsPage = globalPricing.Root + 'Products/Default.aspx?ci=59405';
+globalPricing.rccDashBoard = globalPricing.Root + 'default.aspx?ci=41504';
+globalPricing.showFailureMessage = 'False';
+globalPricing.showPricing = 'True';
+globalPricing.statusUpdateWs = globalPricing.Root + 'wcf/QuickSetUpWcf/QuickSetup.svc/UpdateFailedRequestStatus';
+globalPricing.checkNonUsdForNonMcp = "False";
+})
+</script>
+<script type="text/javascript">
+$(document).ready(function () {
+var rccHeader = $('#rcc-header-container');
+if(rccHeader){
+rccHeader.append('<div class="title-container"><div class="float-left"><a href="ProductOfferings.aspx?suiteid=5&tab=0" class="sf-btn-pil" style="margin: 7px 0 0 7px;"><span class="offerings-sprite btn-back-icon"></span>Back</a></div><div class="float-left"><h1>Quick Shopping Cart&reg Pricing</h1></div></div>');
+}
+require('starfield/sf.droplist', function () {   $('#priceMatchOption').sfDropList({valueChangeElement: '#valForPriceMatchOption'}); });
+var currHelper = new baseCurrencyHelper('$','$','.','2',',','Prefix');
+productPricing.Tab = 0;
+productPricing.AppRoot = '../b-2015-06-23_15-11-00/';
+productPricing.GroupId = 208;
+productPricing.RenewTabDisplay = 'True';
+productPricing.OfferingTabDisplay = 'True';
+productPricing.acc = new basePricingAccordion(currHelper);
+productPricing.acc.AppRoot = '../b-2015-06-23_15-11-00/';
+productPricing.acc.SuccessDiv = $('#productSuccess');
+productPricing.acc.ErrorDiv = $('#productError');
+productPricing.acc.WaringingDiv = $('#productWarn');
+productPricing.acc.MainContainer = $('#mainContainer');
+productPricing.acc.GroupType = 'PRODUCT';
+productPricing.acc.GroupSectionId = '158' ;
+productPricing.ProductAndSectionId = '23-158' ;
+productPricing.GroupName='Quick Shopping Cart&reg';
+productPricing.acc.landingPage = 'https://reseller.godaddy.com/Products/Default.aspx?ci=59405';
+productPricing.acc.RestoreMessage = $('#productRestore');
+productPricing.acc.TransactionCurrency = "USD";
+productPricing.acc.PageType="product";
+productPricing.PricingPage = new basePricingPage(currHelper);
+productPricing.RenewalLookup = {'280077':270077,'16790':6790,'16791':6791,'16792':6792,'16793':6793,'16794':6794,'280078':270078,'16800':6800,'16801':6801,'16802':6802,'16803':6803,'16804':6804,'280079':270079,'16810':6810,'16811':6811,'16812':6812,'16813':6813,'16814':6814};
+productPricing.PricingPage.initPricing( $('#tabs'));
+globalPricing.messageOverlayControl = $('#mainContainer');
+globalPricing.pricingJoberrorControl = $('#divpricingJobError');
+globalPricing.fromPricingPage=true;
+globalPricing.setPricingLink =$('#lnkResubmitPricing');
+globalPricing.pricingDialogControl = $('#divGlobalPricing');
+globalPricing.redirectPage = "../b-2015-06-23_15-11-00/Products/TldPricing.aspx?ci=41506";
+globalPricing.methods.init();
+productPricing.methods.init();
+});
+function LoadImport(data){
+productPricing.PricingPage.loadImportedRows(data, $('#productWarn'), productPricing.methods.expandAllSections);
+};
+</script>
+</body>
+</html>

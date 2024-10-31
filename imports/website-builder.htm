@@ -1,0 +1,4651 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+Website Builder - Reseller Control Center
+</title><meta http-equiv="Content-Style-Type" content="text/css" /><meta http-equiv="Content-Script-Type" content="text/javascript" />
+<!--CSS-->
+<link href="https://img2.wsimg.com/rcc/css/header-layout-styles-20130731.css" rel="stylesheet" type="text/css" />
+<link href="https://img2.wsimg.com/rcc/css/rcc-layout-styles-20131014.min.css" rel="stylesheet"  type="text/css"/>
+<link href="https://img2.wsimg.com/rcc/css/footer-20140221a.css" rel="stylesheet"  type="text/css"/>
+<link href="/css/uxcore-only-footer.css" rel="stylesheet" type="text/css"/>
+<link href="https://img2.wsimg.com/rcc/reseller-uxcore-only-20140224/css/uxcore.118.min.css" rel="stylesheet"  type="text/css"/>
+<!-- IE6 Specific Stuff -->
+<!--[if lte IE 6]>
+<style type="text/css" media="screen">
+div.header-container {
+width:expression(((document.compatMode && document.compatMode=='CSS1Compat') ? document.documentElement.clientWidth : document.body.clientWidth) < 990 ? "990px" : "auto");
+}
+</style>
+<![endif]-->
+<!-- IE6 Specific Stuff -->
+<!--[if lte IE 7]>
+<link href="https://img2.wsimg.com/rcc/css/ie6-7-20110822.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 8]>
+<link href="https://img2.wsimg.com/rcc/css/ie8-20100702.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link href="https://img2.wsimg.com/rcc/css/offerings20131014.min.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.sf-tabs-content {padding: 15px 5px 15px 5px;display: none;}
+#ddmatch-btn{padding-right:30px;}
+.match-btn span.dropdown-arrow-container {border-left: 1px solid #cfcfcf;display: block;right: 10px;position: absolute;top: 0;width: 14px;height: 100%;}
+.match-btn span.dropdown-arrow-container span.drop-arrow {margin: 9px 0 0 7px;}
+</style>
+</head>
+<body>
+<form name="aspnetForm" method="post" action="ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=5&amp;type=200&amp;section=150&amp;groupId=15&amp;groupname=Website+Builder&amp;tab=2" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="v4MpFZH9Y/YQKVIa27rKE9cNYTIwlEvn4Ebgl7TwWVH9x3qxHR3ViaK8wQp34IWUR8LjfPfmgXjPVzYtFoOETRkkEYj3o097Yx1cxmkpgS3AHS3SilDjuXNuSjNp2sn1kG+8VhhkUTOHVpyJK713LYYmvd/qAaueAwjilwRq5tkz1QH7WHKdnpP/UiehVfO9Gzl1YXKvNy78jJP19cAlL4PsIhxJ1+dN6AXmVApKfaETDwKVIL3Z3kMIj4geHxIjsr7DBOJ28g7uCp/gWsr6PdA/q2PAn9zp8EDYieqSWbHYQI+r3Xk0U6ZJ44fqsH7bDbtJ9rkGwMOnJgdCrru9vapnue0XdxC0sttkRtuysAHpj22y0DSS+ZqO3nxXCm96gn9KKa2Yx3bySBB6oPNrsUReASXyFG7cKkcw6wt++m/+Vt05q1KxDNSD3gUkPuN/o9DntCV3yIIpPc487kWntaB/W2oaiEasWlNspioH2to2Rw7YuTB3nfcRJ7l1qnVDmML6ZpKXBkMhhe5HHae1qhKx93ZAXZ6Pgy2K2ltByJ5CfSD0GFxIlZNFpqcslekNW/hzzKDm0GhPwYT/JS51v41VGyVawmtcfuqhPkWw14vV/4VGYD1B743KuTPABS+0ZEGTxAN37zMFmuAdMOaJhbcA6QZte94MZmbJcZjMwvdv2YrothL229dS+WIEhcX5ti0bzNFDPpLeQFh3lECZpSM3w4LZzw1qiTY/fu7hPqYx3KTd53nC8V3I2qlfxUYceNip2btQlEjcMz1h1Aogk3FIRhM1W57kNUx+C0FMwJICvUL0WhvAm52OeFYxN6CZ0NLtWKWO9W2XfnDkCPXSBRcSb6fSLN2AQuDBbeTQL/VtQHFXeNxU2O1Od9lnApattIQkVX4q8lDXw0CMZ98ppCXzDDYAP2tdHwhG/Fj56pxYa2Z4/MU7bPPPVB2uQmdZ/ghe1bOVfxoNQICUdP1FmC01bjJdZijXwN/rMxfcuDrjB+EtYpABUP3voRUOsCt9s1bR/hUkgE0lIxYN3gAPRNqHXDSNz2NQgTQtQuNxIJvh/gdFqzrfI2vbsHoBB6Ls17/iD3UqwYT9R8FhrkAIzLrwQazuf+xpWEvTUisEApmoYsa8+ODrJsywa7fcLd9ZOD+y3BAIBM9y2z5MHaOP2FU4AsIMsvfqpA9N1BK2ep5VAfO1mwfd+s3GMPCYUd3Jsl4oy0lxVIaADD2wPtaixkKGiLuzOxWJJJOBoUE51DVZSsnRZ3jT1p0taDBThKNUD0AWniN9qVxXIgD7dFWLd6z6PeZJudk25zvBw8h5QXFIlPZa6pN0NCBUadh8mZGuuaJB5svUWg0YiumQ6KKEuXL3Ew1WB4PtsEfIDGKLo8QjgIfQq9LqL4rnx6Y1N4KRZLy7SGqhPpCdQU6/eqRyJLSXMKB02jdqia3gKFoNqtSEBprTG7ockbDVubzaLYTuxJRY1jqOc8GOvUUCrANV2mWT3Et10Fxrs2yrivGyKRurJA4wdyQJ+4+kXiQON5EoOPDZiOE28lbK8dh0y3pMUkZBuGt3v8Ctl9BelLi2H8LaYGigm6UNsFzxb4w/llQeX32KaTXSC9gTXNg4DUWcb4YhPZfaxfKc3USvfwyWxErnF72lthmH9CB3yIFoo+4RgPCpfDWxh+o4aZGTBGPd+MJ0LPkAVoT1F10zH0albRrnswJ0R1qf9chAdNTq6IJVUE6rHGahdK3noubKVAyG0vfNgRD6PChZYvbX8pERwgzJau6y8BUO62ZMk9iqXBaALZ+JoQihnH520NLv+vyQarhTWc20J39Wi0nWAW358YWXwUNAjkVbtMWjDp/4S9GcT6WIAP++2oxAui9Xkrpn4f6ivsWkhqUG0l/gcxqHucNHn1vNZlvpwy9RJ1nMhyWa91dcjWuQtP5LMoDZMTaQhJNRyA3n3eLOwTH+1yJCdY7URn5LPsp8MZVsGDe/3YeGhnXEYnYQpJkmqjuvm+jt4ILvj5YIuBGPmcsbXM/eM1M72lSAUzVV/YENa0HF0LDjD3qr0wjhVQUiEyme1v9pToVZO3yH4FZEKjiFeT5vtrEUN0j4E9+PUsRcTwcMMQNZOzK/Ot5kExDQfs7DG81X1Bht5FIh1v4GsQvOrX2gVNbRSTw8kMMsRm4SQOcZfxzKoJh8qpC5qd538LKjuQojHi86Hsh0BZp6TWNb3jrMzcE/xMqV6tI4CCqogOGINEi3Vrw/oVjIBlduXF9nWlICsItKNEeJxDHanf/tQGtcYO/v21m0ZwvM0n3L1E0pTuIWVNC9TQFvu7zA4zpxKLRY7X28nDKIF+bzZ8EKRIsqkhXpVft1IiCJdkGRJDT63+2Rb5rdNPuT+lSsvZ4GsfG57w5ZhZCoxEltkeZCl2wh71zCNAyJLO7XbxlfvpbKej0p3lY2QB0+UhBryiKHnrN4LuZ5h5AGhgtej4UfqR9zeAwYWLmZNnz2Q173J7rEOTFG6YgOJzeG89xx1rgczqvLXwRSe+pW9vKJli+lrYPl4AHg2ODpVk6+oEi73Kdl/QFCo1xXjVOHDshQiPEDtJxHLwZAtJ1OshrredyHThedcRpl+KkGNWEbus1UKcH3bSnoLJzBvlbe4HdZmHryinxkj1b2fibbiHLO98ECWRHKb+f4S97KT+rrgP9rC4eE6eEWmV4XWzCDVN8ORZF403K7tYgxMRIjZX/xEE4OProHcTzpuXDN8WkZS7j1RTmnOG7TUVBvcgZW1/QjB/l+eo1NdIl1LkXRxj+Iyrcvxme59bWTazOkLypVxEMNuzq1w8w727gFfV9xx7XFPYTHuhMwnTtO2fn/Kci0EWj9TQTIaIVdu5QYmwGmu9Zn1G2UfG5PAIQbADXzTBu4lI2T1JgWCjzYiMWLG1cLAPwEgCc7w4i5j1vtKAQJivUJUfxK/OghiA21vAis3x+VrZFcWz6j2YPjNn3f60h4wXj8FLcUh64RnWUN+0MfzWNoLhszaxzWR8vARA==" />
+</div>
+<div id="totalContainer" class="total-container">
+<div style="display:none;"><img src="https://img.securepaynet.net/image.aspx?sitename=www.resellercontrolcenter.com&amp;server=P3PWRCCWEB003&amp;page=/b-2015-06-23_15-11-00/Products/ProductPricing.aspx&amp;isc=&amp;ci=41542&amp;privatelabelid=510674&amp;shopper=103245034&amp;querystring=ci%3d41542%26group%3dproduct%26suiteId%3d5%26type%3d200%26section%3d150%26groupId%3d15%26groupname%3dWebsite%2bBuilder%26tab%3d2" alt="" border="0"/>	</div>
+<div class="uxcore-only">
+<header id="uxh">
+<div id="uxh-acct-delegate" style="display:none;" class="delegate-shim">
+<div style="display:none;" class="delegate delegate-rep">
+<div class="container">
+<div class="acct-delegate-text delegate-left">{0} logged in as: <span>{1} {2}</span></div>
+<div class="delegate-right"><a id="exit-impersonation-link" href="https://sso.godaddy.com/logout?app=www&realm=idp" class="delegate-link"><span class="uxicon uxicon-x"></span><span class="text">Stop impersonation</span></a></div>
+</div>
+</div>
+<div style="display:none;" class="delegate delegate-cust">
+<div class="container">
+<div class="acct-delegate-text delegate-left">{0} logged in as: <span>{1} {2}</span></div>
+<div class="delegate-right"><a id="exit-delegation-link" href="javascript: void(0);" data-action="https://sso.godaddy.com/cookie/switchback/" data-sk="WSv4LgM7Bb9a692PjgPEBHG5MeDTHr" class="delegate-link"><span class="uxicon uxicon-x"></span><span class="text">Exit access</span></a></div>
+</div>
+</div>
+</div>
+<nav id="uxh-nav" class="navbar navbar-default uxc-header">
+<div class="container">
+<div id="uxh-nav-header" class="navbar-header">
+<button id="uxh-mobile-nav" type="button" data-toggle="collapse" data-target=".uxc-header-nav" class="navbar-toggle"><span class="sr-only">Toggle Navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a id="uxh-nav-brand" href="//www.godaddy.com/?ci=" class="navbar-brand"><span id="uxhNavBrandLink" class="uxc-gd-logo">Go Daddy</span></a>
+<div id="uxh-nav-product"></div>
+</div>
+<div id="uxh-nav-collapse" class="navbar-collapse collapse uxc-header-nav">
+<ul id="uxh-nav-breadcrumbs" role="menubar" class="nav navbar-nav navbar-left">
+<li id="uxh-nav-mya-link"><a role="menuitem" href="https://mya.godaddy.com/default.aspx?ci=">My Account</a></li>
+<li id="uxh-s-productsmenu" class="dropdown"><a role="button" href="javascript:void(0);" data-toggle="dropdown" class="dropdown-toggle"><span id="uxh-product">Reseller Control Center</span>&nbsp;<b id="uxh-products-arrow" style="display:none;" class="caret uxh-ctrl-s-products"></b></a>
+<ul id="uxh-s-products" role="menu" data-showops="false" class="sf-menu-icns dropdown-menu uxh-ctrl-s-products">
+<li><a href="https://dcc.godaddy.com/default.aspx?ci=&regionsite=www&marketid=en-US" class="menuitem">Domains</a></li>
+<li><a href="https://gateway.godaddy.com?ci=&regionsite=www&prog_id=GoDaddy&marketid=en-US" class="menuitem">Hosting</a></li>
+<li><a href="https://productivity.godaddy.com/emailchooser?ci=&regionsite=www&utm_medium=uxh&utm_source=rcc&prog_id=GoDaddy&marketid=en-US" class="menuitem">Email</a></li>
+</ul>
+</li>
+<li id="uxh-i-server" style="display:none;"></li>
+</ul>
+<ul id="uxh-nav-right" role="menubar" class="nav navbar-nav navbar-right">
+<li id="uxh-nav-support"><a id="uxhNavSupportLink" role="menuitem" href="https://www.godaddy.com/help" target="_blank">Help</a></li>
+<li id="uxh-nav-user" class="dropdown"><a id="uxh-nav-user-link" role="button" href="javascript:void(0);" data-toggle="dropdown" class="dropdown-toggle"><span id="uxh-s-name-prefix" style="display:none;">Customer #</span><span id="uxh-s-name">Hello</span>&nbsp;<b class="caret"></b></a>
+<ul id="uxh-nav-user-menu" role="menu" class="dropdown-menu shopper-menu">
+<li id="uxh-s-header" class="uxh-logged-in shopper-header dropdown-header">
+<div class="shopper-header-content">
+<div id="uxh-s-fullname" style="display:none;" class="uxc-nowrap"></div>
+<div id="uxh-s-status" style="display:none;" class="uxc-nowrap"></div>
+<div class="uxc-details">
+<div id="uxh-mi-custid" style="display:none;" class="uxc-nowrap"><span class="uxc-shopper-menu-label">Customer #:</span><span id="uxh-s-id"></span></div>
+<div id="uxh-mi-mgrid" style="display:none;" class="uxc-nowrap"><span class="uxc-shopper-menu-label">Manager ID:</span><span id="uxh-mgr-id"></span></div>
+<div id="uxh-mi-mgrname" style="display:none;" class="uxc-nowrap"><span class="uxc-shopper-menu-label">Manager Name:</span><span id="uxh-mgr-name"></span></div>
+<div id="uxh-vip-info" style="display:none;" class="uxc-nowrap"><span id="uxh-vip-label" class="uxc-shopper-menu-label">VIP Acct Exec:</span>
+<div id="uhx-vip-details">
+<div id="uxh-vip-repname"></div>
+<div id="uxh-vip-phone"></div>
+<div><a id="uxh-vip-email" href="javascript:void(0);"></a></div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li role="presentation" class="divider uxh-no-delegate"></li>
+<li id="uxh-nav-logged-in" class="uxh-logged-in uxh-no-delegate"><a role="menuitem" href="https://idp.godaddy.com/logout.aspx?spkey=GDRCC">Log Out</a></li>
+<li id="uxh-nav-logged-out" class="uxh-logged-out"><a role="menuitem" href="https://sso.godaddy.com?realm=idp&app={{pc:loginapp}}&path={{pc:currentpage}}">Log In</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<nav id="uxh-nav-app" role="navigation" class="navbar uxc-nav">
+<div class="container">
+<div id="uxh-nav-app-active" data-toggle="collapse" data-target="#uxh-nav-app-collapse" data-default-caption="Menu" class="collapsed"><span id="uxh-nav-app-caption">Menu</span><b class="caret"></b></div>
+<div id="uxh-nav-app-collapse" class="navbar-collapse collapse">
+<ul id="uxh-nav-app-menu" class="nav navbar-nav">
+<li><a href="https://reseller.godaddy.com/default.aspx">Dashboard</a></li>
+<li class="dropdown">
+<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Reports <b class="caret"></b></a>
+<ul class="dropdown-menu" role="menu">
+<li>
+<ul class="dropdown-columns">
+<li>
+<ul>
+<li>
+<a>Sales and Commissions</a>
+<ul>
+<li><a href="https://reseller.godaddy.com/Reports/CommissionReport.aspx">Commissions</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/ProductCommissionReport.aspx">Product Commissions</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/PaymentHistoryReport.aspx">Payment History</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/RenewalsReport.aspx">Renewals</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/MarketingSourceCodeReport.aspx">Marketing Source Codes</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/ProductSalesReport.aspx">Product Sales</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>
+<a>Customers</a>
+<ul>
+<li><a href="https://reseller.godaddy.com/Reports/CustomerLookUpReport.aspx">Customer Lookup</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/CustomerSalesReport.aspx">Customer Sales</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/DiscountCustomerSalesReport.aspx">Discount Customer Sales</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>
+<a>Domains</a>
+<ul>
+<li><a href="https://reseller.godaddy.com/Reports/DomainLookupReport.aspx">Domain Lookup</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/domainsregisteredreport.aspx">Domain Registrations</a></li>
+<li><a href="https://reseller.godaddy.com/Reports/PendingTransfersReport.aspx">Pending Transfers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Storefront <b class="caret"></b></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="https://reseller.godaddy.com/StorefrontDesign/ColorPalette.aspx">Storefront Designer</a></li>
+<li><a href="https://reseller.godaddy.com/MobileDesign/Default.aspx">Mobile Designer</a></li>
+<li><a href="https://reseller.godaddy.com/StorefrontDesign/SocialMedia.aspx">Social Media</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="https://reseller.godaddy.com/Products/Currency.aspx">Settings</a></li>
+<li><a href="https://reseller.godaddy.com/Products/ProductOfferings.aspx?suiteId=1">Hosting</a></li>
+<li><a href="https://reseller.godaddy.com/Products/DomainOfferings.aspx">Domains</a></li>
+<li><a href="https://reseller.godaddy.com/Products/ProductOfferings.aspx?suiteId=7">Domain Services</a></li>
+<li><a href="https://reseller.godaddy.com/Products/ProductOfferings.aspx?suiteId=5">Site Builders</a></li>
+<li><a href="https://reseller.godaddy.com/Products/ProductOfferings.aspx?suiteId=2">SSL &amp; Security</a></li>
+<li><a href="https://reseller.godaddy.com/Products/ProductOfferings.aspx?suiteId=3">Email &amp; Productivity</a></li>
+<li><a href="https://reseller.godaddy.com/Products/ProductOfferings.aspx?suiteId=4">Marketing Tools</a></li>
+<li><a href="https://reseller.godaddy.com/Products/ProductOfferings.aspx?suiteId=6">Product Add ons</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Promotions <b class="caret"></b></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="https://reseller.godaddy.com/Promotions/DomainPromos.aspx">Domains Promotions</a></li>
+<li><a href="https://reseller.godaddy.com/Promotions/SpecialPromos.aspx">Special Promotions</a></li>
+<li><a href="https://reseller.godaddy.com/Promotions/CustomPromos.aspx">Custom Promotions</a></li>
+<li><a href="https://reseller.godaddy.com/Promotions/OrderLevelPromos.aspx">Order Level Promotions</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="https://reseller.godaddy.com/MarketingTools/default.aspx">Free Products</a></li>
+<li><a href="https://reseller.godaddy.com/MarketingTools/BannerArtwork.aspx">Banner Artwork</a></li>
+<li><a href="https://reseller.godaddy.com/MarketingTools/MarketingSourceCodes.aspx">Marketing Source Codes</a></li>
+<li><a href="https://reseller.godaddy.com/MarketingTools/AdvancedMarketing.aspx">Advanced Marketing</a></li>
+<li><a href="https://reseller.godaddy.com/MarketingTools/GoogleAdWords.aspx">Google Adwords &reg;</a></li>
+<li><a href="https://reseller.godaddy.com/MarketingTools/Analytics.aspx">Google Analytics</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Settings <b class="caret"></b></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="https://reseller.godaddy.com/Settings/default.aspx">Contact Information</a></li>
+<li><a href="https://reseller.godaddy.com/Settings/CustomDomainSettings.aspx">Storefront Domains</a></li>
+<li><a href="https://reseller.godaddy.com/Settings/Payee.aspx">Payee Setup</a></li>
+<li><a href="https://reseller.godaddy.com/Settings/Support.aspx">Support Options</a></li>
+<li><a href="https://reseller.godaddy.com/Settings/EventNotification.aspx">Notification Preferences</a></li>
+<li><a href="https://reseller.godaddy.com/SelectReseller.aspx">Reseller Accounts</a></li>
+<li><a href="https://reseller.godaddy.com/QuickSetUp/Default.aspx">Quick Setup
+</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+</div>
+<div id="dialogExpired" style="display:none;" title="Session Timeout" >
+<br/>
+<div class="yellow-notification-box clear-fix ie-clear-fix">
+<p class="notification-text">
+Your session has expired.
+</p>
+</div>
+</div>
+<div id="dialogWarning" style="display:none;" title="Session Timeout" >
+<div style="padding: 15px 20px 0 20px;">
+<div class="yellow-notification-box clear-fix ie-clear-fix">
+<p class="notification-text">Your session will expire in&nbsp;<span id="dialogText-warning"></span>&nbsp;seconds</p>
+</div>
+</div>
+</div>
+<div class="main-container clear-fix ie-clear-fix">
+<div class="uxcore-only">
+<ol class="breadcrumb">
+<li>Products</li>
+<li>Site Builders</li>
+<li class="active">Website Builder</li>
+</ol>
+</div>
+<div id="divpricingJobError" class="error-notification notification-box" style="display: none;">
+<p class="notification-text">
+<span class="success-span">We couldn't process your global pricing change at this time. <a id="lnkResubmitPricing" href="#" >Please try again.</a></span>
+</p>
+</div>
+<div id="productRestore" class="pricingRestoreWarning msgDiv" data-style="warn" style="display: none;">
+Product Pricing is restored to Suggested Retail. Please click Save to make the changes permanant.
+</div>
+<div id="productError" class="pricingSaveError msgDiv" data-style="error" style="display: none">
+Error saving your changes.
+</div>
+<div id="productSuccess" class="pricingSaveSuccess msgDiv" data-style="success" style="display: none">
+Your changes have been saved!
+</div>
+<div id="productImportSuccess" class="pricingSaveSuccess msgDiv" data-style="success" style="display: none">
+Your changes have been saved!
+</div>
+<div id="productWarn" class="pricingSaveWarning msgDiv" data-style="warn" style="display: none;">
+Your changes have been cancelled.
+</div>
+<div id="pendingChangesWarn" class="pendingSaveWarning msgDiv" data-style="warn" style="display: none;">
+You have pending changes.  Please click Save or Cancel to continue.
+</div>
+<div id="priceMatchWarn" class="pricingSaveWarning msgDiv" data-style="warn" style="display: none;">
+Your renewal retail product pricing has been synched with the new retail product pricing. Please review the changes below, and click <strong>Save</strong> to update.
+</div>
+<div id="mainContainer">
+<div class="rounded-wrapper">
+<div class="rounded-wrapper-top rounded-fade-background">
+<h3 class="collapse-header">Quick Pricing Options</h3>
+</div>
+<div id="quickPricing" class="rounded-wrapper-content free-product-background">
+<div id="topWrapper" class="accordian-padding-bottom">
+<div>
+<div class="float-left offerings-sprite graphic-money" style="margin: 10px 15px 10px 0;">
+</div>
+<div class="float-left account-access" style="width: 800px; margin-top: 25px;">
+Setting your pricing is easy. Change prices for the selected product or across your entire product group. You can also set limited-time sale prices and change your default storefront display currency.
+</div>
+</div>
+<a id="acc"></a>
+<div class="collapse-bar collapse-bar-background"  style="clear: both;">
+<a href="javascript:void(0);" class="plus a1"></a>
+<span class="collapse-title">Set sale prices and dates.</span>
+<span class="collapse-text">Use to offer limited-time discount pricing.</span>
+</div>
+<div style="position: relative; display: none;" class="setSaleDateAccordian accordian-container">
+<div class="accordian-padding-top">
+<div class="accordian-label">
+Sale start/end dates:</div><div style="margin-bottom: 10px;">
+<input id="saleStart" type="text" name="date-from" />
+<span style="padding:0 5px 0 5px;">to</span>
+<input id="saleEnd" type="text" name="date-to" />
+</div>
+</div>
+<div>
+<input type="checkbox" id="datesOnly" value="1" /> Only update sale dates.
+</div>
+<div style="margin-top:20px;">
+<div>
+<div class="accordian-label">
+Sale price:</div>
+<div class="accordian-padding-bottom">
+<select id="salePriceOption">
+<option value="0">Suggested Retail Price</option>
+<option value="2">Your Retail Price</option>
+</select>&nbsp;-&nbsp;<input type="text" id="salePercent" style="width:100px;" maxlength="3"  />&nbsp;%</div>
+</div>
+</div>
+<div>
+<div class="accordian-label">
+Apply Pricing to:</div>
+<div class="accordian-padding-bottom">
+<select id="saleSelect">
+<option value="0">All New &amp; Renewals</option>
+<option value="1">New Only</option>
+<option value="2">Renewals Only</option>
+</select>
+</div>
+</div>
+<div class="accordian-padding-bottom" >
+<a href="#acc" id="salePreview" class="sf-btn-pil"><span class="sf-icn-pil sf-icn-pil-edit"></span>Preview Sale Dates/Pricing</a>
+<span class="preview-text">
+See sales prices in the pricing table below.</span></div>
+<span class="ajax-spinner" id="salePreviewSpinner" style="display: none;margin-top:35px;margin-left:200px;">&nbsp;</span>
+<div id="salePreviewSaveCancel" class="accordian-padding-bottom"  style="display: none;">
+<a id="salePreviewSave" class="black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">
+Save</a> &nbsp;&nbsp;<a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=5&amp;type=200&amp;section=150&amp;groupId=15&amp;groupname=Website+Builder&amp;tab=2&amp;c=true">Cancel</a></div>
+</div>
+<div class="collapse-bar collapse-bar-background">
+<a href="javascript:void(0);" class="plus a2"></a>
+<span class="collapse-title">Set prices for entire product group.</span>
+<span class="collapse-text">Use for bulk pricing updates.</span>
+</div>
+<div style="display: none;" class="accordian-container">
+<div class="accordian-padding-bottom accordian-padding-top">
+Select the price you want to change. Then, add a dollar amount or percentage increase to your starting price.
+</div>
+<div class="accordian-padding-bottom float-left" style="margin-right:10px;">
+<div class="accordian-label">
+Price to change:</div>
+<div>
+<select id="bulkPricingPriceToModify">
+<option value="1">Your Retail Price</option>
+<option value="2">Your Sale Price</option>
+<option value="3">Your Sale & Retail Price</option>
+</select></div>
+</div>
+<div class="accordian-padding-bottom float-left" style="margin-right:10px;">
+<div class="accordian-label">
+Starting price:</div>
+<div>
+<select id="bulkPricingPointSelect" style="width: 250px;">
+<option value="1">Suggested Retail Price</option>
+<option value="2">Suggested Retail Price +
+$</option>
+<option value="3">Suggested Retail Price + %</option>
+<option value="4">Minimum Retail Price</option>
+<option value="5">Minimum Retail Price +
+$</option>
+<option value="6">Minimum Retail Price + %</option>
+<option value="7">My Retail Price -
+$</option>
+<option value="8">My Retail Price - % </option>
+<option value="9">My Retail Price +
+$</option>
+<option value="10">My Retail Price + % </option>
+</select></div>
+</div>
+<div class="accordian-padding-bottom float-left" style="margin-right: 10px;">
+<div class="accordian-label" id="bulkAmountLabel" style="display: none;">
+Amount (% or $)</div>
+<div style="clear: both;">
+<span id="bulkAmountDiv" class="float-left;" style="display: none;">
+<input id="bulkPricingAmount" name="bulkPricingAmount" type="text" maxlength="25"
+style="width: 50px;" />
+</span>
+</div>
+</div>
+<div class="accordian-padding-bottom float-left" style="margin-right: 10px;">
+<div style="clear: both;">
+<a href="#acc" id="bulkPricingPreview" class="sf-btn-pil" style="display:inline-block;vertical-align:text-bottom;margin:15px 0 0 0;"><span class="sf-icn-pil sf-icn-pil-edit"></span>Calculate</a>
+</div>
+</div>
+<div class="accordian-padding-bottom" style="clear:both;">
+Don't like the last pricing change you made?&nbsp;&nbsp;
+<a href="javascript:void(0);" id="lnkRestore" class="sf-btn-pil"><span class="sf-icn-pil sf-icn-pil-edit"></span>Restore Pricing to Suggested Retail</a>
+</div>
+<div id="bulkPricingSaveCancel" class="accordian-padding-bottom" style="display: none;">
+<a id="bulkPricingSave" class="black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">
+Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=5&amp;type=200&amp;section=150&amp;groupId=15&amp;groupname=Website+Builder&amp;tab=2&amp;c=true">Cancel</a>
+</div><div id="restorePopIn" style="display: none;">
+Are you sure  you want to restore suggested retail pricing? This change affects every product in your catalog.
+</div>
+</div>
+<div class="collapse-bar collapse-bar-background">
+<a href="javascript:void(0);" class="plus"></a>
+<span class="collapse-title">Change display currency.</span>
+<span class="collapse-text">Use to change the currency for pricing shown in the Reseller Control Center.</span>
+</div>
+<div style="display: none;" class="currencyOptinSection accordian-container">
+<div id="saveCurrencyError" data-style="error" style="display: none;line-height:2;height: 210px; overflow-y: auto; overflow-x: auto;">
+Error saving your changes.
+</div>
+<div class="accordian-padding-top">
+<div class="accordian-label">
+Select Reseller Control Center Display Currency:
+</div>
+<div class="accordian-label">
+<select id="currencyList" style="width: 250px;">
+<option value="AED">United Arab Emirates Dirham (&#1583;&#46;&#1573;)</option><option value="ARS">Argentine Peso (AR$)</option><option value="AUD">Australian Dollar (A$)</option><option value="BRL">Brazilian Real (R$)</option><option value="CAD">Canadian Dollar (C$)</option><option value="CHF">Swiss Franc (CHF)</option><option value="CLP">Chilean Peso (CL$)</option><option value="CNY">Chinese Yuan (&#165;)</option><option value="COP">Colombian Peso (CO$)</option><option value="CZK">Czech Republic Koruna (&#75;&#269;)</option><option value="DKK">Danish Krone (kr)</option><option value="EGP">Egyptian Pound (&#163;)</option><option value="EUR">Euro (&euro;)</option><option value="GBP">British Pound (&#163;)</option><option value="HKD">Hong Kong Dollar (HK$)</option><option value="HUF">Hungary Forint (&#70;&#116;)</option><option value="IDR">Indonesian Rupiah (Rp)</option><option value="ILS">Israeli New Shekel (&#8362;)</option><option value="INR">Indian Rupee (&#8360;)</option><option value="JPY">Japanese Yen (&#165;)</option><option value="KRW">South Korean Won (&#65510;)</option><option value="MAD">Moroccan Dirham (&#46;&#1583;&#46;&#1605;)</option><option value="MXN">Mexican Peso (MXN)</option><option value="MYR">Malaysian Ringgit (RM)</option><option value="NOK">Norway Krone (&#107;&#114;)</option><option value="NZD">New Zealand Dollar (NZ$)</option><option value="PEN">Peruvian Nuevo sol (S/.)</option><option value="PHP">Philippine Peso (&#8369;)</option><option value="PKR">Pakistan Rupee (&#8360;)</option><option value="PLN">Polish Zloty (z&#322;)</option><option value="RON">Romania Leu (&#108;&#101;&#105;)</option><option value="RUB">Russia Ruble (&#1088;&#1091;&#1073;)</option><option value="SAR">Saudi Arabia Riyal (&#65020;)</option><option value="SEK">Swedish Krona (kr)</option><option value="SGD">Singapore Dollar (SG$)</option><option value="THB">Thai Baht (&#x0E3F;)</option><option value="TRY">Turkey Lira (TL)</option><option value="TWD">New Taiwan Dollar (NT$)</option><option value="UAH">Ukrainian Hryvnia (&#8372;)</option><option value="USD">United States Dollar ($)</option><option value="UYU">Peso Uruguayo (&#36;&#85;)</option><option value="VEF">Venezuelan bolivar (Bs.)</option><option value="VND">Vietnamese Dong (&#8363;)</option><option value="ZAR">South Africa Rand (&#82;)</option>
+</select>
+</div>
+<div style="margin-bottom:20px;padding-top:10px;">
+The RCC display currency is how prices appear when managing them in the RCC.<br/><br/>Display and transactional currencies for your storefront are managed under <a href="https://reseller.godaddy.com/Products/Currency.aspx?ci=59405">Settings.</a>
+</div>
+</div>
+<div id="saveCancelCurrencyOptions" class="accordian-padding-bottom">
+<a id="saveCurrencyOptions" class="black-css3-button" style="margin-right: 10px;"
+href="javascript:void(0);">Save</a><a id="cancelCurrencyOptions" href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=5&amp;type=200&amp;section=150&amp;groupId=15&amp;groupname=Website+Builder&amp;tab=2&amp;c=true">Cancel</a>
+</div>
+</div>
+</div>
+</div>
+</div>  <div id="processingPopIn" style="display:none;">
+We are processing your request for pricing updates. Please wait a few minutes before making additional updates.
+</div>
+<div style="margin-top: 20px;">
+</div>
+<div class="dialogdiv" id="importExcelPopin" style="display: none;">
+</div>
+<div id="tabs" class="sf-tabs-content-wrap">
+<div class="sf-tabs-content" data-title="New">
+<input type="hidden" class="tabIdx" />
+<div style="padding-bottom: 20px;">
+<div class="productTitle" style="margin-left: 10px;">
+Website Builder
+</div>
+</div>
+<div class="table-top">
+<div class="table-top-right-curve">
+</div>
+<div class="table-top-middle">
+<div class="float-left import-export">
+<a href="Export.aspx?suiteid=5&group=product&type=200&name=Website+Builder&ci=41543" class="offerings-sprite act-icon-export"><span>Export Prices</span></a>
+</div>
+<div class="float-left import-export">
+<a href="javascript:void(0);" id="lnkImportOffering" class="offerings-sprite act-icon-import"><span>Import Prices</span></a>
+</div>
+<div class="float-right last-updated" id="RegisterLastUpdateDate">
+</div>
+</div>
+</div>
+<div class="groupWrapper" style="clear: both;" id="regGroupWrapper">
+<div class="collapse-bar collapse-bar-background" style="clear: both; margin-top: 0;">
+<input type="hidden" class="ProductGroupId" value="15" />
+<input type="hidden" class="PricingSectionId" value="150" />
+<input type="hidden" class="ProductGroupIdAndPricingSectionId" value="15-150" />
+<a href="javascript:void(0);" class="plus"></a><span class="collapse-title">
+WebSite Builder Economy Packages</span>
+</div>
+<div class="mainpricingSection" style="display: none;">
+<!--- Main Table Starts Here -->
+<div class="main-table-style" style="clear: both;">
+<table class="regTable" cellspacing="0" cellpadding="0">
+<tr class="header">
+<th>Product</th>
+<th class="rightHeader">Min. Retail</th>
+<th class="rightHeader">Suggested<br />Retail</th>
+<th class="rightHeader">Your Retail</th>
+<th class="rightHeader">Your Sale</th>
+<th>Start Sale</th>
+<th>End Sale</th>
+<th class="rightHeader">Base Buy<br />Rate</th>
+<th class="rightHeader">Retail Profit</th>
+<th class="rightHeader">Sale Profit</th>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Personal - Monthly (recurring)</span>
+<input type="hidden" id="7521" class="pf-id" value="7521" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_7521" value="b248121f2d7a81382500bbf567a1f002" />
+<input type="hidden" class="max-retail" id="maxretail_7521" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="150" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$4.31</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$4.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_7521" class="price retail-price" data-pfid="7521"
+value="$4.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_7521" class="price sale-price" data-pfid="7521"
+value="$4.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_7521" class="date sale-start" data-pfid="7521"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_7521" class="date sale-end" data-pfid="7521"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_7521">
+$3.95</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_7521">
+$1.04</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_7521">
+$1.04</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Personal - 5 Page Web Site - Monthly (recurring)</span>
+<input type="hidden" id="272302" class="pf-id" value="272302" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_272302" value="d06f0332bf2992375eab75f97fd4d327" />
+<input type="hidden" class="max-retail" id="maxretail_272302" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="150" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$4.31</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$4.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_272302" class="price retail-price" data-pfid="272302"
+value="$4.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_272302" class="price sale-price" data-pfid="272302"
+value="$4.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_272302" class="date sale-start" data-pfid="272302"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_272302" class="date sale-end" data-pfid="272302"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_272302">
+$3.95</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_272302">
+$1.04</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_272302">
+$1.04</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Personal - 1 year (recurring)</span>
+<input type="hidden" id="7524" class="pf-id" value="7524" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_7524" value="e3bd6b7fc230e4ab7ec67f500f527983" />
+<input type="hidden" class="max-retail" id="maxretail_7524" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="150" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$44.14</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$59.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_7524" class="price retail-price" data-pfid="7524"
+value="$59.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_7524" class="price sale-price" data-pfid="7524"
+value="$59.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_7524" class="date sale-start" data-pfid="7524"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_7524" class="date sale-end" data-pfid="7524"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_7524">
+$42.66</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_7524">
+$17.22</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_7524">
+$17.22</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Personal - 5 Page Web Site - 1 year (recurring)</span>
+<input type="hidden" id="6760" class="pf-id" value="6760" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6760" value="97f4abc110b1d0d4c0cfb3e33e5befab" />
+<input type="hidden" class="max-retail" id="maxretail_6760" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="150" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$44.14</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$59.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6760" class="price retail-price" data-pfid="6760"
+value="$59.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6760" class="price sale-price" data-pfid="6760"
+value="$59.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6760" class="date sale-start" data-pfid="6760"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6760" class="date sale-end" data-pfid="6760"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6760">
+$42.66</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6760">
+$17.22</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6760">
+$17.22</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Personal - 5 Page Web Site - 2 years (recurring)</span>
+<input type="hidden" id="6761" class="pf-id" value="6761" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6761" value="245a26d70d93847a054cf7a5e09e7003" />
+<input type="hidden" class="max-retail" id="maxretail_6761" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="150" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$83.05</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$119.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6761" class="price retail-price" data-pfid="6761"
+value="$119.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6761" class="price sale-price" data-pfid="6761"
+value="$119.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6761" class="date sale-start" data-pfid="6761"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6761" class="date sale-end" data-pfid="6761"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6761">
+$80.47</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6761">
+$39.29</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6761">
+$39.29</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Personal - 2 years (recurring)</span>
+<input type="hidden" id="7525" class="pf-id" value="7525" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_7525" value="39cd1737ae007c66173f2cdb3268b34c" />
+<input type="hidden" class="max-retail" id="maxretail_7525" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="150" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$83.05</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$119.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_7525" class="price retail-price" data-pfid="7525"
+value="$119.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_7525" class="price sale-price" data-pfid="7525"
+value="$119.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_7525" class="date sale-start" data-pfid="7525"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_7525" class="date sale-end" data-pfid="7525"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_7525">
+$80.47</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_7525">
+$39.29</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_7525">
+$39.29</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Personal - 3 years (recurring)</span>
+<input type="hidden" id="7526" class="pf-id" value="7526" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_7526" value="cf9ed8611cdc7ebdf89c8323a0b691a8" />
+<input type="hidden" class="max-retail" id="maxretail_7526" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="150" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$108.93</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$179.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_7526" class="price retail-price" data-pfid="7526"
+value="$179.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_7526" class="price sale-price" data-pfid="7526"
+value="$179.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_7526" class="date sale-start" data-pfid="7526"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_7526" class="date sale-end" data-pfid="7526"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_7526">
+$105.62</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_7526">
+$74.02</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_7526">
+$74.02</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Personal - 5 Page Web Site - 3 years (recurring)</span>
+<input type="hidden" id="6762" class="pf-id" value="6762" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6762" value="69c64d3e4b5efd3a07eac36723655996" />
+<input type="hidden" class="max-retail" id="maxretail_6762" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="150" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$108.93</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$179.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6762" class="price retail-price" data-pfid="6762"
+value="$179.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6762" class="price sale-price" data-pfid="6762"
+value="$179.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6762" class="date sale-start" data-pfid="6762"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6762" class="date sale-end" data-pfid="6762"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6762">
+$105.62</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6762">
+$74.02</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6762">
+$74.02</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Personal - 5 Page Web Site - 4 years (recurring)</span>
+<input type="hidden" id="6763" class="pf-id" value="6763" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6763" value="0649e19b4a9f2d6fa262861902a4f1a7" />
+<input type="hidden" class="max-retail" id="maxretail_6763" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="150" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$146.89</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$239.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6763" class="price retail-price" data-pfid="6763"
+value="$239.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6763" class="price sale-price" data-pfid="6763"
+value="$239.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6763" class="date sale-start" data-pfid="6763"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6763" class="date sale-end" data-pfid="6763"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6763">
+$142.51</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6763">
+$97.01</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6763">
+$97.01</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Personal - 4 years (recurring)</span>
+<input type="hidden" id="7527" class="pf-id" value="7527" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_7527" value="a42ac78933c566017d58447892eeaf17" />
+<input type="hidden" class="max-retail" id="maxretail_7527" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="150" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$146.89</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$239.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_7527" class="price retail-price" data-pfid="7527"
+value="$239.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_7527" class="price sale-price" data-pfid="7527"
+value="$239.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_7527" class="date sale-start" data-pfid="7527"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_7527" class="date sale-end" data-pfid="7527"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_7527">
+$142.51</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_7527">
+$97.01</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_7527">
+$97.01</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Personal - 5 years (recurring)</span>
+<input type="hidden" id="7528" class="pf-id" value="7528" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_7528" value="6e7bc03db8433973dfbd8a78ca14e83a" />
+<input type="hidden" class="max-retail" id="maxretail_7528" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="150" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$185.70</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$299.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_7528" class="price retail-price" data-pfid="7528"
+value="$299.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_7528" class="price sale-price" data-pfid="7528"
+value="$299.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_7528" class="date sale-start" data-pfid="7528"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_7528" class="date sale-end" data-pfid="7528"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_7528">
+$180.23</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_7528">
+$119.17</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_7528">
+$119.17</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Personal - 5 Page Web Site - 5 years (recurring)</span>
+<input type="hidden" id="6764" class="pf-id" value="6764" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6764" value="0068adcfe6291fef79cb990a4e2f3173" />
+<input type="hidden" class="max-retail" id="maxretail_6764" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="150" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$185.70</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$299.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6764" class="price retail-price" data-pfid="6764"
+value="$299.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6764" class="price sale-price" data-pfid="6764"
+value="$299.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6764" class="date sale-start" data-pfid="6764"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6764" class="date sale-end" data-pfid="6764"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6764">
+$180.23</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6764">
+$119.17</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6764">
+$119.17</span>
+</td>
+</tr>
+<tr class="save-row">
+<td colspan="10">
+<div>
+<a class="save sectionSave black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=5&amp;type=200&amp;section=150&amp;groupId=15&amp;groupname=Website+Builder&amp;tab=2&amp;c=true" class="cancel">Cancel</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="collapse-bar collapse-bar-background" style="clear: both; margin-top: 0;">
+<input type="hidden" class="ProductGroupId" value="15" />
+<input type="hidden" class="PricingSectionId" value="152" />
+<input type="hidden" class="ProductGroupIdAndPricingSectionId" value="15-152" />
+<a href="javascript:void(0);" class="plus"></a><span class="collapse-title">
+WebSite Builder Deluxe Packages</span>
+</div>
+<div class="mainpricingSection" style="display: none;">
+<!--- Main Table Starts Here -->
+<div class="main-table-style" style="clear: both;">
+<table class="regTable" cellspacing="0" cellpadding="0">
+<tr class="header">
+<th>Product</th>
+<th class="rightHeader">Min. Retail</th>
+<th class="rightHeader">Suggested<br />Retail</th>
+<th class="rightHeader">Your Retail</th>
+<th class="rightHeader">Your Sale</th>
+<th>Start Sale</th>
+<th>End Sale</th>
+<th class="rightHeader">Base Buy<br />Rate</th>
+<th class="rightHeader">Retail Profit</th>
+<th class="rightHeader">Sale Profit</th>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business - Monthly (recurring)</span>
+<input type="hidden" id="7502" class="pf-id" value="7502" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_7502" value="1de47aebed2bff7f7b8d204cfaa3582e" />
+<input type="hidden" class="max-retail" id="maxretail_7502" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="152" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$7.40</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$8.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_7502" class="price retail-price" data-pfid="7502"
+value="$8.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_7502" class="price sale-price" data-pfid="7502"
+value="$8.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_7502" class="date sale-start" data-pfid="7502"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_7502" class="date sale-end" data-pfid="7502"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_7502">
+$6.95</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_7502">
+$2.04</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_7502">
+$2.04</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business - 10 Page Web Site - Monthly (recurring)</span>
+<input type="hidden" id="272303" class="pf-id" value="272303" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_272303" value="eecbe12aba77828ff285de2940d8490d" />
+<input type="hidden" class="max-retail" id="maxretail_272303" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="152" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$7.40</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$8.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_272303" class="price retail-price" data-pfid="272303"
+value="$8.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_272303" class="price sale-price" data-pfid="272303"
+value="$8.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_272303" class="date sale-start" data-pfid="272303"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_272303" class="date sale-end" data-pfid="272303"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_272303">
+$6.95</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_272303">
+$2.04</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_272303">
+$2.04</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business - 10 Page Web Site - 1 year (recurring)</span>
+<input type="hidden" id="6770" class="pf-id" value="6770" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6770" value="1f6a7df49fc87e02f3dec928a9163891" />
+<input type="hidden" class="max-retail" id="maxretail_6770" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="152" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$77.48</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$107.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6770" class="price retail-price" data-pfid="6770"
+value="$107.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6770" class="price sale-price" data-pfid="6770"
+value="$107.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6770" class="date sale-start" data-pfid="6770"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6770" class="date sale-end" data-pfid="6770"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6770">
+$75.06</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6770">
+$32.82</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6770">
+$32.82</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business - 1 year (recurring)</span>
+<input type="hidden" id="7509" class="pf-id" value="7509" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_7509" value="10d8cf90a7c14b2750e05b853bc6fed9" />
+<input type="hidden" class="max-retail" id="maxretail_7509" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="152" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$77.48</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$107.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_7509" class="price retail-price" data-pfid="7509"
+value="$107.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_7509" class="price sale-price" data-pfid="7509"
+value="$107.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_7509" class="date sale-start" data-pfid="7509"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_7509" class="date sale-end" data-pfid="7509"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_7509">
+$75.06</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_7509">
+$32.82</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_7509">
+$32.82</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business - 2 years (recurring)</span>
+<input type="hidden" id="7510" class="pf-id" value="7510" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_7510" value="e3f3d542294bca82af649bd5055f501b" />
+<input type="hidden" class="max-retail" id="maxretail_7510" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="152" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$149.44</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$215.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_7510" class="price retail-price" data-pfid="7510"
+value="$215.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_7510" class="price sale-price" data-pfid="7510"
+value="$215.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_7510" class="date sale-start" data-pfid="7510"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_7510" class="date sale-end" data-pfid="7510"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_7510">
+$144.99</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_7510">
+$70.77</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_7510">
+$70.77</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business - 10 Page Web Site - 2 years (recurring)</span>
+<input type="hidden" id="6771" class="pf-id" value="6771" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6771" value="341891a064a363c47edac00af4aaae55" />
+<input type="hidden" class="max-retail" id="maxretail_6771" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="152" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$149.44</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$215.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6771" class="price retail-price" data-pfid="6771"
+value="$215.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6771" class="price sale-price" data-pfid="6771"
+value="$215.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6771" class="date sale-start" data-pfid="6771"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6771" class="date sale-end" data-pfid="6771"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6771">
+$144.99</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6771">
+$70.77</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6771">
+$70.77</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business - 10 Page Web Site - 3 years (recurring)</span>
+<input type="hidden" id="6772" class="pf-id" value="6772" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6772" value="1904ba589bcc74dc7c2c343ac2d14e21" />
+<input type="hidden" class="max-retail" id="maxretail_6772" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="152" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$198.39</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$323.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6772" class="price retail-price" data-pfid="6772"
+value="$323.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6772" class="price sale-price" data-pfid="6772"
+value="$323.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6772" class="date sale-start" data-pfid="6772"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6772" class="date sale-end" data-pfid="6772"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6772">
+$192.56</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6772">
+$131.08</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6772">
+$131.08</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business - 3 years (recurring)</span>
+<input type="hidden" id="7511" class="pf-id" value="7511" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_7511" value="604e6452c6aea527e98e31b713e6481d" />
+<input type="hidden" class="max-retail" id="maxretail_7511" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="152" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$198.39</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$323.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_7511" class="price retail-price" data-pfid="7511"
+value="$323.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_7511" class="price sale-price" data-pfid="7511"
+value="$323.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_7511" class="date sale-start" data-pfid="7511"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_7511" class="date sale-end" data-pfid="7511"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_7511">
+$192.56</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_7511">
+$131.08</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_7511">
+$131.08</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business - 4 years (recurring)</span>
+<input type="hidden" id="7512" class="pf-id" value="7512" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_7512" value="dd7009ab7d3d5b34be25851c8f82ce00" />
+<input type="hidden" class="max-retail" id="maxretail_7512" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="152" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$267.55</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$431.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_7512" class="price retail-price" data-pfid="7512"
+value="$431.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_7512" class="price sale-price" data-pfid="7512"
+value="$431.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_7512" class="date sale-start" data-pfid="7512"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_7512" class="date sale-end" data-pfid="7512"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_7512">
+$259.77</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_7512">
+$171.75</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_7512">
+$171.75</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business - 10 Page Web Site - 4 years (recurring)</span>
+<input type="hidden" id="6773" class="pf-id" value="6773" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6773" value="a6e3c17ce54ca8c782173f692f1eadf7" />
+<input type="hidden" class="max-retail" id="maxretail_6773" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="152" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$267.55</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$431.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6773" class="price retail-price" data-pfid="6773"
+value="$431.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6773" class="price sale-price" data-pfid="6773"
+value="$431.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6773" class="date sale-start" data-pfid="6773"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6773" class="date sale-end" data-pfid="6773"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6773">
+$259.77</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6773">
+$171.75</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6773">
+$171.75</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business - 10 Page Web Site - 5 years (recurring)</span>
+<input type="hidden" id="6774" class="pf-id" value="6774" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6774" value="e19191cf34fd0921b82f33fe3835a91b" />
+<input type="hidden" class="max-retail" id="maxretail_6774" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="152" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$334.37</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$539.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6774" class="price retail-price" data-pfid="6774"
+value="$539.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6774" class="price sale-price" data-pfid="6774"
+value="$539.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6774" class="date sale-start" data-pfid="6774"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6774" class="date sale-end" data-pfid="6774"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6774">
+$324.71</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6774">
+$214.69</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6774">
+$214.69</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business - 5 years (recurring)</span>
+<input type="hidden" id="7513" class="pf-id" value="7513" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_7513" value="9fae0dd41da72ac517b7d0af405873b9" />
+<input type="hidden" class="max-retail" id="maxretail_7513" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="152" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$334.37</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$539.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_7513" class="price retail-price" data-pfid="7513"
+value="$539.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_7513" class="price sale-price" data-pfid="7513"
+value="$539.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_7513" class="date sale-start" data-pfid="7513"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_7513" class="date sale-end" data-pfid="7513"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_7513">
+$324.71</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_7513">
+$214.69</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_7513">
+$214.69</span>
+</td>
+</tr>
+<tr class="save-row">
+<td colspan="10">
+<div>
+<a class="save sectionSave black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=5&amp;type=200&amp;section=150&amp;groupId=15&amp;groupname=Website+Builder&amp;tab=2&amp;c=true" class="cancel">Cancel</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="collapse-bar collapse-bar-background" style="clear: both; margin-top: 0;">
+<input type="hidden" class="ProductGroupId" value="15" />
+<input type="hidden" class="PricingSectionId" value="154" />
+<input type="hidden" class="ProductGroupIdAndPricingSectionId" value="15-154" />
+<a href="javascript:void(0);" class="plus"></a><span class="collapse-title">
+WebSite Builder Premium Packages</span>
+</div>
+<div class="mainpricingSection" style="display: none;">
+<!--- Main Table Starts Here -->
+<div class="main-table-style" style="clear: both;">
+<table class="regTable" cellspacing="0" cellpadding="0">
+<tr class="header">
+<th>Product</th>
+<th class="rightHeader">Min. Retail</th>
+<th class="rightHeader">Suggested<br />Retail</th>
+<th class="rightHeader">Your Retail</th>
+<th class="rightHeader">Your Sale</th>
+<th>Start Sale</th>
+<th>End Sale</th>
+<th class="rightHeader">Base Buy<br />Rate</th>
+<th class="rightHeader">Retail Profit</th>
+<th class="rightHeader">Sale Profit</th>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business Plus - Monthly (recurring)</span>
+<input type="hidden" id="7503" class="pf-id" value="7503" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_7503" value="d944d6e987739f88e9b2f2c1ad966e62" />
+<input type="hidden" class="max-retail" id="maxretail_7503" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="154" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$10.48</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$12.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_7503" class="price retail-price" data-pfid="7503"
+value="$12.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_7503" class="price sale-price" data-pfid="7503"
+value="$12.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_7503" class="date sale-start" data-pfid="7503"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_7503" class="date sale-end" data-pfid="7503"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_7503">
+$9.95</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_7503">
+$3.04</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_7503">
+$3.04</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business Plus - Unlimited Page Web Site - Monthly (recurring)</span>
+<input type="hidden" id="272304" class="pf-id" value="272304" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_272304" value="27fa221367c713600d2aaee521c850e9" />
+<input type="hidden" class="max-retail" id="maxretail_272304" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="154" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$10.48</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$12.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_272304" class="price retail-price" data-pfid="272304"
+value="$12.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_272304" class="price sale-price" data-pfid="272304"
+value="$12.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_272304" class="date sale-start" data-pfid="272304"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_272304" class="date sale-end" data-pfid="272304"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_272304">
+$9.95</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_272304">
+$3.04</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_272304">
+$3.04</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business Plus - 1 year (recurring)</span>
+<input type="hidden" id="7514" class="pf-id" value="7514" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_7514" value="0fef50036594ae670776ff556533693e" />
+<input type="hidden" class="max-retail" id="maxretail_7514" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="154" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$110.82</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$155.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_7514" class="price retail-price" data-pfid="7514"
+value="$155.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_7514" class="price sale-price" data-pfid="7514"
+value="$155.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_7514" class="date sale-start" data-pfid="7514"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_7514" class="date sale-end" data-pfid="7514"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_7514">
+$107.46</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_7514">
+$48.42</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_7514">
+$48.42</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business Plus - Unlimited Page Web Site - 1 year (recurring)</span>
+<input type="hidden" id="6780" class="pf-id" value="6780" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6780" value="0c8f615a958c14982acc228359052c97" />
+<input type="hidden" class="max-retail" id="maxretail_6780" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="154" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$110.82</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$155.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6780" class="price retail-price" data-pfid="6780"
+value="$155.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6780" class="price sale-price" data-pfid="6780"
+value="$155.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6780" class="date sale-start" data-pfid="6780"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6780" class="date sale-end" data-pfid="6780"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6780">
+$107.46</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6780">
+$48.42</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6780">
+$48.42</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business Plus - Unlimited Page Web Site - 2 years (recurring)</span>
+<input type="hidden" id="6781" class="pf-id" value="6781" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6781" value="dc6d8848bb2da3c3f8e4b05aaeb50e34" />
+<input type="hidden" class="max-retail" id="maxretail_6781" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="154" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$215.82</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$311.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6781" class="price retail-price" data-pfid="6781"
+value="$311.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6781" class="price sale-price" data-pfid="6781"
+value="$311.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6781" class="date sale-start" data-pfid="6781"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6781" class="date sale-end" data-pfid="6781"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6781">
+$209.50</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6781">
+$102.26</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6781">
+$102.26</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business Plus - 2 years (recurring)</span>
+<input type="hidden" id="7515" class="pf-id" value="7515" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_7515" value="49c7270ceadb6f01a9ba2d6b49fa789f" />
+<input type="hidden" class="max-retail" id="maxretail_7515" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="154" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$215.82</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$311.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_7515" class="price retail-price" data-pfid="7515"
+value="$311.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_7515" class="price sale-price" data-pfid="7515"
+value="$311.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_7515" class="date sale-start" data-pfid="7515"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_7515" class="date sale-end" data-pfid="7515"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_7515">
+$209.50</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_7515">
+$102.26</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_7515">
+$102.26</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business Plus - 3 years (recurring)</span>
+<input type="hidden" id="7516" class="pf-id" value="7516" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_7516" value="84a6331e7036fe931effe836e705c441" />
+<input type="hidden" class="max-retail" id="maxretail_7516" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="154" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$286.55</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$467.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_7516" class="price retail-price" data-pfid="7516"
+value="$467.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_7516" class="price sale-price" data-pfid="7516"
+value="$467.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_7516" class="date sale-start" data-pfid="7516"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_7516" class="date sale-end" data-pfid="7516"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_7516">
+$278.24</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_7516">
+$189.40</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_7516">
+$189.40</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business Plus - Unlimited Page Web Site - 3 years (recurring)</span>
+<input type="hidden" id="6782" class="pf-id" value="6782" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6782" value="678736afdebb7f5018b7d4ccb49f810e" />
+<input type="hidden" class="max-retail" id="maxretail_6782" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="154" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$286.55</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$467.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6782" class="price retail-price" data-pfid="6782"
+value="$467.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6782" class="price sale-price" data-pfid="6782"
+value="$467.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6782" class="date sale-start" data-pfid="6782"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6782" class="date sale-end" data-pfid="6782"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6782">
+$278.24</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6782">
+$189.40</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6782">
+$189.40</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business Plus - Unlimited Page Web Site - 4 years (recurring)</span>
+<input type="hidden" id="6783" class="pf-id" value="6783" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6783" value="acff4ef7fe01fa5262be76b92844c003" />
+<input type="hidden" class="max-retail" id="maxretail_6783" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="154" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$386.48</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$623.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6783" class="price retail-price" data-pfid="6783"
+value="$623.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6783" class="price sale-price" data-pfid="6783"
+value="$623.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6783" class="date sale-start" data-pfid="6783"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6783" class="date sale-end" data-pfid="6783"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6783">
+$375.35</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6783">
+$248.17</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6783">
+$248.17</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business Plus - 4 years (recurring)</span>
+<input type="hidden" id="7517" class="pf-id" value="7517" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_7517" value="79b16e88710b10c77cfd74cccf819d72" />
+<input type="hidden" class="max-retail" id="maxretail_7517" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="154" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$386.48</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$623.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_7517" class="price retail-price" data-pfid="7517"
+value="$623.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_7517" class="price sale-price" data-pfid="7517"
+value="$623.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_7517" class="date sale-start" data-pfid="7517"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_7517" class="date sale-end" data-pfid="7517"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_7517">
+$375.35</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_7517">
+$248.17</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_7517">
+$248.17</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business Plus - 5 years (recurring)</span>
+<input type="hidden" id="7518" class="pf-id" value="7518" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_7518" value="b2dc92ef99df55bca1dfe016f6d7e5b4" />
+<input type="hidden" class="max-retail" id="maxretail_7518" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="154" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$483.04</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$779.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_7518" class="price retail-price" data-pfid="7518"
+value="$779.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_7518" class="price sale-price" data-pfid="7518"
+value="$779.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_7518" class="date sale-start" data-pfid="7518"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_7518" class="date sale-end" data-pfid="7518"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_7518">
+$469.19</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_7518">
+$310.21</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_7518">
+$310.21</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business Plus - Unlimited Page Web Site - 5 years (recurring)</span>
+<input type="hidden" id="6784" class="pf-id" value="6784" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_6784" value="7e48ed24698c1ecc6c036c5789571349" />
+<input type="hidden" class="max-retail" id="maxretail_6784" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="154" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$483.04</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$779.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_6784" class="price retail-price" data-pfid="6784"
+value="$779.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_6784" class="price sale-price" data-pfid="6784"
+value="$779.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_6784" class="date sale-start" data-pfid="6784"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_6784" class="date sale-end" data-pfid="6784"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_6784">
+$469.19</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_6784">
+$310.21</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_6784">
+$310.21</span>
+</td>
+</tr>
+<tr class="save-row">
+<td colspan="10">
+<div>
+<a class="save sectionSave black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=5&amp;type=200&amp;section=150&amp;groupId=15&amp;groupname=Website+Builder&amp;tab=2&amp;c=true" class="cancel">Cancel</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="collapse-bar collapse-bar-background" style="clear: both; margin-top: 0;">
+<input type="hidden" class="ProductGroupId" value="15" />
+<input type="hidden" class="PricingSectionId" value="156" />
+<input type="hidden" class="ProductGroupIdAndPricingSectionId" value="15-156" />
+<a href="javascript:void(0);" class="plus"></a><span class="collapse-title">
+Storage and Bandwidth Add-Ons</span>
+</div>
+<div class="mainpricingSection" style="display: none;">
+<!--- Main Table Starts Here -->
+<div class="main-table-style" style="clear: both;">
+<table class="regTable" cellspacing="0" cellpadding="0">
+<tr class="header">
+<th>Product</th>
+<th class="rightHeader">Min. Retail</th>
+<th class="rightHeader">Suggested<br />Retail</th>
+<th class="rightHeader">Your Retail</th>
+<th class="rightHeader">Your Sale</th>
+<th>Start Sale</th>
+<th>End Sale</th>
+<th class="rightHeader">Base Buy<br />Rate</th>
+<th class="rightHeader">Retail Profit</th>
+<th class="rightHeader">Sale Profit</th>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder - Additional 1 GB (recurring)</span>
+<input type="hidden" id="272308" class="pf-id" value="272308" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_272308" value="64fabbb114c1b409fa0da9f883e2f2a4" />
+<input type="hidden" class="max-retail" id="maxretail_272308" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="156" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$0.20</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$0.20</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_272308" class="price retail-price" data-pfid="272308"
+value="$0.20" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_272308" class="price sale-price" data-pfid="272308"
+value="$0.20" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_272308" class="date sale-start" data-pfid="272308"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_272308" class="date sale-end" data-pfid="272308"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_272308">
+$0.18</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_272308">
+$0.02</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_272308">
+$0.02</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder - Add'l 1000 MB Data Transfer - committed (recurring)</span>
+<input type="hidden" id="272309" class="pf-id" value="272309" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_272309" value="cb13b8ffd5991f06159043358a69b3c4" />
+<input type="hidden" class="max-retail" id="maxretail_272309" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="156" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1.25</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1.25</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_272309" class="price retail-price" data-pfid="272309"
+value="$1.25" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_272309" class="price sale-price" data-pfid="272309"
+value="$1.25" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_272309" class="date sale-start" data-pfid="272309"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_272309" class="date sale-end" data-pfid="272309"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_272309">
+$1.00</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_272309">
+$0.25</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_272309">
+$0.25</span>
+</td>
+</tr>
+<tr class="save-row">
+<td colspan="10">
+<div>
+<a class="save sectionSave black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=5&amp;type=200&amp;section=150&amp;groupId=15&amp;groupname=Website+Builder&amp;tab=2&amp;c=true" class="cancel">Cancel</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sf-tabs-content" data-title="Renewals">
+<input type="hidden" class="tabIdx" />
+<div style="padding-bottom: 20px;">
+<div class="productTitle" style="margin-left: 10px;">
+Website Builder
+Renewals
+</div>
+</div>
+<div class="table-top">
+<div class="table-top-right-curve">
+</div>
+<div class="table-top-middle">
+<div class="float-left import-export">
+<a href="Export.aspx?suiteid=5&group=product&type=200&name=Website+Builder&ci=41543" class="offerings-sprite act-icon-export"><span>Export Prices</span></a>
+</div>
+<div class="float-left import-export">
+<a href="javascript:void(0);" id="lnkImportRenewal" class="offerings-sprite act-icon-import"><span>Import Prices</span></a>
+</div>
+<div class="float-left" style="margin: 12px 0 0 15px; border-left: 1px dashed #c9c9c9; padding-left: 15px;">
+<ul class="banner-size-dropdown">
+<li>
+<a href="javascript:void(0);" id="ddmatch-btn" class="match-btn sf-btn-pil"><span class="sf-icn-pil sf-icn-pil-edit"></span>Match New Product Pricing <span class="dropdown-arrow-container"><span class="sf-icn-descend sf-icn drop-arrow"></span></span></a>
+<ul id="priceMatch" style="margin: -5px 0 0 13px;">
+<li><a href="javascript:void(0);" class="lnk_selectbanner" data-value="0">All Prices</a></li>
+<li><a href="javascript:void(0);" class="lnk_selectbanner" data-value="1">Retail Prices</a></li>
+<li><a href="javascript:void(0);" class="lnk_selectbanner" data-value="2">Sale Prices</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="float-left ajax-spinner" id="matchSpinner" style="margin-left: 375px; display: none;"></div>
+<div class="float-right last-updated" id="RenewLastUpdateDate">
+</div>
+</div>
+</div>
+<div class="groupWrapper" style="clear: both;" id="renewWrapper">
+<div class="collapse-bar collapse-bar-background" style="clear: both; margin-top: 0;">
+<input type="hidden" class="ProductGroupId" value="15" />
+<input type="hidden" class="PricingSectionId" value="151" />
+<input type="hidden" class="ProductGroupIdAndPricingSectionId" value="15-151" />
+<a href="javascript:void(0);" class="plus"></a><span class="collapse-title">
+WebSite Builder Economy Package - Renewals</span>
+</div>
+<div class="mainpricingSection" style="display: none;">
+<!--- Main Table Starts Here -->
+<div class="main-table-style">
+<table class="renewTable" cellspacing="0" cellpadding="0">
+<tr class="header">
+<th>Product</th>
+<th class="rightHeader">Min. Retail</th>
+<th class="rightHeader">Suggested<br />Retail</th>
+<th class="rightHeader">Your Retail</th>
+<th class="rightHeader">Your Sale</th>
+<th>Start Sale</th>
+<th>End Sale</th>
+<th class="rightHeader">Base Buy<br />Rate</th>
+<th class="rightHeader">Retail Profit</th>
+<th class="rightHeader">Sale Profit</th>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Personal - 5 Page Web Site - Renewal - Monthly (recurring)</span>
+<input type="hidden" id="282302" class="pf-id" value="282302" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_282302" value="9d2451697fb9815936f621be06f7b1a7" />
+<input type="hidden" class="max-retail" id="maxretail_282302" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="151" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$4.31</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$4.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_282302" class="price retail-price" data-pfid="282302"
+value="$4.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_282302" class="price sale-price" data-pfid="282302"
+value="$4.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_282302" class="date sale-start" data-pfid="282302"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_282302" class="date sale-end" data-pfid="282302"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_282302">
+$3.95</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_282302">
+$1.04</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_282302">
+$1.04</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Personal - Renewal - Monthly (recurring)</span>
+<input type="hidden" id="17521" class="pf-id" value="17521" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_17521" value="fcf445ae0730d22951e0922c48a24682" />
+<input type="hidden" class="max-retail" id="maxretail_17521" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="151" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$4.31</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$4.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_17521" class="price retail-price" data-pfid="17521"
+value="$4.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_17521" class="price sale-price" data-pfid="17521"
+value="$4.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_17521" class="date sale-start" data-pfid="17521"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_17521" class="date sale-end" data-pfid="17521"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_17521">
+$3.95</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_17521">
+$1.04</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_17521">
+$1.04</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Personal - Renewal - 1 year (recurring)</span>
+<input type="hidden" id="17524" class="pf-id" value="17524" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_17524" value="4bcdb335801ef0a7de0c974f2e8fbb99" />
+<input type="hidden" class="max-retail" id="maxretail_17524" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="151" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$44.14</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$59.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_17524" class="price retail-price" data-pfid="17524"
+value="$59.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_17524" class="price sale-price" data-pfid="17524"
+value="$59.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_17524" class="date sale-start" data-pfid="17524"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_17524" class="date sale-end" data-pfid="17524"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_17524">
+$42.66</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_17524">
+$17.22</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_17524">
+$17.22</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Personal - 5 Page Web Site - Renewal - 1 year (recurring)</span>
+<input type="hidden" id="16760" class="pf-id" value="16760" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16760" value="0b8e28fa93d1edf293d4dc57ff8802fa" />
+<input type="hidden" class="max-retail" id="maxretail_16760" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="151" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$44.14</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$59.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16760" class="price retail-price" data-pfid="16760"
+value="$59.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16760" class="price sale-price" data-pfid="16760"
+value="$59.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16760" class="date sale-start" data-pfid="16760"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16760" class="date sale-end" data-pfid="16760"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16760">
+$42.66</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16760">
+$17.22</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16760">
+$17.22</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Personal - 5 Page Web Site - Renewal - 2 years (recurring)</span>
+<input type="hidden" id="16761" class="pf-id" value="16761" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16761" value="3ee2caa9652d95042a297923d08eb2e2" />
+<input type="hidden" class="max-retail" id="maxretail_16761" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="151" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$83.05</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$119.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16761" class="price retail-price" data-pfid="16761"
+value="$119.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16761" class="price sale-price" data-pfid="16761"
+value="$119.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16761" class="date sale-start" data-pfid="16761"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16761" class="date sale-end" data-pfid="16761"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16761">
+$80.47</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16761">
+$39.29</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16761">
+$39.29</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Personal - Renewal - 2 years (recurring)</span>
+<input type="hidden" id="17525" class="pf-id" value="17525" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_17525" value="3c1d628b51d1d74ed944d4831d6267a8" />
+<input type="hidden" class="max-retail" id="maxretail_17525" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="151" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$83.05</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$119.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_17525" class="price retail-price" data-pfid="17525"
+value="$119.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_17525" class="price sale-price" data-pfid="17525"
+value="$119.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_17525" class="date sale-start" data-pfid="17525"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_17525" class="date sale-end" data-pfid="17525"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_17525">
+$80.47</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_17525">
+$39.29</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_17525">
+$39.29</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Personal - Renewal - 3 years (recurring)</span>
+<input type="hidden" id="17526" class="pf-id" value="17526" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_17526" value="789a71b713481903ee7de6e381ab6c06" />
+<input type="hidden" class="max-retail" id="maxretail_17526" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="151" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$108.93</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$179.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_17526" class="price retail-price" data-pfid="17526"
+value="$179.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_17526" class="price sale-price" data-pfid="17526"
+value="$179.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_17526" class="date sale-start" data-pfid="17526"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_17526" class="date sale-end" data-pfid="17526"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_17526">
+$105.62</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_17526">
+$74.02</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_17526">
+$74.02</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Personal - 5 Page Web Site - Renewal - 3 years (recurring)</span>
+<input type="hidden" id="16762" class="pf-id" value="16762" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16762" value="dafb532de3256d29c0ebc6d64b4905b0" />
+<input type="hidden" class="max-retail" id="maxretail_16762" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="151" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$108.93</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$179.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16762" class="price retail-price" data-pfid="16762"
+value="$179.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16762" class="price sale-price" data-pfid="16762"
+value="$179.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16762" class="date sale-start" data-pfid="16762"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16762" class="date sale-end" data-pfid="16762"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16762">
+$105.62</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16762">
+$74.02</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16762">
+$74.02</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Personal - 5 Page Web Site - Renewal - 4 years (recurring)</span>
+<input type="hidden" id="16763" class="pf-id" value="16763" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16763" value="02a85995e70e8ba76b38b8ae1d324bb9" />
+<input type="hidden" class="max-retail" id="maxretail_16763" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="151" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$146.89</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$239.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16763" class="price retail-price" data-pfid="16763"
+value="$239.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16763" class="price sale-price" data-pfid="16763"
+value="$239.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16763" class="date sale-start" data-pfid="16763"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16763" class="date sale-end" data-pfid="16763"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16763">
+$142.51</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16763">
+$97.01</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16763">
+$97.01</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Personal - Renewal - 4 years (recurring)</span>
+<input type="hidden" id="17527" class="pf-id" value="17527" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_17527" value="53bc77f2e64b1b891ff7780912f364a7" />
+<input type="hidden" class="max-retail" id="maxretail_17527" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="151" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$146.89</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$239.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_17527" class="price retail-price" data-pfid="17527"
+value="$239.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_17527" class="price sale-price" data-pfid="17527"
+value="$239.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_17527" class="date sale-start" data-pfid="17527"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_17527" class="date sale-end" data-pfid="17527"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_17527">
+$142.51</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_17527">
+$97.01</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_17527">
+$97.01</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Personal - Renewal - 5 years (recurring)</span>
+<input type="hidden" id="17528" class="pf-id" value="17528" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_17528" value="ef4dd26bf731896aa13f5a31b90ad1af" />
+<input type="hidden" class="max-retail" id="maxretail_17528" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="151" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$185.70</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$299.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_17528" class="price retail-price" data-pfid="17528"
+value="$299.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_17528" class="price sale-price" data-pfid="17528"
+value="$299.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_17528" class="date sale-start" data-pfid="17528"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_17528" class="date sale-end" data-pfid="17528"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_17528">
+$180.23</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_17528">
+$119.17</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_17528">
+$119.17</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Personal - 5 Page Web Site - Renewal - 5 years (recurring)</span>
+<input type="hidden" id="16764" class="pf-id" value="16764" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16764" value="6a52f61878711b5e05d2f35f7e95c910" />
+<input type="hidden" class="max-retail" id="maxretail_16764" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="151" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$185.70</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$299.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16764" class="price retail-price" data-pfid="16764"
+value="$299.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16764" class="price sale-price" data-pfid="16764"
+value="$299.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16764" class="date sale-start" data-pfid="16764"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16764" class="date sale-end" data-pfid="16764"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16764">
+$180.23</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16764">
+$119.17</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16764">
+$119.17</span>
+</td>
+</tr>
+<tr class="save-row">
+<td colspan="10">
+<div>
+<a class="save sectionSave black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=5&amp;type=200&amp;section=150&amp;groupId=15&amp;groupname=Website+Builder&amp;tab=2&amp;c=true" class="cancel">Cancel</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="collapse-bar collapse-bar-background" style="clear: both; margin-top: 0;">
+<input type="hidden" class="ProductGroupId" value="15" />
+<input type="hidden" class="PricingSectionId" value="153" />
+<input type="hidden" class="ProductGroupIdAndPricingSectionId" value="15-153" />
+<a href="javascript:void(0);" class="plus"></a><span class="collapse-title">
+WebSite Builder Deluxe Package - Renewals</span>
+</div>
+<div class="mainpricingSection" style="display: none;">
+<!--- Main Table Starts Here -->
+<div class="main-table-style">
+<table class="renewTable" cellspacing="0" cellpadding="0">
+<tr class="header">
+<th>Product</th>
+<th class="rightHeader">Min. Retail</th>
+<th class="rightHeader">Suggested<br />Retail</th>
+<th class="rightHeader">Your Retail</th>
+<th class="rightHeader">Your Sale</th>
+<th>Start Sale</th>
+<th>End Sale</th>
+<th class="rightHeader">Base Buy<br />Rate</th>
+<th class="rightHeader">Retail Profit</th>
+<th class="rightHeader">Sale Profit</th>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business - 10 Page Web Site - Renewal - Monthly (recurring)</span>
+<input type="hidden" id="282303" class="pf-id" value="282303" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_282303" value="88ad6902d0dd7cbefe0d876fde724389" />
+<input type="hidden" class="max-retail" id="maxretail_282303" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="153" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$7.40</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$8.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_282303" class="price retail-price" data-pfid="282303"
+value="$8.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_282303" class="price sale-price" data-pfid="282303"
+value="$8.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_282303" class="date sale-start" data-pfid="282303"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_282303" class="date sale-end" data-pfid="282303"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_282303">
+$6.95</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_282303">
+$2.04</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_282303">
+$2.04</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business - Renewal - Monthly (recurring)</span>
+<input type="hidden" id="17502" class="pf-id" value="17502" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_17502" value="a0b0c36edf62e9f5698d7f68474bcaec" />
+<input type="hidden" class="max-retail" id="maxretail_17502" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="153" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$7.40</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$8.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_17502" class="price retail-price" data-pfid="17502"
+value="$8.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_17502" class="price sale-price" data-pfid="17502"
+value="$8.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_17502" class="date sale-start" data-pfid="17502"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_17502" class="date sale-end" data-pfid="17502"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_17502">
+$6.95</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_17502">
+$2.04</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_17502">
+$2.04</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business - Renewal - 1 year (recurring)</span>
+<input type="hidden" id="17509" class="pf-id" value="17509" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_17509" value="f83e74290e067b85216c273dee43206d" />
+<input type="hidden" class="max-retail" id="maxretail_17509" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="153" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$77.48</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$107.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_17509" class="price retail-price" data-pfid="17509"
+value="$107.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_17509" class="price sale-price" data-pfid="17509"
+value="$107.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_17509" class="date sale-start" data-pfid="17509"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_17509" class="date sale-end" data-pfid="17509"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_17509">
+$75.06</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_17509">
+$32.82</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_17509">
+$32.82</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business - 10 Page Web Site - Renewal - 1 year (recurring)</span>
+<input type="hidden" id="16770" class="pf-id" value="16770" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16770" value="8d1f05babf8958a2d1701f7b6a009261" />
+<input type="hidden" class="max-retail" id="maxretail_16770" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="153" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$77.48</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$107.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16770" class="price retail-price" data-pfid="16770"
+value="$107.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16770" class="price sale-price" data-pfid="16770"
+value="$107.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16770" class="date sale-start" data-pfid="16770"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16770" class="date sale-end" data-pfid="16770"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16770">
+$75.06</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16770">
+$32.82</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16770">
+$32.82</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business - 10 Page Web Site - Renewal - 2 years (recurring)</span>
+<input type="hidden" id="16771" class="pf-id" value="16771" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16771" value="68a6df4164771ad161fc58a65297db46" />
+<input type="hidden" class="max-retail" id="maxretail_16771" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="153" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$149.44</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$215.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16771" class="price retail-price" data-pfid="16771"
+value="$215.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16771" class="price sale-price" data-pfid="16771"
+value="$215.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16771" class="date sale-start" data-pfid="16771"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16771" class="date sale-end" data-pfid="16771"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16771">
+$144.99</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16771">
+$70.77</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16771">
+$70.77</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business - Renewal - 2 years (recurring)</span>
+<input type="hidden" id="17510" class="pf-id" value="17510" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_17510" value="911340cbaee101b586aa70434b04e80c" />
+<input type="hidden" class="max-retail" id="maxretail_17510" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="153" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$149.44</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$215.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_17510" class="price retail-price" data-pfid="17510"
+value="$215.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_17510" class="price sale-price" data-pfid="17510"
+value="$215.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_17510" class="date sale-start" data-pfid="17510"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_17510" class="date sale-end" data-pfid="17510"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_17510">
+$144.99</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_17510">
+$70.77</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_17510">
+$70.77</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business - Renewal - 3 years (recurring)</span>
+<input type="hidden" id="17511" class="pf-id" value="17511" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_17511" value="6fbd4b34b33ecf86e8cc0425150da669" />
+<input type="hidden" class="max-retail" id="maxretail_17511" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="153" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$198.39</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$323.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_17511" class="price retail-price" data-pfid="17511"
+value="$323.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_17511" class="price sale-price" data-pfid="17511"
+value="$323.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_17511" class="date sale-start" data-pfid="17511"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_17511" class="date sale-end" data-pfid="17511"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_17511">
+$192.56</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_17511">
+$131.08</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_17511">
+$131.08</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business - 10 Page Web Site - Renewal - 3 years (recurring)</span>
+<input type="hidden" id="16772" class="pf-id" value="16772" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16772" value="0f260a4ec4f8a16ce00aabd464e0042b" />
+<input type="hidden" class="max-retail" id="maxretail_16772" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="153" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$198.39</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$323.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16772" class="price retail-price" data-pfid="16772"
+value="$323.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16772" class="price sale-price" data-pfid="16772"
+value="$323.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16772" class="date sale-start" data-pfid="16772"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16772" class="date sale-end" data-pfid="16772"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16772">
+$192.56</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16772">
+$131.08</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16772">
+$131.08</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business - 10 Page Web Site - Renewal - 4 years (recurring)</span>
+<input type="hidden" id="16773" class="pf-id" value="16773" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16773" value="3e259246e77357b9474883cfacff0aac" />
+<input type="hidden" class="max-retail" id="maxretail_16773" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="153" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$267.55</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$431.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16773" class="price retail-price" data-pfid="16773"
+value="$431.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16773" class="price sale-price" data-pfid="16773"
+value="$431.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16773" class="date sale-start" data-pfid="16773"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16773" class="date sale-end" data-pfid="16773"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16773">
+$259.77</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16773">
+$171.75</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16773">
+$171.75</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business - Renewal - 4 years (recurring)</span>
+<input type="hidden" id="17512" class="pf-id" value="17512" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_17512" value="51b3e18d7c7e1e287f494031f1e547e1" />
+<input type="hidden" class="max-retail" id="maxretail_17512" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="153" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$267.55</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$431.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_17512" class="price retail-price" data-pfid="17512"
+value="$431.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_17512" class="price sale-price" data-pfid="17512"
+value="$431.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_17512" class="date sale-start" data-pfid="17512"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_17512" class="date sale-end" data-pfid="17512"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_17512">
+$259.77</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_17512">
+$171.75</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_17512">
+$171.75</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business - Renewal - 5 years (recurring)</span>
+<input type="hidden" id="17513" class="pf-id" value="17513" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_17513" value="80fff0f3df05d8e27e100de3b81fea5b" />
+<input type="hidden" class="max-retail" id="maxretail_17513" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="153" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$334.37</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$539.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_17513" class="price retail-price" data-pfid="17513"
+value="$539.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_17513" class="price sale-price" data-pfid="17513"
+value="$539.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_17513" class="date sale-start" data-pfid="17513"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_17513" class="date sale-end" data-pfid="17513"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_17513">
+$324.71</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_17513">
+$214.69</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_17513">
+$214.69</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business - 10 Page Web Site - Renewal - 5 years (recurring)</span>
+<input type="hidden" id="16774" class="pf-id" value="16774" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16774" value="411b5feafbf470e893d29306061bdbaf" />
+<input type="hidden" class="max-retail" id="maxretail_16774" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="153" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$334.37</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$539.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16774" class="price retail-price" data-pfid="16774"
+value="$539.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16774" class="price sale-price" data-pfid="16774"
+value="$539.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16774" class="date sale-start" data-pfid="16774"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16774" class="date sale-end" data-pfid="16774"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16774">
+$324.71</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16774">
+$214.69</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16774">
+$214.69</span>
+</td>
+</tr>
+<tr class="save-row">
+<td colspan="10">
+<div>
+<a class="save sectionSave black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=5&amp;type=200&amp;section=150&amp;groupId=15&amp;groupname=Website+Builder&amp;tab=2&amp;c=true" class="cancel">Cancel</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="collapse-bar collapse-bar-background" style="clear: both; margin-top: 0;">
+<input type="hidden" class="ProductGroupId" value="15" />
+<input type="hidden" class="PricingSectionId" value="155" />
+<input type="hidden" class="ProductGroupIdAndPricingSectionId" value="15-155" />
+<a href="javascript:void(0);" class="plus"></a><span class="collapse-title">
+WebSite Builder Premium Package - Renewals</span>
+</div>
+<div class="mainpricingSection" style="display: none;">
+<!--- Main Table Starts Here -->
+<div class="main-table-style">
+<table class="renewTable" cellspacing="0" cellpadding="0">
+<tr class="header">
+<th>Product</th>
+<th class="rightHeader">Min. Retail</th>
+<th class="rightHeader">Suggested<br />Retail</th>
+<th class="rightHeader">Your Retail</th>
+<th class="rightHeader">Your Sale</th>
+<th>Start Sale</th>
+<th>End Sale</th>
+<th class="rightHeader">Base Buy<br />Rate</th>
+<th class="rightHeader">Retail Profit</th>
+<th class="rightHeader">Sale Profit</th>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business Plus - Unlimited Page Web Site - Renewal - Monthly (recurring)</span>
+<input type="hidden" id="282304" class="pf-id" value="282304" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_282304" value="8cf2c242cbeaf6499f0368036e9599d3" />
+<input type="hidden" class="max-retail" id="maxretail_282304" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="155" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$10.48</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$12.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_282304" class="price retail-price" data-pfid="282304"
+value="$12.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_282304" class="price sale-price" data-pfid="282304"
+value="$12.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_282304" class="date sale-start" data-pfid="282304"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_282304" class="date sale-end" data-pfid="282304"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_282304">
+$9.95</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_282304">
+$3.04</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_282304">
+$3.04</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business Plus - Renewal - Monthly (recurring)</span>
+<input type="hidden" id="17503" class="pf-id" value="17503" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_17503" value="ac739e8dcc63ebf41099d48602f9658b" />
+<input type="hidden" class="max-retail" id="maxretail_17503" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="155" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$10.48</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$12.99</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_17503" class="price retail-price" data-pfid="17503"
+value="$12.99" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_17503" class="price sale-price" data-pfid="17503"
+value="$12.99" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_17503" class="date sale-start" data-pfid="17503"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_17503" class="date sale-end" data-pfid="17503"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_17503">
+$9.95</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_17503">
+$3.04</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_17503">
+$3.04</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business Plus - Renewal - 1 year (recurring)</span>
+<input type="hidden" id="17514" class="pf-id" value="17514" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_17514" value="c6d85d01b8763bcd0431b13bf81cd6cd" />
+<input type="hidden" class="max-retail" id="maxretail_17514" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="155" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$110.82</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$155.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_17514" class="price retail-price" data-pfid="17514"
+value="$155.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_17514" class="price sale-price" data-pfid="17514"
+value="$155.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_17514" class="date sale-start" data-pfid="17514"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_17514" class="date sale-end" data-pfid="17514"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_17514">
+$107.46</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_17514">
+$48.42</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_17514">
+$48.42</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business Plus - Unlimited Page Web Site - Renewal - 1 year (recurring)</span>
+<input type="hidden" id="16780" class="pf-id" value="16780" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16780" value="d6058419a22f54a9e5f44b34ef20bb88" />
+<input type="hidden" class="max-retail" id="maxretail_16780" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="155" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$110.82</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$155.88</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16780" class="price retail-price" data-pfid="16780"
+value="$155.88" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16780" class="price sale-price" data-pfid="16780"
+value="$155.88" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16780" class="date sale-start" data-pfid="16780"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16780" class="date sale-end" data-pfid="16780"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16780">
+$107.46</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16780">
+$48.42</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16780">
+$48.42</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business Plus - Unlimited Page Web Site - Renewal - 2 years (recurring)</span>
+<input type="hidden" id="16781" class="pf-id" value="16781" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16781" value="3a5cbf378926209bcfdcd3b2b0638604" />
+<input type="hidden" class="max-retail" id="maxretail_16781" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="155" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$215.82</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$311.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16781" class="price retail-price" data-pfid="16781"
+value="$311.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16781" class="price sale-price" data-pfid="16781"
+value="$311.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16781" class="date sale-start" data-pfid="16781"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16781" class="date sale-end" data-pfid="16781"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16781">
+$209.50</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16781">
+$102.26</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16781">
+$102.26</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business Plus - Renewal - 2 years (recurring)</span>
+<input type="hidden" id="17515" class="pf-id" value="17515" />
+<input type="hidden" class="periods" value="2" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_17515" value="8273ddc199e5bb92b6838301f57c1ace" />
+<input type="hidden" class="max-retail" id="maxretail_17515" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="155" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$215.82</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$311.76</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_17515" class="price retail-price" data-pfid="17515"
+value="$311.76" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_17515" class="price sale-price" data-pfid="17515"
+value="$311.76" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_17515" class="date sale-start" data-pfid="17515"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_17515" class="date sale-end" data-pfid="17515"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_17515">
+$209.50</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_17515">
+$102.26</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_17515">
+$102.26</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business Plus - Renewal - 3 years (recurring)</span>
+<input type="hidden" id="17516" class="pf-id" value="17516" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_17516" value="13bee0d816e9fb7e67f50ff97b6be095" />
+<input type="hidden" class="max-retail" id="maxretail_17516" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="155" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$286.55</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$467.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_17516" class="price retail-price" data-pfid="17516"
+value="$467.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_17516" class="price sale-price" data-pfid="17516"
+value="$467.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_17516" class="date sale-start" data-pfid="17516"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_17516" class="date sale-end" data-pfid="17516"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_17516">
+$278.24</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_17516">
+$189.40</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_17516">
+$189.40</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business Plus - Unlimited Page Web Site - Renewal - 3 years (recurring)</span>
+<input type="hidden" id="16782" class="pf-id" value="16782" />
+<input type="hidden" class="periods" value="3" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16782" value="0c8d3034cb47921779e1a506bf9a8400" />
+<input type="hidden" class="max-retail" id="maxretail_16782" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="155" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$286.55</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$467.64</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16782" class="price retail-price" data-pfid="16782"
+value="$467.64" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16782" class="price sale-price" data-pfid="16782"
+value="$467.64" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16782" class="date sale-start" data-pfid="16782"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16782" class="date sale-end" data-pfid="16782"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16782">
+$278.24</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16782">
+$189.40</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16782">
+$189.40</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business Plus - Unlimited Page Web Site - Renewal - 4 years (recurring)</span>
+<input type="hidden" id="16783" class="pf-id" value="16783" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16783" value="81eea3ea19c6b969ec1889f99bf1eb67" />
+<input type="hidden" class="max-retail" id="maxretail_16783" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="155" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$386.48</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$623.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16783" class="price retail-price" data-pfid="16783"
+value="$623.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16783" class="price sale-price" data-pfid="16783"
+value="$623.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16783" class="date sale-start" data-pfid="16783"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16783" class="date sale-end" data-pfid="16783"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16783">
+$375.35</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16783">
+$248.17</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16783">
+$248.17</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business Plus - Renewal - 4 years (recurring)</span>
+<input type="hidden" id="17517" class="pf-id" value="17517" />
+<input type="hidden" class="periods" value="4" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_17517" value="f8c426b04aecf2e940a9ace52acb0041" />
+<input type="hidden" class="max-retail" id="maxretail_17517" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="155" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$386.48</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$623.52</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_17517" class="price retail-price" data-pfid="17517"
+value="$623.52" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_17517" class="price sale-price" data-pfid="17517"
+value="$623.52" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_17517" class="date sale-start" data-pfid="17517"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_17517" class="date sale-end" data-pfid="17517"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_17517">
+$375.35</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_17517">
+$248.17</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_17517">
+$248.17</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business Plus - Renewal - 5 years (recurring)</span>
+<input type="hidden" id="17518" class="pf-id" value="17518" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_17518" value="cff9847815417c81b2d8813017cb6224" />
+<input type="hidden" class="max-retail" id="maxretail_17518" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="155" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$483.04</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$779.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_17518" class="price retail-price" data-pfid="17518"
+value="$779.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_17518" class="price sale-price" data-pfid="17518"
+value="$779.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_17518" class="date sale-start" data-pfid="17518"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_17518" class="date sale-end" data-pfid="17518"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_17518">
+$469.19</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_17518">
+$310.21</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_17518">
+$310.21</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Business Plus - Unlimited Page Web Site - Renewal - 5 years (recurring)</span>
+<input type="hidden" id="16784" class="pf-id" value="16784" />
+<input type="hidden" class="periods" value="5" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_16784" value="38866d9c5db4e9230025905392df466a" />
+<input type="hidden" class="max-retail" id="maxretail_16784" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="155" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$483.04</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$779.40</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_16784" class="price retail-price" data-pfid="16784"
+value="$779.40" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_16784" class="price sale-price" data-pfid="16784"
+value="$779.40" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_16784" class="date sale-start" data-pfid="16784"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_16784" class="date sale-end" data-pfid="16784"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_16784">
+$469.19</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_16784">
+$310.21</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_16784">
+$310.21</span>
+</td>
+</tr>
+<tr class="save-row">
+<td colspan="10">
+<div>
+<a class="save sectionSave black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=5&amp;type=200&amp;section=150&amp;groupId=15&amp;groupname=Website+Builder&amp;tab=2&amp;c=true" class="cancel">Cancel</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="collapse-bar collapse-bar-background" style="clear: both; margin-top: 0;">
+<input type="hidden" class="ProductGroupId" value="15" />
+<input type="hidden" class="PricingSectionId" value="157" />
+<input type="hidden" class="ProductGroupIdAndPricingSectionId" value="15-157" />
+<a href="javascript:void(0);" class="plus"></a><span class="collapse-title">
+Storage and Bandwidth Add-Ons - Renewal</span>
+</div>
+<div class="mainpricingSection" style="display: none;">
+<!--- Main Table Starts Here -->
+<div class="main-table-style">
+<table class="renewTable" cellspacing="0" cellpadding="0">
+<tr class="header">
+<th>Product</th>
+<th class="rightHeader">Min. Retail</th>
+<th class="rightHeader">Suggested<br />Retail</th>
+<th class="rightHeader">Your Retail</th>
+<th class="rightHeader">Your Sale</th>
+<th>Start Sale</th>
+<th>End Sale</th>
+<th class="rightHeader">Base Buy<br />Rate</th>
+<th class="rightHeader">Retail Profit</th>
+<th class="rightHeader">Sale Profit</th>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Fee - Additional 1 GB - Renewal (recurring)</span>
+<input type="hidden" id="282308" class="pf-id" value="282308" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_282308" value="e05bdad050e4823571d0422befd94f7b" />
+<input type="hidden" class="max-retail" id="maxretail_282308" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="157" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$0.20</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$0.20</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_282308" class="price retail-price" data-pfid="282308"
+value="$0.20" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_282308" class="price sale-price" data-pfid="282308"
+value="$0.20" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_282308" class="date sale-start" data-pfid="282308"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_282308" class="date sale-end" data-pfid="282308"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_282308">
+$0.18</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_282308">
+$0.02</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_282308">
+$0.02</span>
+</td>
+</tr>
+<tr class=" ">
+<td class="product-name">
+<span class="product-name">Website Builder Fees - Add'l 1000 MB Data Transfer - Renewal (recurring)</span>
+<input type="hidden" id="282309" class="pf-id" value="282309" />
+<input type="hidden" class="periods" value="1" />
+<input type="hidden" class="bulk" value="False" />
+<input type="hidden" class="min-retail-hash" id="minretailhash_282309" value="e9a12f2b434a413da9aee3fcea7dcd36" />
+<input type="hidden" class="max-retail" id="maxretail_282309" value="$9,999,999.99" />
+<input type="hidden" class="product-group-section-id" value="157" />
+</td>
+<td class="price-td">
+<span class="retail-min">
+$1.00</span>
+</td>
+<td class="price-td">
+<span class="retail-default">
+$1.00</span>
+</td>
+<td class="price-td">
+<input type="text" id="retail_282309" class="price retail-price" data-pfid="282309"
+value="$1.00" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="sale_282309" class="price sale-price" data-pfid="282309"
+value="$1.00" maxlength="20" />
+</td>
+<td class="price-td">
+<input type="text" id="salestart_282309" class="date sale-start" data-pfid="282309"
+value="1/1/2000" maxlength="20"  />
+</td>
+<td class="price-td">
+<input type="text" id="saleend_282309" class="date sale-end" data-pfid="282309"
+value="1/1/2000" maxlength="20" />
+</td>
+<td class="price-td">
+<span class="buy-rate" id="buyrate_282309">
+$0.70</span>
+</td>
+<td class="price-td">
+<span class="retail-profit" id="retailprofit_282309">
+$0.30</span>
+</td>
+<td class="price-td">
+<span class="sale-profit" id="saleprofit_282309">
+$0.30</span>
+</td>
+</tr>
+<tr class="save-row">
+<td colspan="10">
+<div>
+<a class="save sectionSave black-css3-button" style="margin-right: 10px;" href="javascript:void(0);">Save</a><a href="https://reseller.godaddy.com/b-2015-06-23_15-11-00/Products/ProductPricing.aspx?ci=41542&amp;group=product&amp;suiteId=5&amp;type=200&amp;section=150&amp;groupId=15&amp;groupname=Website+Builder&amp;tab=2&amp;c=true" class="cancel">Cancel</a>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="divImport" style="display: none; width: 400px; vertical-align: middle;">
+<iframe id="uploadframe" style="text-align: center;" align="middle" frameborder="0" height="110" width="350"></iframe>
+</div>
+<div id="divGlobalPricing" style="display: none;">
+<div id="spinner" class="ajax-spinner float-left" style="display: none; margin-left: 600px;">
+</div>
+<div id="errorDiv" class="ErrorMessage error-notification notification-box clear-fix ie-clear-fix"
+style="display: none;">
+<a class="close-notification" href="#"><span>Close</span> </a>
+<p id="errorText" class="notification-text red">
+Error setting Global Pricing
+</p>
+</div>
+<div id="divSuccess" class="SuccessMessage success-notification notification-box clear-fix ie-clear-fix" style="clear: both;display:none;">
+<a class="close-notification" href="#"><span>Close</span> </a>
+<p class="notification-text">
+Your changes were successfully saved.
+</p>
+</div>
+<p style="padding-bottom: 15px;">
+Select a pricing structure to apply to all products. You can always make pricing changes to individual products later.
+</p>
+<ul id="ulPricePoint" class="set-pricing-list">
+<li style="padding-bottom: 15px;">
+<input type="radio" id="chk_pricepoint_0" name="chk_pricepoint" value="0" />
+<label for="percentage-markup">
+<strong>Percentage markup</strong></label>
+<p>
+Percentage markups lets you choose the percent above the selected pricing option below.
+</p>
+<ul id="percentageEntry" class="pricing-changes percentage-select" style="width:410px;display: none;">
+<li id="liPercentageEntry">
+<select id="lst_PercentageMarkUp">
+<option value="1">Mininum Retail</option>
+<option value="2">Suggested Retail</option>
+<option value="3">My Retail</option>
+</select>
+<span> +</span>
+<input type="text" id="txtamount" maxlength="3"/>
+<span>%</span>
+<p class="error" style="padding-left:220px;"></p>
+</li>
+</ul>
+</li>
+<li style="padding-bottom: 15px;">
+<input type="radio" id="chk_pricepoint_1" name="chk_pricepoint" value="1"/>
+<label for="minimum-markkup">
+<strong>Mininum retail pricing</strong></label>
+<p>
+Minimum retail price is the lowest price you're allowed to charge for a product.
+</p>
+</li>
+<li>
+<input type="radio" id="chk_pricepoint_2" name="chk_pricepoint" value="2" />
+<label for="suggested-ricing">
+<strong>Suggested retail pricing</strong></label>
+<p>
+Suggested retail price is higher than minimum retail and what we recommend resellers charge.
+</p>
+</li>
+<li style=" border-top:1px solid #c3c3c3;padding-top:5px;">
+<p style="padding-left:0px;">
+<strong>Happy with your current pricing?</strong>
+</p>
+<input type="radio" id="chk_pricepoint_3" name="chk_pricepoint" value="999" />
+<label for="suggested-ricing">Keep product pricing as is.</label>
+</li>
+<li style="padding-bottom: 15px;padding-top:25px;">
+<p style="padding-left:0px;">
+<strong>Note:</strong> It may take up to 48 hours for the published price changes to update.
+</p>
+</li>
+</ul>
+<div id="divSaveConfirmModal" style="width: 400px; clear: both; display: none;height:120px;">
+<div id="divInputs" class="account-access" style="line-height:1.4;vertical-align:middle;text-align:justify;">
+<label>Please Confirm</label>
+<p style="padding-bottom:10px;">
+Are you sure you want to change the pricing of all your products? You cannot undo this.
+</p>
+<p>
+Your new retail pricing will be set to <span id="newPricing" style="font-weight: bold;"></span>pricing.
+</p>
+</div>
+</div>
+<input type="hidden" id="priceModiifedFlag" />
+</div>
+</div>
+</div>
+<div class="uxcore-only">
+<div class="container uxcore-footer">
+<div class="row">
+<div class="col-sm-4 text-right" style="padding-top: 5px;">
+<script type="text/javascript" src="https://seal.starfieldtech.com/getSeal?sealID=N5LDrMam1CrGjIOM0U1ZTjrbiaJmeUnLLEZiLEzMBOzjRsFxoLHqzyH"></script>
+</div>
+<div class="col-sm-7">
+<div class="row">
+Basic Reseller Plan |
+<a href="http://Hosting.LARRYWAKEMAN.COM">View Storefront</a> |
+<a href="https://survey.godaddy.com/pqc/pqc/lpqc.aspx?survey=209&amp;admingroup=32" target="_blank">Feedback</a> |
+<a href="https://support.godaddy.com/help/category/reseller/" target="_blank">Help</a>
+| <a href="mailto:resellersupport@godaddy.com">resellersupport@godaddy.com</a>
+</div>
+<div class="row">
+Call Support (480) 505-8857 |
+Copyright &copy; 2001 - 2015. All Rights Reserved.
+<a href="https://plus.google.com/communities/110833808277616099110"><span class="uxicon uxicon-google-plus-box"></span></a>
+<a href="http://twitter.com/wildwestdomains"><span class="uxicon uxicon-twitter"></span></a>
+<a href="http://www.facebook.com/pages/Wild-West-Domains#!/pages/Wild-West-Domains/127671573927218?ref=ts"><span class="uxicon uxicon-facebook-box"></span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1F9DBF50" />
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+</div></form>
+<script src="//img1.wsimg.com/ux/1.3.7/js/uxcore.en.min.js"></script>
+<script>
+var uxel = ux.eldorado || {};
+uxel.fns = [];
+uxel.ready = function ready(fn) { uxel.fns.push(fn); };
+uxel.data = {
+app: 'rcc',
+market: 'en-us',
+appAlias: 'rcc',
+version: '1.4.27',
+plId: '1',
+shopperId: '{{pc:shopperid}}',
+env: 'prodPhx',
+manifest: 'appheader',
+urlArgs: '?ci=',
+thirdParty: {}
+};
+uxel.texts = {};
+uxel.urls = {};
+ux.eldorado = uxel;
+</script>
+<script type="text/javascript">
+uxel.data.thirdParty.tealium = { js: '//tags.tiqcdn.com/utag/godaddy/godaddy/prod/utag.js' };
+</script>
+<script src="//img1.wsimg.com/ux/eldorado/1.4.27/js/appheader.min.js"></script>
+<script type="text/javascript">
+uxel.data.tokens = { loginApp: '{{pc:loginapp}}', loginPath: '{{pc:currentpage}}' };
+uxel.header.load('https://gui.godaddy.com', 'rcc', undefined, undefined, null);
+</script><!-- Google Analytics config -->
+<script>
+uxel.ready(function() {
+uxel.thirdParty.configGATagManager({
+data: [
+{ 'shopperId': '103245034' },
+{ 'privateLabelId': '510674' },
+{ 'server': 'P3PWRCCWEB003' }
+],
+domain: 'reseller.godaddy.com'
+});
+});
+</script><!-- Google Tag Manager -->
+<noscript>
+<iframe src="//www.googletagmanager.com/ns.html?id=GTM-SXRF" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>
+uxel.ready(function() {
+uxel.thirdParty.initGATagManager('GTM-SXRF');
+});
+<!-- End Google Tag Manager -->
+</script><!-- Manifest appheader -->
+<script src="//img1.wsimg.com/ux/1.3.7/js/uxcontrols.min.js"></script>
+<script>
+$sf = {skin: "app"};
+</script>
+<script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/jquery-1.7.1-jquery-ui-1.8.min.js"></script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/rcc.shared.plugins.js"></script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/header/header-js-20120730.min.js"></script><script id='duel' type="text/javascript" src="https://img3.wsimg.com/starfield/duel/v2.5.1/duel.js?appid=aBwld8TY#YUJ3bGQ4VFl2Mi41LjFwcm9k"></script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/header/superfish-20100511.js"></script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/fastballLibrary0009-channelIntegration-2.0.0.min.js"></script><script>var jsPlusIns_rccReportsTokens = {reportjsAddEventError:"not supported or DOM not loaded",reportjsValidElementError:"Please make sure that you're passing a valid element",reportjsOpacityError:"Opacity not supported by the browser",reportjsFlashError:"Flash Player Installation",reportjsNoTableIdError:"Error: No Table id set, you need to set an id on your table and every row",x:''}</script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/jquery.plugins_20130912.min.js"></script><script>var GDRcc_rccTokens = {GDRccJS11monthsError:"Cannot go back more than 11 months!",GDRccJSYearTimePeriodError:"The time period selected cannot be greater than one year.",GDRccJS6moTimePeriodError:"The time period selected cannot be greater than six months.",GDRccJSChooseDateRange:"Choose a date range",GDRccJSDisplayText:"Display:",GDRccJSOfText:"of",GDRccJSFromText:"From:",GDRccJSToText:"To:",GDRccJSUpdateText:"Update",GDRccJSDateFormat:"The date format should be : mm/dd/yyyy",GDRccJSValidMonth:"Please enter a valid month",GDRccJSValidDay:"Please enter a valid day",GDRccJSValidBetweenDate:"Please enter a valid 4 digit year between {0} and {1}",GDRccJSValidDate:"Please enter a valid date",GDRccJSControlError:"This control can only be used with select elements",GDRccJSTodayText:"Today",GDRccJSThisWeekText:"This Week",GDRccJSLastWeekText:"Last Week",GDRccJSThisMonthText:"This Month",GDRccJSLastMonthText:"Last Month",GDRccJSThisQuarterText:"This Quarter",GDRccJSLastQuarterText:"Last Quarter",GDRccJSLastSixMonthsText:"Last Six Months",x:''}</script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/reports/gd.Rcc20130912.min.js"></script><script>var DWCommon_rccTokens = {DWCommonJSDateFormat:"",DWCommonJSValidMonth:"",DWCommonJSValidDay:"",DWCommonJSValidBetweenDate:"",DWCommonJSValidDate:"",DWCommonJSTagsNotAllowed:"'{0}' tags are not allowed",DWCommonJSAreYouSureRestore:"Are you sure you want to restore to your previously published version?",DWCommonJSUndoChangesText:"Undo Changes",DWCommonJSBrowseText:"Browse...",DWCommonJSSWFWidth:"Enter the Width of SWF file:",DWCommonJSSWFHeight:"Enter the Height of SWF file:",DWCommonJSPreviewText:"preview",DWCommonJSImportFileText:"Import File",DWCommonJSUploadImageText:"Upload Image",DWCommonJSValidHeight:"Please enter a valid height.",DWCommonJSValidWidth:"Please enter a valid width.",DWCommonJSSelectFileToImport:"Please select a file to import.",DWCommonJSPleaseSelectAFile:"Please select a file.",DWCommonJSImportInProgress:"Import in progress...",DWCommonJSInvalidImageFormat:"Invalid image format.",DWCommonJSInvalidFileFormat:"Invalid file format.",DWCommonJSImportCompleteSelectChanges:"File Import Complete. Click &quot;Select&quot; to see the changes",DWCommonJSErrorUploadingFile:"Error uploading file.",DWCommonJSFileUploadComplete:"File upload complete.",DWCommonJSFileImportComplete:"File import complete.",x:''}</script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/dwCommon20131231.min.js"></script><script>var QS_Common_rccTokens = {QSCommonFillInValue:"Please fill in the value.",QSCommonValidValue:"Please enter a valid value.",QSCommonSelectValidValue:"Please enter a valid value.",QSCommonChooseOne:"Choose one",QSCommonVendorError:"Error while getting vendors",QSCommonNA:"Not Applicable",QSCommonStatesError:"Error while getting States",QSCommonSessionExpired:"Your session has expired. Please login.",QSCommonInvalidInputs:"Please correct the following invalid inputs :",QSCommonErrorSaving:"Error saving the details.",x:''}</script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/qsCommon20130912.min.js"></script><script>var PricingJs_rccQuickSetupTokens = {PricingJsMinRetail:"Mininum Retail",PricingJsSuggestedRetail:"Suggested Retail",PricingJsCurrentRetail:"Your Current Retail",PricingJsGlobalPricing:"Global Pricing",PricingJsOK:"OK",PricingJsCancel:"Cancel",PricingJsUpdateTime:"Your product pricing is being updated. These changes usually take 5 minutes. However, it may take up to 48 hours for these changes to take effect. These time frames are estimates and not guaranteed.",PricingJsMoreThan:"% more than",PricingJsDecimalNotAllowed:"Decimal number is not allowed. <br/> Please enter the percentage as a whole number.",PricingJsEnterPercent:"Please enter a percentage.",PricingJsValueBetween:"Please enter a value between 0 and 999.",x:''}</script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/quicksetup/Pricing.min.20130912.js"></script><script>var ProductPricingJs_rccProductsTokens = {ProductPricingJsSetPriceFor:"Set price for {0} - 1 year",ProductPricingJsImportExcel:"Import Excel",ProductPricingJsSessionExpired:"Your session has expired. Please login.",ProductPricingJsFixErrors:"Please fix the following errors :",ProductPricingJsSaveError:"Error while saving the pricing.",ProductPricingJsUpdateMessage:"Your currency preference(s) is being updated. These changes usually take 5 minutes. However, it may take up to <br/> <span style='padding-left:25px;'>48 hours for these changes to take effect. These time frames are estimates and not guaranteed.</span>",x:''}</script><script  type="text/javascript" src="https://img3.wsimg.com/rcc/js/products/productPricing20130912.min.js"></script><script>var RccPricingJs_rccProductsTokens = {RccPricingJsUpdatesNotSaved:"Your pricing updates are not saved. Are you sure you want to cancel without saving these changes?",RccPricingJsConfirm:"Confirm",RccPricingJsOK:"OK",RccPricingJsCancel:"Cancel",RccPricingJsImportError:"Error in importing pricing sheet.",RccPricingJsInvalidPricingSheet:"Invalid Pricing sheet.",RccPricingJsDateFormat:"The date format should be: mm/dd/yyyy",RccPricingJsValidMonth:"Please enter a valid month.",RccPricingJsValidDay:"Please enter a valid day.",RccPricingJsValidBetweenDate:"Please enter a valid 4 digit year between {0} and {1}.",RccPricingJsValidDate:"Please enter a valid date.",RccPricingJsValidAmount:"Please enter a valid amount.",RccPricingJsFixErrors:"Please fix the following errors.",RccPricingJsSaving:"Saving, please wait...",RccPricingJsValidRetailPrice:"Please enter a valid retail price.",RccPricingJsValidSalePrice:"Please enter a valid sale price.",RccPricingJsRetailGreaterThanMin:"Please enter a retail price greater than your minimum retail price.",RccPricingJsRetailEntry:"Please enter a retail price below {0}.",RccPricingJsSaleEntry:"Please enter a sale price below {0}.",RccPricingJsEndDateGreaterThanStart:"Please enter a end date greater than start date.",RccPricingJsSaleGreaterThanMin:"Please enter a sale price greater than your minimum retail price.",RccPricingJsSaleLessThanRetail:"Please enter a sale price less than your retail price.",x:''}</script><script  type="text/javascript" src="/javascript/products/rccPricing.js"></script>
+<script type="text/javascript" language="javascript">
+var _trafficDomain = 'securepaynet.net';
+$(document).ready(function () {
+fbiLibSetDomainName('securepaynet.net');
+function setMargin() {
+if ($(window).width() <= 1100) {
+$('div.header-container div.tabs ul').css('margin', '0px');
+}
+else {
+$('div.header-container div.tabs ul').css('margin-left', '100px');
+}
+}
+$(window).resize(function () {
+setMargin();
+});
+setMargin();
+if ('False' === 'true') {
+$('#gdLogo').css('background-image', 'https://img1.wsimg.com/rcc/images/suite-logo2.gif');
+}
+});
+</script>
+<script  type="text/javascript" language="javascript" >
+$(document).ready(function () {
+var showStorefrontLink = 'False';
+if (showStorefrontLink.toLowerCase() === 'true')
+$('a.view-store').parent().css('display', 'none');
+else {
+if ($('a.view-store2').length && ($('a.view-store2').css('display') != 'none'))
+$('a.view-store').parent().css('display', 'none');
+else {
+$('a.view-store').parent().css('display', 'inline');
+}
+}
+})
+</script>
+<script language="javascript" type="text/javascript">
+var disableCurrencyOptinAccordian = 'True';
+var currencies = $('#currencyList');
+var showProcessingMsg = 'False';
+var landingPage = 'https://reseller.godaddy.com/Products/Default.aspx?ci=59405';
+var isMCP = 'False';
+var pricing = {};
+var pricingCheck = $('#groupPricingCheck');
+var groupPricingSelect = $('#groupPricingSelect');
+if (groupPricingSelect.length == 1 && groupPricingSelect.find('option:first').val() == "3") {
+pricingCheck.prop('checked', false).prop('disabled', true);
+pricingCheck.parent().css('color', '#CCC');
+}
+groupPricingSelect.change(function () {
+if($(this).find(':selected').val() === "3") {
+pricingCheck.prop('checked', false).prop('disabled', true);
+pricingCheck.parent().css('color', '#CCC');
+} else {
+pricingCheck.prop('disabled', false);
+}
+});
+if(isMCP.toLowerCase() != "true"){
+currencies.find("option[value='USD']").attr('selected', 'selected');
+$('div.currencyOptinSection').addClass('currency-overlay');
+$('#saveCurrencyOptions').unbind('click');
+$('#saveCancelCurrencyOptions').hide();
+$('#currencyList').attr('disabled', 'disabled');
+}
+else{
+currencies.find("option[value='USD']").attr('selected', 'selected');
+}
+if (disableCurrencyOptinAccordian.toLowerCase() == "true") {
+var quickPricingTop;
+if (showProcessingMsg.toLowerCase() == "true") {
+require("starfield/sf.msg.overlay", function () {
+$('#mainContainer').sfMsgOverlay({
+message: "Your currency preference(s) is being updated. These changes usually take 5 minutes. However, it may take up to <br/> <span style='padding-left:25px;'>48 hours for these changes to take effect. These time frames are estimates and not guaranteed.</span>"
+});
+quickPricingTop = $('#mainContainer').position().top;
+$('div.sf-msg-overlay').offset({ top: quickPricingTop + 200, left: $('div.sf-msg-overlay').offset.left }).css('text-align','left');
+});
+} else {
+require("starfield/sf.msg.overlay", function() {
+$('#mainContainer').sfMsgOverlay({
+message: null
+});
+});
+}
+}
+</script>
+<script type="text/javascript">
+$(document).ready(function () {
+globalPricing.Root = '../b-2015-06-23_15-11-00/';
+globalPricing.wsUrl = globalPricing.Root + 'wcf/QuickSetUpWcf/QuickSetup.svc/SaveGlobalPricing';
+globalPricing.updateSavedStepWs = '../b-2015-06-23_15-11-00/wcf/PlDataWcf/PlData.svc/UpdatePlData';
+globalPricing.productsPage = globalPricing.Root + 'Products/Default.aspx?ci=59405';
+globalPricing.rccDashBoard = globalPricing.Root + 'default.aspx?ci=41504';
+globalPricing.showFailureMessage = 'False';
+globalPricing.showPricing = 'True';
+globalPricing.statusUpdateWs = globalPricing.Root + 'wcf/QuickSetUpWcf/QuickSetup.svc/UpdateFailedRequestStatus';
+globalPricing.checkNonUsdForNonMcp = "False";
+})
+</script>
+<script type="text/javascript">
+$(document).ready(function () {
+var rccHeader = $('#rcc-header-container');
+if(rccHeader){
+rccHeader.append('<div class="title-container"><div class="float-left"><a href="ProductOfferings.aspx?suiteid=5&tab=2" class="sf-btn-pil" style="margin: 7px 0 0 7px;"><span class="offerings-sprite btn-back-icon"></span>Back</a></div><div class="float-left"><h1>Website Builder Pricing</h1></div></div>');
+}
+require('starfield/sf.droplist', function () {   $('#priceMatchOption').sfDropList({valueChangeElement: '#valForPriceMatchOption'}); });
+var currHelper = new baseCurrencyHelper('$','$','.','2',',','Prefix');
+productPricing.Tab = 0;
+productPricing.AppRoot = '../b-2015-06-23_15-11-00/';
+productPricing.GroupId = 200;
+productPricing.RenewTabDisplay = 'True';
+productPricing.OfferingTabDisplay = 'True';
+productPricing.acc = new basePricingAccordion(currHelper);
+productPricing.acc.AppRoot = '../b-2015-06-23_15-11-00/';
+productPricing.acc.SuccessDiv = $('#productSuccess');
+productPricing.acc.ErrorDiv = $('#productError');
+productPricing.acc.WaringingDiv = $('#productWarn');
+productPricing.acc.MainContainer = $('#mainContainer');
+productPricing.acc.GroupType = 'PRODUCT';
+productPricing.acc.GroupSectionId = '150' ;
+productPricing.ProductAndSectionId = '15-150' ;
+productPricing.GroupName='Website Builder';
+productPricing.acc.landingPage = 'https://reseller.godaddy.com/Products/Default.aspx?ci=59405';
+productPricing.acc.RestoreMessage = $('#productRestore');
+productPricing.acc.TransactionCurrency = "USD";
+productPricing.acc.PageType="product";
+productPricing.PricingPage = new basePricingPage(currHelper);
+productPricing.RenewalLookup = {'17521':7521,'282302':272302,'17524':7524,'16760':6760,'16761':6761,'17525':7525,'17526':7526,'16762':6762,'16763':6763,'17527':7527,'17528':7528,'16764':6764,'17502':7502,'282303':272303,'16770':6770,'17509':7509,'17510':7510,'16771':6771,'16772':6772,'17511':7511,'17512':7512,'16773':6773,'16774':6774,'17513':7513,'17503':7503,'282304':272304,'17514':7514,'16780':6780,'16781':6781,'17515':7515,'17516':7516,'16782':6782,'16783':6783,'17517':7517,'17518':7518,'16784':6784,'282308':272308,'282309':272309};
+productPricing.PricingPage.initPricing( $('#tabs'));
+globalPricing.messageOverlayControl = $('#mainContainer');
+globalPricing.pricingJoberrorControl = $('#divpricingJobError');
+globalPricing.fromPricingPage=true;
+globalPricing.setPricingLink =$('#lnkResubmitPricing');
+globalPricing.pricingDialogControl = $('#divGlobalPricing');
+globalPricing.redirectPage = "../b-2015-06-23_15-11-00/Products/TldPricing.aspx?ci=41506";
+globalPricing.methods.init();
+productPricing.methods.init();
+});
+function LoadImport(data){
+productPricing.PricingPage.loadImportedRows(data, $('#productWarn'), productPricing.methods.expandAllSections);
+};
+</script>
+</body>
+</html>
